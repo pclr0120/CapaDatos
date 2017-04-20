@@ -1,0 +1,12 @@
+\\Mac\Home\Desktop\CapaDatos\CapaDatos\bin\Debug\CapaDatos.dll
+\\Mac\Home\Desktop\CapaDatos\CapaDatos\bin\Debug\CapaDatos.pdb
+\\Mac\Home\Desktop\CapaDatos\CapaDatos\bin\Debug\MySql.Data.dll
+\\Mac\Home\Desktop\CapaDatos\CapaDatos\bin\Debug\MySql.Data.xml
+\\Mac\Home\Desktop\CapaDatos\CapaDatos\obj\Debug\CapaDatos.dll
+\\Mac\Home\Desktop\CapaDatos\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\pclr\Desktop\CapaDatos\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\pclr\Desktop\CapaDatos\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\pclr\Desktop\CapaDatos\CapaDatos\bin\Debug\MySql.Data.dll
+C:\Users\pclr\Desktop\CapaDatos\CapaDatos\bin\Debug\MySql.Data.xml
+C:\Users\pclr\Desktop\CapaDatos\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\pclr\Desktop\CapaDatos\CapaDatos\obj\Debug\CapaDatos.pdb
