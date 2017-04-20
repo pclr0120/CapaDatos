@@ -30,7 +30,7 @@ namespace CapaLogica
 
 
         Accesodatos Acceso = new Accesodatos();
-        //dsdds
+        //pclr
         public DataTable ConsultaProducto(string codigo)
         {
             string[] parametros = { "_codigo" };
