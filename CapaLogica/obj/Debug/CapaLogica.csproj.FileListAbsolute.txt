@@ -16,3 +16,12 @@ C:\Users\pclr\Desktop\CapaDatos\CapaLogica\bin\Debug\MySql.Data.xml
 C:\Users\pclr\Desktop\CapaDatos\CapaLogica\obj\Debug\CapaLogica.csprojResolveAssemblyReference.cache
 C:\Users\pclr\Desktop\CapaDatos\CapaLogica\obj\Debug\CapaLogica.dll
 C:\Users\pclr\Desktop\CapaDatos\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\pclr\Source\Repos\CapaDatos\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\pclr\Source\Repos\CapaDatos\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\pclr\Source\Repos\CapaDatos\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\pclr\Source\Repos\CapaDatos\CapaLogica\bin\Debug\MySql.Data.dll
+C:\Users\pclr\Source\Repos\CapaDatos\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\pclr\Source\Repos\CapaDatos\CapaLogica\bin\Debug\MySql.Data.xml
+C:\Users\pclr\Source\Repos\CapaDatos\CapaLogica\obj\Debug\CapaLogica.csprojResolveAssemblyReference.cache
+C:\Users\pclr\Source\Repos\CapaDatos\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\pclr\Source\Repos\CapaDatos\CapaLogica\obj\Debug\CapaLogica.pdb
