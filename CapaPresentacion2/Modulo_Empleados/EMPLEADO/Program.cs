@@ -9,7 +9,7 @@ namespace Modulo_Empleados
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        /// The main efntry point for the application.
         /// </summary>
         [STAThread]
         static void Main()
