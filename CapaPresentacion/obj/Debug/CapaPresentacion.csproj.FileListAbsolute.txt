@@ -40,3 +40,25 @@ C:\Users\pclr\Desktop\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion.Prop
 C:\Users\pclr\Desktop\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.Cache
 C:\Users\pclr\Desktop\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 C:\Users\pclr\Desktop\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\bin\Debug\CapaLogica.dll
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\bin\Debug\MySql.Data.dll
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\bin\Debug\CapaLogica.pdb
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\bin\Debug\MySql.Data.xml
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion.csprojResolveAssemblyReference.cache
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\obj\Debug\VENTA\MainWindow.g.cs
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\obj\Debug\VENTA\Venta.g.cs
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\obj\Debug\App.g.cs
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion_MarkupCompile.cache
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion_MarkupCompile.lref
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\obj\Debug\VENTA\MainWindow.baml
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\obj\Debug\VENTA\Venta.baml
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion.g.resources
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.Cache
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion\obj\Debug\CapaPresentacion.pdb

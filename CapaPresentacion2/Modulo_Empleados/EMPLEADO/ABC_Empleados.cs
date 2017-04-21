@@ -45,5 +45,10 @@ namespace Modulo_Empleados
             rb_curp.Checked = true;
             txt_clave_empleado.Enabled = false;
         }
+
+        private void btn_ok_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

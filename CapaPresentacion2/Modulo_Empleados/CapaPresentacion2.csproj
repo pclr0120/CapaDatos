@@ -11,6 +11,21 @@
     <AssemblyName>Modulo_Empleados</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,6 +45,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>EMBLEMA.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
@@ -72,6 +90,19 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="EMPLEADO\Program.cs" />
+    <Compile Include="PRINCIPAL\Class_Ovalo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRINCIPAL\Formulario_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRINCIPAL\Formulario_Principal.Designer.cs">
+      <DependentUpon>Formulario_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRINCIPAL\Oval Button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRINCIPAL\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="EMPLEADO\ABC_Empleados.resx">
       <DependentUpon>ABC_Empleados.cs</DependentUpon>
@@ -82,6 +113,9 @@
     <EmbeddedResource Include="EMPLEADO\Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PRINCIPAL\Formulario_Principal.resx">
+      <DependentUpon>Formulario_Principal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -90,6 +124,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -113,6 +148,31 @@
       <Project>{a9a66ae8-1d4f-4085-a8d1-093c90cf84ef}</Project>
       <Name>CapaLogica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Config1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empleados1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Equipo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inicio1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Membre1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Punto1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -25,3 +25,12 @@ C:\Users\pclr\Source\Repos\CapaDatos\CapaLogica\bin\Debug\MySql.Data.xml
 C:\Users\pclr\Source\Repos\CapaDatos\CapaLogica\obj\Debug\CapaLogica.csprojResolveAssemblyReference.cache
 C:\Users\pclr\Source\Repos\CapaDatos\CapaLogica\obj\Debug\CapaLogica.dll
 C:\Users\pclr\Source\Repos\CapaDatos\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaLogica\bin\Debug\MySql.Data.dll
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaLogica\bin\Debug\MySql.Data.xml
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaLogica\obj\Debug\CapaLogica.csprojResolveAssemblyReference.cache
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaLogica\obj\Debug\CapaLogica.pdb

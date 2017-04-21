@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ABC_Empleados));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_clave_empleado = new System.Windows.Forms.TextBox();
+            this.rb_clave = new System.Windows.Forms.RadioButton();
             this.btn_ok = new System.Windows.Forms.Button();
             this.txt_curp = new System.Windows.Forms.TextBox();
             this.rb_lista = new System.Windows.Forms.RadioButton();
             this.rb_curp = new System.Windows.Forms.RadioButton();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.lbl_accion = new System.Windows.Forms.Label();
-            this.txt_clave_empleado = new System.Windows.Forms.TextBox();
-            this.rb_clave = new System.Windows.Forms.RadioButton();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,27 @@
             this.panel2.Size = new System.Drawing.Size(631, 264);
             this.panel2.TabIndex = 9;
             // 
+            // txt_clave_empleado
+            // 
+            this.txt_clave_empleado.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_clave_empleado.Location = new System.Drawing.Point(64, 155);
+            this.txt_clave_empleado.Name = "txt_clave_empleado";
+            this.txt_clave_empleado.Size = new System.Drawing.Size(195, 26);
+            this.txt_clave_empleado.TabIndex = 8;
+            // 
+            // rb_clave
+            // 
+            this.rb_clave.AutoSize = true;
+            this.rb_clave.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_clave.ForeColor = System.Drawing.Color.White;
+            this.rb_clave.Location = new System.Drawing.Point(46, 127);
+            this.rb_clave.Name = "rb_clave";
+            this.rb_clave.Size = new System.Drawing.Size(189, 22);
+            this.rb_clave.TabIndex = 7;
+            this.rb_clave.Text = "Ingresar clave de empleado";
+            this.rb_clave.UseVisualStyleBackColor = true;
+            this.rb_clave.CheckedChanged += new System.EventHandler(this.rb_clave_CheckedChanged);
+            // 
             // btn_ok
             // 
             this.btn_ok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -74,6 +95,7 @@
             this.btn_ok.TabIndex = 6;
             this.btn_ok.Text = "ACEPTAR";
             this.btn_ok.UseVisualStyleBackColor = false;
+            this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 
             // txt_curp
             // 
@@ -106,6 +128,7 @@
             this.rb_curp.Name = "rb_curp";
             this.rb_curp.Size = new System.Drawing.Size(120, 22);
             this.rb_curp.TabIndex = 3;
+            this.rb_curp.TabStop = true;
             this.rb_curp.Text = "Ingresar C.U.R.P";
             this.rb_curp.UseVisualStyleBackColor = true;
             this.rb_curp.CheckedChanged += new System.EventHandler(this.rb_curp_CheckedChanged);
@@ -139,27 +162,6 @@
             this.lbl_accion.Size = new System.Drawing.Size(270, 18);
             this.lbl_accion.TabIndex = 0;
             this.lbl_accion.Text = "Accion a dempeñar de este formulario";
-            // 
-            // txt_clave_empleado
-            // 
-            this.txt_clave_empleado.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_clave_empleado.Location = new System.Drawing.Point(64, 155);
-            this.txt_clave_empleado.Name = "txt_clave_empleado";
-            this.txt_clave_empleado.Size = new System.Drawing.Size(195, 26);
-            this.txt_clave_empleado.TabIndex = 8;
-            // 
-            // rb_clave
-            // 
-            this.rb_clave.AutoSize = true;
-            this.rb_clave.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_clave.ForeColor = System.Drawing.Color.White;
-            this.rb_clave.Location = new System.Drawing.Point(46, 127);
-            this.rb_clave.Name = "rb_clave";
-            this.rb_clave.Size = new System.Drawing.Size(189, 22);
-            this.rb_clave.TabIndex = 7;
-            this.rb_clave.Text = "Ingresar clave de empleado";
-            this.rb_clave.UseVisualStyleBackColor = true;
-            this.rb_clave.CheckedChanged += new System.EventHandler(this.rb_clave_CheckedChanged);
             // 
             // ABC_Empleados
             // 

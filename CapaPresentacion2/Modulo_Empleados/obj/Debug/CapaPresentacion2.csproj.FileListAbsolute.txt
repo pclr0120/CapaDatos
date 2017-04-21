@@ -1,0 +1,12 @@
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debug\Modulo_Empleados.exe.config
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debug\Modulo_Empleados.exe
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debug\Modulo_Empleados.pdb
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\CapaPresentacion2.csprojResolveAssemblyReference.cache
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.ABC_Empleados.resources
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.Autentificar_Nuevo_Empleado.resources
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.Empleados.resources
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.Properties.Resources.resources
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\CapaPresentacion2.csproj.GenerateResource.Cache
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.exe
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.pdb
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\EMBLEMA.Formulario_Principal.resources

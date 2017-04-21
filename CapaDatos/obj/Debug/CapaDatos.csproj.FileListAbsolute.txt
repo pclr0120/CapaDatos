@@ -17,3 +17,10 @@ C:\Users\pclr\Source\Repos\CapaDatos\CapaDatos\bin\Debug\MySql.Data.xml
 C:\Users\pclr\Source\Repos\CapaDatos\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
 C:\Users\pclr\Source\Repos\CapaDatos\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\pclr\Source\Repos\CapaDatos\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaDatos\bin\Debug\MySql.Data.dll
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaDatos\bin\Debug\MySql.Data.xml
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaDatos\obj\Debug\CapaDatos.pdb
