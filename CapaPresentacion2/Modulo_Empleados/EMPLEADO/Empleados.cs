@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EMBLEMA;
-using CapaLogica;
+
 
 namespace Modulo_Empleados
 {

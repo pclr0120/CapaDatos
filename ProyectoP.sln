@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaLogica", "CapaLogica\Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacion", "CapaPresentacion\CapaPresentacion.csproj", "{535CD9B5-18F8-498E-B8AC-3B5EBAA08BD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacion2", "Modulo_Empleados\Modulo_Empleados\CapaPresentacion2.csproj", "{D058E1DD-C529-4313-9E75-023978707E4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacion2", "CapaPresentacion2\Modulo_Empleados\CapaPresentacion2.csproj", "{D058E1DD-C529-4313-9E75-023978707E4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
