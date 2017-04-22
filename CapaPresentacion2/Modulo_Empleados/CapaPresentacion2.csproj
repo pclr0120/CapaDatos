@@ -65,55 +65,55 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EMPLEADO\ABC_Empleados.cs">
+    <Compile Include="EMPLEADOS\ABC_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EMPLEADO\ABC_Empleados.Designer.cs">
+    <Compile Include="EMPLEADOS\ABC_Empleados.Designer.cs">
       <DependentUpon>ABC_Empleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="EMPLEADO\Autentificar_Nuevo_Empleado.cs">
+    <Compile Include="EMPLEADOS\Autentificar_Nuevo_Empleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EMPLEADO\Autentificar_Nuevo_Empleado.designer.cs">
+    <Compile Include="EMPLEADOS\Autentificar_Nuevo_Empleado.designer.cs">
       <DependentUpon>Autentificar_Nuevo_Empleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="EMPLEADO\Class_Ovalo.cs">
+    <Compile Include="EMPLEADOS\Class_Ovalo.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="EMPLEADO\Empleados.cs">
+    <Compile Include="EMPLEADOS\Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EMPLEADO\Empleados.Designer.cs">
+    <Compile Include="EMPLEADOS\Empleados.Designer.cs">
       <DependentUpon>Empleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="EMPLEADO\Oval Button.cs">
+    <Compile Include="EMPLEADOS\Oval Button.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="EMPLEADO\Program.cs" />
-    <Compile Include="PRINCIPAL\Class_Ovalo.cs">
+    <Compile Include="EMPLEADOS\Program.cs" />
+    <Compile Include="INTERFAZ_PRINCIPAL\Class_Ovalo.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="PRINCIPAL\Formulario_Principal.cs">
+    <Compile Include="INTERFAZ_PRINCIPAL\Formulario_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PRINCIPAL\Formulario_Principal.Designer.cs">
+    <Compile Include="INTERFAZ_PRINCIPAL\Formulario_Principal.designer.cs">
       <DependentUpon>Formulario_Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="PRINCIPAL\Oval Button.cs">
+    <Compile Include="INTERFAZ_PRINCIPAL\Oval Button.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="PRINCIPAL\Program.cs" />
+    <Compile Include="INTERFAZ_PRINCIPAL\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="EMPLEADO\ABC_Empleados.resx">
+    <EmbeddedResource Include="EMPLEADOS\ABC_Empleados.resx">
       <DependentUpon>ABC_Empleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EMPLEADO\Autentificar_Nuevo_Empleado.resx">
+    <EmbeddedResource Include="EMPLEADOS\Autentificar_Nuevo_Empleado.resx">
       <DependentUpon>Autentificar_Nuevo_Empleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EMPLEADO\Empleados.resx">
+    <EmbeddedResource Include="EMPLEADOS\Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PRINCIPAL\Formulario_Principal.resx">
+    <EmbeddedResource Include="INTERFAZ_PRINCIPAL\Formulario_Principal.resx">
       <DependentUpon>Formulario_Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
