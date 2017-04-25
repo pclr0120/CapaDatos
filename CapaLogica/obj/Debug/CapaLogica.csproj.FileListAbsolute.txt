@@ -34,3 +34,12 @@ C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaLogica\bin\Debug\MySql.Da
 C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaLogica\obj\Debug\CapaLogica.csprojResolveAssemblyReference.cache
 C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaLogica\obj\Debug\CapaLogica.dll
 C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\7559\Source\Repos\CapaDatos\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\7559\Source\Repos\CapaDatos\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\7559\Source\Repos\CapaDatos\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\7559\Source\Repos\CapaDatos\CapaLogica\bin\Debug\MySql.Data.dll
+C:\Users\7559\Source\Repos\CapaDatos\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\7559\Source\Repos\CapaDatos\CapaLogica\bin\Debug\MySql.Data.xml
+C:\Users\7559\Source\Repos\CapaDatos\CapaLogica\obj\Debug\CapaLogica.csprojResolveAssemblyReference.cache
+C:\Users\7559\Source\Repos\CapaDatos\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\7559\Source\Repos\CapaDatos\CapaLogica\obj\Debug\CapaLogica.pdb
