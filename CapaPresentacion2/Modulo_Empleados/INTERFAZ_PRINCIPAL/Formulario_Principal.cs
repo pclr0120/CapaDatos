@@ -85,5 +85,16 @@ namespace EMBLEMA
 
        
 
+        private void lbl_control_sesion_Click(object sender, EventArgs e)
+        {
+            Modulo_Empleados.INTERFAZ_PRINCIPAL.LOGIN.Warning adver = new Modulo_Empleados.INTERFAZ_PRINCIPAL.LOGIN.Warning();
+            adver.Show();
+        }
+
+        private void lbl_iniciar_Click(object sender, EventArgs e)
+        {
+            LOGIN.Login ingreso = new LOGIN.Login();
+            ingreso.Show();
+        }
     }
 }

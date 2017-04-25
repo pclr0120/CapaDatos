@@ -1,12 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CapaPresentacion",
-    "\\CapaPresentacion2",
-    "\\CapaPresentacion2\\Modulo_Empleados",
-    "\\CapaPresentacion2\\Modulo_Empleados\\bin\\Debug",
-    "\\CapaPresentacion2\\Modulo_Empleados\\bin\\Release",
-    "\\CapaPresentacion2\\Modulo_Empleados\\EMPLEADO"
+    "\\CapaPresentacion2\\Interfaz_Principal\\LOGIN"
   ],
   "SelectedNode": "\\ProyectoP.sln",
   "PreviewInSolutionExplorer": false

@@ -10,3 +10,5 @@ C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empl
 C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.exe
 C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.pdb
 C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\EMBLEMA.Formulario_Principal.resources
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\LOGIN.Login.resources
+C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.INTERFAZ_PRINCIPAL.LOGIN.Warning.resources
