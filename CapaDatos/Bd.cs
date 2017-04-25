@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 using System.Collections;
 using System.Data;
 using System.Configuration;
-//hola soy Michel
+//hola soy Michel X2
 namespace CapaDatos
 {
    public  class Bd
