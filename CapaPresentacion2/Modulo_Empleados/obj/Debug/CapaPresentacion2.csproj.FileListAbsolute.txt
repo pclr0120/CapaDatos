@@ -26,3 +26,6 @@ C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debu
 C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\CapaPresentacion2.csproj.GenerateResource.Cache
 C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.exe
 C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.pdb
+C:\Users\pclr\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debug\Modulo_Empleados.exe.config
+C:\Users\pclr\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.exe
+C:\Users\pclr\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.pdb
