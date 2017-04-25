@@ -12,9 +12,9 @@ C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empl
 C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\EMBLEMA.Formulario_Principal.resources
 C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\LOGIN.Login.resources
 C:\Users\Frank Crow-Belloso\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.INTERFAZ_PRINCIPAL.LOGIN.Warning.resources
-C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debug\Modulo_Empleados.exe.config
-C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debug\Modulo_Empleados.exe
-C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debug\Modulo_Empleados.pdb
+C:\Users\pclr\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debug\Modulo_Empleados.exe.config
+C:\Users\pclr\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.exe
+C:\Users\pclr\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.pdb
 C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\CapaPresentacion2.csprojResolveAssemblyReference.cache
 C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.ABC_Empleados.resources
 C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.Autentificar_Nuevo_Empleado.resources
@@ -24,8 +24,3 @@ C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debu
 C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.INTERFAZ_PRINCIPAL.LOGIN.Warning.resources
 C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.Properties.Resources.resources
 C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\CapaPresentacion2.csproj.GenerateResource.Cache
-C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.exe
-C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.pdb
-C:\Users\pclr\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debug\Modulo_Empleados.exe.config
-C:\Users\pclr\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.exe
-C:\Users\pclr\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.pdb

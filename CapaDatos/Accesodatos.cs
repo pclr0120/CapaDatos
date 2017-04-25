@@ -13,7 +13,7 @@ namespace CapaDatos
         public DataTable GetTabla(string Procedimiento,string[]NombreParametros,params Object[]valparametros)
         {
             /////
-
+            //Solo para consultas
             DataTable dt = new DataTable();
             MySqlCommand cmd = new MySqlCommand();
             Bd con = new Bd();

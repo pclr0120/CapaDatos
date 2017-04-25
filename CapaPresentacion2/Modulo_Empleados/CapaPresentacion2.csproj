@@ -165,16 +165,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CapaDatos\CapaDatos.csproj">
-      <Project>{cf324cd7-b340-4272-86ee-e9dcb8f32770}</Project>
-      <Name>CapaDatos</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\CapaLogica\CapaLogica.csproj">
-      <Project>{a9a66ae8-1d4f-4085-a8d1-093c90cf84ef}</Project>
-      <Name>CapaLogica</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Config1.png" />
   </ItemGroup>
   <ItemGroup>

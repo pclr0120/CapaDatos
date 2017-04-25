@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoP;
+using CapaLogica;
 
 namespace LOGIN
 {
@@ -78,7 +79,8 @@ namespace LOGIN
 
         private void txt_ingresar_Click(object sender, EventArgs e)
         {
-            
+            CapaLogica.Usuarios Pepe = new CapaLogica.Usuarios();
+            //Pepe.
         }
 
         private void txt_user_TextChanged(object sender, EventArgs e)
