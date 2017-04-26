@@ -15,15 +15,18 @@ namespace CapaLogica
 
         Accesodatos Acceso = new Accesodatos();
         //pclr
-        public void CheckLogin(int Id, string Pass)
+        public int CheckLogin(int Id, string Pass)
         {
-            string[] parametros = { "_Id", "_Pas" };
+            string[] parametros = { "_codigo", "_Pas" };
 
 
-            if (Acceso.GetTabla("Login", parametros, Id, Pass).Columns.Count>0) {
-                bool a;
-                a = true;
+            if (Acceso.GetTabla("Login", parametros, Id, Pass).Rows.Count>0){
+                return 1;
             }
+            else{
+                return 0;
+            }
+            
         }
     }
 

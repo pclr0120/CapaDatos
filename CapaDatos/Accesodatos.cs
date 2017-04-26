@@ -34,9 +34,14 @@ namespace CapaDatos
                     return dt;
 
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     throw;
+                }
+                finally {
+                    Bd cone = new Bd();
+                    cone.CerrarConexion();
+
                 }
              
             }
@@ -66,8 +71,14 @@ namespace CapaDatos
                     {
                     throw;
                     }
-                
-               
+                finally
+                {
+                    Bd cone = new Bd();
+                    cone.CerrarConexion();
+
+                }
+
+
             }
             return 0;
         }

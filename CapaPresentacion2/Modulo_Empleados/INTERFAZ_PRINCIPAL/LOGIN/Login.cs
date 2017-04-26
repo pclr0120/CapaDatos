@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoP;
 using CapaLogica;
+using EMBLEMA;
 
 namespace LOGIN
 {
@@ -16,7 +17,7 @@ namespace LOGIN
     {
         int ex, ey;
         bool arrastre;
-
+        
         public Login()
         {
             InitializeComponent();
@@ -76,11 +77,26 @@ namespace LOGIN
             
             
         }
-
+        
         private void txt_ingresar_Click(object sender, EventArgs e)
         {
-            CapaLogica.Usuarios Pepe = new CapaLogica.Usuarios();
-            //Pepe.
+            CapaLogica.Login l = new CapaLogica.Login();
+
+
+            if (l.CheckLogin(Convert.ToInt32(txt_user.Text), textBox2.Text) == 1)
+            {
+
+                this.Hide();
+                Formulario_Principal frp = new Formulario_Principal();
+                frp.Show();
+               
+
+
+            }
+            else {
+                MessageBox.Show("intenta de nuevo");
+            }
+            
         }
 
         private void txt_user_TextChanged(object sender, EventArgs e)

@@ -15,9 +15,10 @@ namespace CapaDatos
         private MySqlConnection Cone { get; set; }
         private string CadenaConexion()
         {
-            return @"Data Source = localhost; user id = root; Password=1234; database = bdgym";
+            return @"Data Source = localhost; user id = root; Password=1234; database =bdgym";
         }
-       // private static string CadenaConexion = ConfigurationSettings.AppSettings["CadenaConexion"];
+        // private static string CadenaConexion = ConfigurationSettings.AppSettings["CadenaConexion"];
+      
 
         public MySqlConnection GetConexion() {
             try
