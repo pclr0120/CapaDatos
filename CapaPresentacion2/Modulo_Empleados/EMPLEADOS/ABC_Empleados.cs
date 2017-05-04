@@ -32,18 +32,21 @@ namespace Modulo_Empleados
         {
             txt_curp.Enabled = true;
             txt_clave_empleado.Enabled = false;
+            txt_curp.Focus();
         }
 
         private void rb_clave_CheckedChanged(object sender, EventArgs e)
         {
             txt_curp.Enabled = false;
             txt_clave_empleado.Enabled = true;
+            txt_clave_empleado.Focus();
         }
 
         private void ABC_Empleados_Load(object sender, EventArgs e)
         {
             rb_curp.Checked = true;
             txt_clave_empleado.Enabled = false;
+            txt_curp.Focus();
         }
 
         private void btn_ok_Click(object sender, EventArgs e)

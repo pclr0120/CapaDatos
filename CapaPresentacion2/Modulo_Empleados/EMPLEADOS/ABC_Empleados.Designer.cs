@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ABC_Empleados));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txt_clave_empleado = new System.Windows.Forms.TextBox();
             this.rb_clave = new System.Windows.Forms.RadioButton();
             this.btn_ok = new System.Windows.Forms.Button();
-            this.txt_curp = new System.Windows.Forms.TextBox();
             this.rb_lista = new System.Windows.Forms.RadioButton();
             this.rb_curp = new System.Windows.Forms.RadioButton();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.lbl_accion = new System.Windows.Forms.Label();
+            this.txt_curp = new System.Windows.Forms.MaskedTextBox();
+            this.txt_clave_empleado = new System.Windows.Forms.MaskedTextBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,9 +45,9 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel2.Controls.Add(this.txt_clave_empleado);
+            this.panel2.Controls.Add(this.txt_curp);
             this.panel2.Controls.Add(this.rb_clave);
             this.panel2.Controls.Add(this.btn_ok);
-            this.panel2.Controls.Add(this.txt_curp);
             this.panel2.Controls.Add(this.rb_lista);
             this.panel2.Controls.Add(this.rb_curp);
             this.panel2.Controls.Add(this.btn_cerrar);
@@ -58,14 +58,6 @@
             this.panel2.Size = new System.Drawing.Size(631, 264);
             this.panel2.TabIndex = 9;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // txt_clave_empleado
-            // 
-            this.txt_clave_empleado.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_clave_empleado.Location = new System.Drawing.Point(64, 155);
-            this.txt_clave_empleado.Name = "txt_clave_empleado";
-            this.txt_clave_empleado.Size = new System.Drawing.Size(195, 26);
-            this.txt_clave_empleado.TabIndex = 8;
             // 
             // rb_clave
             // 
@@ -97,14 +89,6 @@
             this.btn_ok.Text = "SIGUIENTE";
             this.btn_ok.UseVisualStyleBackColor = false;
             this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
-            // 
-            // txt_curp
-            // 
-            this.txt_curp.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_curp.Location = new System.Drawing.Point(64, 83);
-            this.txt_curp.Name = "txt_curp";
-            this.txt_curp.Size = new System.Drawing.Size(282, 26);
-            this.txt_curp.TabIndex = 5;
             // 
             // rb_lista
             // 
@@ -164,6 +148,22 @@
             this.lbl_accion.TabIndex = 0;
             this.lbl_accion.Text = "Accion a dempeñar de este formulario";
             // 
+            // txt_curp
+            // 
+            this.txt_curp.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.txt_curp.Location = new System.Drawing.Point(62, 83);
+            this.txt_curp.Name = "txt_curp";
+            this.txt_curp.Size = new System.Drawing.Size(253, 26);
+            this.txt_curp.TabIndex = 1;
+            // 
+            // txt_clave_empleado
+            // 
+            this.txt_clave_empleado.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.txt_clave_empleado.Location = new System.Drawing.Point(62, 155);
+            this.txt_clave_empleado.Name = "txt_clave_empleado";
+            this.txt_clave_empleado.Size = new System.Drawing.Size(189, 26);
+            this.txt_clave_empleado.TabIndex = 2;
+            // 
             // ABC_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,10 +186,10 @@
         private System.Windows.Forms.Button btn_cerrar;
         private System.Windows.Forms.RadioButton rb_lista;
         private System.Windows.Forms.RadioButton rb_curp;
-        private System.Windows.Forms.TextBox txt_curp;
         private System.Windows.Forms.Button btn_ok;
         public System.Windows.Forms.Label lbl_accion;
-        private System.Windows.Forms.TextBox txt_clave_empleado;
         private System.Windows.Forms.RadioButton rb_clave;
+        private System.Windows.Forms.MaskedTextBox txt_clave_empleado;
+        private System.Windows.Forms.MaskedTextBox txt_curp;
     }
 }
