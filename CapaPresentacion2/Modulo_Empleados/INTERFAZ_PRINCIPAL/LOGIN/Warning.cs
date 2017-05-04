@@ -29,7 +29,7 @@ namespace Modulo_Empleados.INTERFAZ_PRINCIPAL.LOGIN
         {
             pb_progress.Visible = true;
             lbl_cerrando.Visible = true;
-            //Formulrio ---- Soy un comentario
+            //Formulrio ---- Soy un comentariox2
             Formulario_Principal frp =  new Formulario_Principal();
             frp.Close();
             timer1.Start();
