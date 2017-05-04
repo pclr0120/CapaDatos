@@ -18,6 +18,6 @@ namespace CapaLogica
         public int IdVenta { get; set; }
         public int IdDetalle { get; set; }
 
-
+        //gfg
     }
 }
