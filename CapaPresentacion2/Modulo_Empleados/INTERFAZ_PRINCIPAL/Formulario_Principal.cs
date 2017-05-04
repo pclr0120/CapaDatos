@@ -99,5 +99,10 @@ namespace EMBLEMA
             LOGIN.Login ingreso = new LOGIN.Login();
             ingreso.Show();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

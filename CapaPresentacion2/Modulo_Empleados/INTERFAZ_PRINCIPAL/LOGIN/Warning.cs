@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LOGIN;
 using System.Threading;
+using EMBLEMA;
 
 namespace Modulo_Empleados.INTERFAZ_PRINCIPAL.LOGIN
 {
@@ -29,6 +30,8 @@ namespace Modulo_Empleados.INTERFAZ_PRINCIPAL.LOGIN
             pb_progress.Visible = true;
             lbl_cerrando.Visible = true;
             //Formulrio ---- Soy un comentario
+            Formulario_Principal frp =  new Formulario_Principal();
+            frp.Close();
             timer1.Start();
         }
 
