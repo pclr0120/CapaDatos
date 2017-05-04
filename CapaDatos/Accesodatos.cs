@@ -110,7 +110,7 @@ namespace CapaDatos
                     x = Convert.ToInt32(cmd.ExecuteScalar());
                   
                     tranOperaciones.Commit();
-                    return 0;
+                    return x;
                 }
                 catch (Exception e)
                 {

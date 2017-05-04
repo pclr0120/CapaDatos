@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,11 +14,26 @@ namespace CapaLogica
         public double IVA { get; set; }
         public double total { get; set; }
         public int CantidadProducto { get; set; }
-        public int IdEmpleado { get; set; }
+        public int IdCliente { get; set; }
         public int IdUsuario { get; set; }
         public int IdVenta { get; set; }
-        public int IdDetalle { get; set; }
+  
 
-        //gfg
+
+        Accesodatos Acceso = new Accesodatos();
+        ///insertar la venta maestra primero
+        public int InsertarVentaMaestra( int IdUsuario, int IdEmpleado, int CantidadProducto, double Total, double IVA, double Subtotal)
+        {
+            string[] parametros = { "_IdUsuario", "_IdCliente", "_CantidadP", "_Total", "_Iva", "_Subtotal" };
+            return Convert.ToInt32(Acceso.ExeProceVenta("FinalizarVenta", parametros, IdUsuario, IdCliente, CantidadProducto, Total, IVA, Subtotal));
+
+        }
+
+        public int InsertarDetalle(int IdUsuario, int IdEmpleado, int CantidadProducto, double Total, double IVA, double Subtotal)
+        {
+            string[] parametros = { "_IdUsuario", "_IdCliente", "_CantidadP", "_Total", "_Iva", "_Subtotal" };
+            return Convert.ToInt32(Acceso.ExeProcedimiento("FinalizarVenta", parametros, IdUsuario, IdCliente, CantidadProducto, Total, IVA, Subtotal));
+
+        }
     }
 }
