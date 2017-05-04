@@ -48,6 +48,12 @@ namespace Modulo_Empleados
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
+            Datos_Usuario Confirmar = new Datos_Usuario();
+            Confirmar.Show();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

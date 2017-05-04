@@ -97,6 +97,12 @@
     <Compile Include="EMPLEADOS\Empleados.Designer.cs">
       <DependentUpon>Empleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="EMPLEADOS\Nuevo_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMPLEADOS\Nuevo_Empleado.Designer.cs">
+      <DependentUpon>Nuevo_Empleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="EMPLEADOS\Oval Button.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -134,8 +140,14 @@
     <EmbeddedResource Include="EMPLEADOS\Autentificar_Nuevo_Empleado.resx">
       <DependentUpon>Autentificar_Nuevo_Empleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EMPLEADOS\Datos_Usuario.resx">
+      <DependentUpon>Datos_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EMPLEADOS\Empleados.resx">
       <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMPLEADOS\Nuevo_Empleado.resx">
+      <DependentUpon>Nuevo_Empleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="INTERFAZ_PRINCIPAL\Formulario_Principal.resx">
       <DependentUpon>Formulario_Principal.cs</DependentUpon>
@@ -186,6 +198,30 @@
     <None Include="Resources\Equipo1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Fonts\newsgoth-bt\NewGotBd.ttf" />
+    <None Include="Resources\Fonts\newsgoth-bt\newgotbi.ttf" />
+    <None Include="Resources\Fonts\newsgoth-bt\NewGotIt.ttf" />
+    <None Include="Resources\Fonts\newsgoth-bt\NewGotRm.ttf" />
+    <None Include="Resources\Fonts\newsgoth-bt\news gothic bt.ttf" />
+    <None Include="Resources\Fonts\newsgoth-bt\news gothic italic bt.ttf" />
+    <None Include="Resources\Fonts\newsgoth-bt\NEWSGOT.ttf" />
+    <None Include="Resources\Fonts\newsgoth-bt\newsgotb.ttf" />
+    <None Include="Resources\Fonts\newsgoth-bt\NewsGothBTBoldItalic.ttf" />
+    <None Include="Resources\Fonts\newsgoth-bt\NewsGothicBoldBT.ttf" />
+    <None Include="Resources\Fonts\newsgoth-bt\NewsGothicBoldItalicBT.ttf" />
+    <None Include="Resources\Fonts\newsgoth-bt\NewsGothicBT.ttf" />
+    <None Include="Resources\Fonts\newsgoth-bt\NewsGothicItalicBT.ttf" />
+    <None Include="Resources\Fonts\newsgoth-bt\NEWSGOTN.ttf" />
+    <None Include="Resources\Fonts\Open_Sans\OpenSans-Bold.ttf" />
+    <None Include="Resources\Fonts\Open_Sans\OpenSans-BoldItalic.ttf" />
+    <None Include="Resources\Fonts\Open_Sans\OpenSans-ExtraBold.ttf" />
+    <None Include="Resources\Fonts\Open_Sans\OpenSans-ExtraBoldItalic.ttf" />
+    <None Include="Resources\Fonts\Open_Sans\OpenSans-Italic.ttf" />
+    <None Include="Resources\Fonts\Open_Sans\OpenSans-Light.ttf" />
+    <None Include="Resources\Fonts\Open_Sans\OpenSans-LightItalic.ttf" />
+    <None Include="Resources\Fonts\Open_Sans\OpenSans-Regular.ttf" />
+    <None Include="Resources\Fonts\Open_Sans\OpenSans-Semibold.ttf" />
+    <None Include="Resources\Fonts\Open_Sans\OpenSans-SemiboldItalic.ttf" />
     <None Include="Resources\Inicio1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +232,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Fonts\Open_Sans\LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

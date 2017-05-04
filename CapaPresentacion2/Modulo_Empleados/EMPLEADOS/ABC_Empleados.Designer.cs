@@ -57,6 +57,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(631, 264);
             this.panel2.TabIndex = 9;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // txt_clave_empleado
             // 
@@ -93,7 +94,7 @@
             this.btn_ok.Name = "btn_ok";
             this.btn_ok.Size = new System.Drawing.Size(139, 34);
             this.btn_ok.TabIndex = 6;
-            this.btn_ok.Text = "ACEPTAR";
+            this.btn_ok.Text = "SIGUIENTE";
             this.btn_ok.UseVisualStyleBackColor = false;
             this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 

@@ -35,3 +35,25 @@ C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debu
 C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debug\MySql.Data.xml
 C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.exe
 C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.pdb
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debug\Modulo_Empleados.exe.config
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debug\Modulo_Empleados.exe
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debug\Modulo_Empleados.pdb
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debug\CapaLogica.dll
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debug\CapaDatos.dll
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debug\MySql.Data.dll
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debug\CapaLogica.pdb
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debug\CapaDatos.pdb
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\bin\Debug\MySql.Data.xml
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\CapaPresentacion2.csprojResolveAssemblyReference.cache
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.ABC_Empleados.resources
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.Autentificar_Nuevo_Empleado.resources
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.Empleados.resources
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\EMBLEMA.Formulario_Principal.resources
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\LOGIN.Login.resources
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.INTERFAZ_PRINCIPAL.LOGIN.Warning.resources
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.Properties.Resources.resources
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\CapaPresentacion2.csproj.GenerateResource.Cache
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.exe
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.pdb
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.Nuevo_Empleado.resources
+C:\Users\Frank Crow-Belloso\Desktop\GYM PRO\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.Datos_Usuario.resources

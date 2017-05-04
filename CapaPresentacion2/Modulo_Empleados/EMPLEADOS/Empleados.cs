@@ -87,12 +87,8 @@ namespace Modulo_Empleados
         }
         private void btn_alta_empleado_Click(object sender, EventArgs e)
         {
-            /*Deberá mostrar un nuevo formulario donde se le permita al usuario elegir si ya cuenta
-             con la C.U.R.P. del empleado o si desea encontrarlo en la lista de empleados*/
-            ABC_Empleados ABC_Alta = new ABC_Empleados();
-            ABC_Alta.lbl_accion.Text = "Dar de alta a empleado existente";
-            accion = "A";
-            ABC_Alta.Show();
+            Nuevo_Empleado Nuevo = new Nuevo_Empleado();
+            Nuevo.Show();
         }
         private void btn_baja_empleado_Click(object sender, EventArgs e)
         {

@@ -80,22 +80,18 @@ namespace LOGIN
         
         private void txt_ingresar_Click(object sender, EventArgs e)
         {
-            CapaLogica.Login l = new CapaLogica.Login();
+            /*CapaLogica.Login l = new CapaLogica.Login();
 
-
-            if (l.CheckLogin(Convert.ToInt32(txt_user.Text), textBox2.Text) == 1)
-            {
-
+            if (l.CheckLogin(Convert.ToInt32(txt_user.Text), txt_pass.Text) == 1)
+            {*/
                 this.Hide();
                 Formulario_Principal frp = new Formulario_Principal();
                 frp.Show();
-               
-
-
-            }
+            /*}
             else {
-                MessageBox.Show("intenta de nuevo");
-            }
+                lbl_resul.Text = "Usuario y/o contraseña inconrrectos";
+                lbl_resul.Visible = true;
+            }*/
             
         }
 

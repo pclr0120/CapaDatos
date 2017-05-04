@@ -26,7 +26,8 @@ namespace EMBLEMA
             DialogResult result = MessageBox.Show("Está seguro que desea salir?", "GYMCENTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
-                this.Close();
+                //this.Close();
+                Application.Exit();
             }
             else if (result == DialogResult.No) { }
         }
