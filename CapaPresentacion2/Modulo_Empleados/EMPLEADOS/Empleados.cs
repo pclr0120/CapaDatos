@@ -87,8 +87,10 @@ namespace Modulo_Empleados
         }
         private void btn_alta_empleado_Click(object sender, EventArgs e)
         {
+            /* Esto es un comentario momentaneo para checar el tab del registro del empleados
             Nuevo_Empleado Nuevo = new Nuevo_Empleado();
-            Nuevo.Show();
+            Nuevo.Show();*/
+            TabControl_Empleados.SelectedTab = TabEmpleados_Registro;
         }
         private void btn_baja_empleado_Click(object sender, EventArgs e)
         {

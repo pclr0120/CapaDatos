@@ -247,7 +247,7 @@
             this.lbl_control_sesion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_control_sesion.Name = "lbl_control_sesion";
             this.lbl_control_sesion.Size = new System.Drawing.Size(120, 17);
-            this.lbl_control_sesion.TabIndex = 14;
+            this.lbl_control_sesion.TabIndex = 7;
             this.lbl_control_sesion.Text = "CERRAR SESIÓN";
             this.lbl_control_sesion.Click += new System.EventHandler(this.lbl_control_sesion_Click);
             // 
@@ -296,7 +296,7 @@
             this.rb_config.MinimumSize = new System.Drawing.Size(347, 74);
             this.rb_config.Name = "rb_config";
             this.rb_config.Size = new System.Drawing.Size(347, 74);
-            this.rb_config.TabIndex = 11;
+            this.rb_config.TabIndex = 6;
             this.rb_config.UseVisualStyleBackColor = false;
             this.rb_config.CheckedChanged += new System.EventHandler(this.rb_config_CheckedChanged);
             // 
@@ -317,7 +317,7 @@
             this.rb_empleados.MinimumSize = new System.Drawing.Size(347, 74);
             this.rb_empleados.Name = "rb_empleados";
             this.rb_empleados.Size = new System.Drawing.Size(347, 74);
-            this.rb_empleados.TabIndex = 10;
+            this.rb_empleados.TabIndex = 5;
             this.rb_empleados.UseVisualStyleBackColor = false;
             this.rb_empleados.Click += new System.EventHandler(this.rb_empleados_CheckedChanged);
             // 
@@ -338,7 +338,7 @@
             this.rb_equipo.MinimumSize = new System.Drawing.Size(347, 74);
             this.rb_equipo.Name = "rb_equipo";
             this.rb_equipo.Size = new System.Drawing.Size(347, 74);
-            this.rb_equipo.TabIndex = 9;
+            this.rb_equipo.TabIndex = 4;
             this.rb_equipo.UseVisualStyleBackColor = false;
             this.rb_equipo.CheckedChanged += new System.EventHandler(this.rb_equipo_CheckedChanged);
             // 
@@ -359,7 +359,7 @@
             this.rb_membre.MinimumSize = new System.Drawing.Size(347, 74);
             this.rb_membre.Name = "rb_membre";
             this.rb_membre.Size = new System.Drawing.Size(347, 74);
-            this.rb_membre.TabIndex = 8;
+            this.rb_membre.TabIndex = 3;
             this.rb_membre.UseVisualStyleBackColor = false;
             this.rb_membre.CheckedChanged += new System.EventHandler(this.rb_membre_CheckedChanged);
             // 
@@ -380,7 +380,7 @@
             this.rb_punto_vta.MinimumSize = new System.Drawing.Size(347, 74);
             this.rb_punto_vta.Name = "rb_punto_vta";
             this.rb_punto_vta.Size = new System.Drawing.Size(347, 74);
-            this.rb_punto_vta.TabIndex = 7;
+            this.rb_punto_vta.TabIndex = 2;
             this.rb_punto_vta.UseVisualStyleBackColor = false;
             this.rb_punto_vta.CheckedChanged += new System.EventHandler(this.rb_punto_vta_CheckedChanged);
             // 

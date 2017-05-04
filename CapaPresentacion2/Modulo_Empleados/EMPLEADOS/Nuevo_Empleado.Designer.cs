@@ -48,11 +48,12 @@
             // rb_clave
             // 
             this.rb_clave.AutoSize = true;
-            this.rb_clave.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_clave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb_clave.ForeColor = System.Drawing.Color.White;
-            this.rb_clave.Location = new System.Drawing.Point(44, 96);
+            this.rb_clave.Location = new System.Drawing.Point(59, 118);
+            this.rb_clave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rb_clave.Name = "rb_clave";
-            this.rb_clave.Size = new System.Drawing.Size(189, 22);
+            this.rb_clave.Size = new System.Drawing.Size(235, 24);
             this.rb_clave.TabIndex = 15;
             this.rb_clave.Text = "Ingresar clave de empleado";
             this.rb_clave.UseVisualStyleBackColor = true;
@@ -66,23 +67,26 @@
             this.btn_ok.FlatAppearance.BorderSize = 0;
             this.btn_ok.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_ok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ok.Font = new System.Drawing.Font("Open Sans", 8.25F);
+            this.btn_ok.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btn_ok.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_ok.Location = new System.Drawing.Point(464, 437);
+            this.btn_ok.Location = new System.Drawing.Point(619, 538);
+            this.btn_ok.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_ok.Name = "btn_ok";
-            this.btn_ok.Size = new System.Drawing.Size(139, 34);
+            this.btn_ok.Size = new System.Drawing.Size(185, 42);
             this.btn_ok.TabIndex = 4;
             this.btn_ok.Text = "ACEPTAR";
             this.btn_ok.UseVisualStyleBackColor = false;
+            this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 
             // rb_lista
             // 
             this.rb_lista.AutoSize = true;
-            this.rb_lista.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_lista.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb_lista.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rb_lista.Location = new System.Drawing.Point(44, 172);
+            this.rb_lista.Location = new System.Drawing.Point(59, 212);
+            this.rb_lista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rb_lista.Name = "rb_lista";
-            this.rb_lista.Size = new System.Drawing.Size(227, 22);
+            this.rb_lista.Size = new System.Drawing.Size(286, 24);
             this.rb_lista.TabIndex = 12;
             this.rb_lista.Text = "Seleccionar empleado de una lista";
             this.rb_lista.UseVisualStyleBackColor = true;
@@ -92,11 +96,12 @@
             // 
             this.rb_curp.AutoSize = true;
             this.rb_curp.Checked = true;
-            this.rb_curp.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_curp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb_curp.ForeColor = System.Drawing.Color.White;
-            this.rb_curp.Location = new System.Drawing.Point(44, 24);
+            this.rb_curp.Location = new System.Drawing.Point(59, 30);
+            this.rb_curp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rb_curp.Name = "rb_curp";
-            this.rb_curp.Size = new System.Drawing.Size(123, 22);
+            this.rb_curp.Size = new System.Drawing.Size(159, 24);
             this.rb_curp.TabIndex = 11;
             this.rb_curp.TabStop = true;
             this.rb_curp.Text = "Ingresar C.U.R.P.";
@@ -107,11 +112,12 @@
             // 
             this.lbl_accion.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_accion.AutoSize = true;
-            this.lbl_accion.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_accion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_accion.ForeColor = System.Drawing.Color.White;
-            this.lbl_accion.Location = new System.Drawing.Point(12, 9);
+            this.lbl_accion.Location = new System.Drawing.Point(16, 11);
+            this.lbl_accion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_accion.Name = "lbl_accion";
-            this.lbl_accion.Size = new System.Drawing.Size(167, 18);
+            this.lbl_accion.Size = new System.Drawing.Size(205, 20);
             this.lbl_accion.TabIndex = 9;
             this.lbl_accion.Text = "Dar de alta a empleado";
             // 
@@ -126,9 +132,10 @@
             this.btn_cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btn_cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cerrar.Location = new System.Drawing.Point(570, 0);
+            this.btn_cerrar.Location = new System.Drawing.Point(760, 0);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(45, 25);
+            this.btn_cerrar.Size = new System.Drawing.Size(60, 31);
             this.btn_cerrar.TabIndex = 5;
             this.btn_cerrar.UseVisualStyleBackColor = false;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
@@ -142,28 +149,34 @@
             this.groupBox1.Controls.Add(this.rb_clave);
             this.groupBox1.Enabled = false;
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(15, 209);
+            this.groupBox1.Location = new System.Drawing.Point(20, 257);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(588, 219);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(784, 270);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             // 
             // txt_clave_empleado
             // 
             this.txt_clave_empleado.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.txt_clave_empleado.Location = new System.Drawing.Point(44, 124);
+            this.txt_clave_empleado.Location = new System.Drawing.Point(59, 153);
+            this.txt_clave_empleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_clave_empleado.Name = "txt_clave_empleado";
-            this.txt_clave_empleado.Size = new System.Drawing.Size(189, 26);
+            this.txt_clave_empleado.Size = new System.Drawing.Size(251, 31);
             this.txt_clave_empleado.TabIndex = 3;
+            this.txt_clave_empleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_clave_empleado_KeyPress);
             // 
             // txt_curp
             // 
             this.txt_curp.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.txt_curp.Location = new System.Drawing.Point(44, 52);
+            this.txt_curp.Location = new System.Drawing.Point(59, 64);
+            this.txt_curp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_curp.Mask = ">LLLL999999LLLLLL99";
             this.txt_curp.Name = "txt_curp";
-            this.txt_curp.Size = new System.Drawing.Size(304, 26);
+            this.txt_curp.Size = new System.Drawing.Size(404, 31);
             this.txt_curp.TabIndex = 2;
             // 
             // rb_nuevo
@@ -172,11 +185,12 @@
             this.rb_nuevo.BackColor = System.Drawing.Color.Transparent;
             this.rb_nuevo.Checked = true;
             this.rb_nuevo.FlatAppearance.BorderSize = 0;
-            this.rb_nuevo.Font = new System.Drawing.Font("Open Sans Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_nuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb_nuevo.ForeColor = System.Drawing.Color.White;
-            this.rb_nuevo.Location = new System.Drawing.Point(41, 67);
+            this.rb_nuevo.Location = new System.Drawing.Point(55, 82);
+            this.rb_nuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rb_nuevo.Name = "rb_nuevo";
-            this.rb_nuevo.Size = new System.Drawing.Size(151, 26);
+            this.rb_nuevo.Size = new System.Drawing.Size(183, 29);
             this.rb_nuevo.TabIndex = 18;
             this.rb_nuevo.TabStop = true;
             this.rb_nuevo.Text = "Nuevo Empleado";
@@ -188,11 +202,12 @@
             // 
             this.rb_existente.AutoSize = true;
             this.rb_existente.FlatAppearance.BorderSize = 0;
-            this.rb_existente.Font = new System.Drawing.Font("Open Sans Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_existente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rb_existente.ForeColor = System.Drawing.Color.Transparent;
-            this.rb_existente.Location = new System.Drawing.Point(41, 177);
+            this.rb_existente.Location = new System.Drawing.Point(55, 218);
+            this.rb_existente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rb_existente.Name = "rb_existente";
-            this.rb_existente.Size = new System.Drawing.Size(170, 26);
+            this.rb_existente.Size = new System.Drawing.Size(206, 29);
             this.rb_existente.TabIndex = 19;
             this.rb_existente.Text = "Empleado Existente";
             this.rb_existente.UseVisualStyleBackColor = true;
@@ -202,28 +217,31 @@
             // lbl_curp
             // 
             this.lbl_curp.AutoSize = true;
-            this.lbl_curp.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_curp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_curp.ForeColor = System.Drawing.Color.White;
-            this.lbl_curp.Location = new System.Drawing.Point(56, 96);
+            this.lbl_curp.Location = new System.Drawing.Point(75, 118);
+            this.lbl_curp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_curp.Name = "lbl_curp";
-            this.lbl_curp.Size = new System.Drawing.Size(105, 18);
+            this.lbl_curp.Size = new System.Drawing.Size(138, 20);
             this.lbl_curp.TabIndex = 20;
             this.lbl_curp.Text = "Ingresar C.U.R.P.";
             // 
             // txt_curp2
             // 
             this.txt_curp2.Font = new System.Drawing.Font("Lucida Sans", 12F);
-            this.txt_curp2.Location = new System.Drawing.Point(59, 126);
+            this.txt_curp2.Location = new System.Drawing.Point(79, 155);
+            this.txt_curp2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_curp2.Mask = ">LLLL999999LLLLLL99";
             this.txt_curp2.Name = "txt_curp2";
-            this.txt_curp2.Size = new System.Drawing.Size(304, 26);
+            this.txt_curp2.Size = new System.Drawing.Size(404, 31);
             this.txt_curp2.TabIndex = 1;
             // 
             // Nuevo_Empleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(615, 483);
+            this.ClientSize = new System.Drawing.Size(820, 594);
             this.Controls.Add(this.txt_curp2);
             this.Controls.Add(this.rb_nuevo);
             this.Controls.Add(this.rb_existente);
@@ -233,6 +251,7 @@
             this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.lbl_accion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Nuevo_Empleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo_Empleado";
