@@ -28,6 +28,7 @@ namespace Modulo_Empleados.INTERFAZ_PRINCIPAL.LOGIN
         {
             pb_progress.Visible = true;
             lbl_cerrando.Visible = true;
+            //Formulario
             timer1.Start();
         }
 

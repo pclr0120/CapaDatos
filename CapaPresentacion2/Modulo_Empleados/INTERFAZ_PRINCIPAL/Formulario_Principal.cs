@@ -14,13 +14,15 @@ namespace EMBLEMA
 {
     public partial class Formulario_Principal : Form
     {
+        public int ID;
+
         public Formulario_Principal()
         {
             InitializeComponent();
         }
         Modulo_Empleados.Empleados Empleados = new Modulo_Empleados.Empleados();
 
-        
+ 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Está seguro que desea salir?", "GYMCENTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
@@ -81,7 +83,7 @@ namespace EMBLEMA
         private void Formulario_Principal_Load(object sender, EventArgs e)
         {
             menuStrip1.Visible = false;
-         
+            lbl_id.Text = Convert.ToString(ID);
         }
 
        

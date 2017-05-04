@@ -79,3 +79,5 @@ C:\Users\Frank Crow-Belloso\Source\CapaDatos\CapaPresentacion2\Modulo_Empleados\
 C:\Users\Frank Crow-Belloso\Source\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\CapaPresentacion2.csproj.GenerateResource.Cache
 C:\Users\Frank Crow-Belloso\Source\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.exe
 C:\Users\Frank Crow-Belloso\Source\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.pdb
+C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.Datos_Usuario.resources
+C:\Users\7559\Source\Repos\CapaDatos\CapaPresentacion2\Modulo_Empleados\obj\Debug\Modulo_Empleados.Nuevo_Empleado.resources
