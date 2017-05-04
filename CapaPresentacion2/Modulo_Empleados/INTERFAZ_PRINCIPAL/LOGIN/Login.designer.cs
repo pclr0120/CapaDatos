@@ -52,7 +52,7 @@
             this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cerrar.Name = "btn_cerrar";
             this.btn_cerrar.Size = new System.Drawing.Size(60, 25);
-            this.btn_cerrar.TabIndex = 3;
+            this.btn_cerrar.TabIndex = 5;
             this.btn_cerrar.UseVisualStyleBackColor = false;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
@@ -69,7 +69,7 @@
             this.btn_min.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_min.Name = "btn_min";
             this.btn_min.Size = new System.Drawing.Size(35, 25);
-            this.btn_min.TabIndex = 3;
+            this.btn_min.TabIndex = 4;
             this.btn_min.UseVisualStyleBackColor = false;
             this.btn_min.Click += new System.EventHandler(this.btn_min_Click);
             // 
@@ -107,10 +107,14 @@
             this.txt_user.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F);
             this.txt_user.Location = new System.Drawing.Point(192, 321);
             this.txt_user.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_user.Mask = "000000000";
             this.txt_user.Name = "txt_user";
+            this.txt_user.PromptChar = ' ';
+            this.txt_user.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txt_user.ShortcutsEnabled = false;
             this.txt_user.Size = new System.Drawing.Size(329, 31);
             this.txt_user.TabIndex = 1;
+            this.txt_user.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
+            this.txt_user.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_user_KeyPress);
             // 
             // txt_pass
             // 
@@ -120,8 +124,10 @@
             this.txt_pass.Location = new System.Drawing.Point(192, 386);
             this.txt_pass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_pass.Name = "txt_pass";
+            this.txt_pass.PasswordChar = '*';
             this.txt_pass.Size = new System.Drawing.Size(329, 31);
             this.txt_pass.TabIndex = 2;
+            this.txt_pass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_pass_KeyPress);
             // 
             // lbl_resul
             // 

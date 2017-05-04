@@ -29,16 +29,14 @@ namespace Modulo_Empleados.INTERFAZ_PRINCIPAL.LOGIN
         {
             pb_progress.Visible = true;
             lbl_cerrando.Visible = true;
-            //Formulrio ---- Soy un comentariox2
-            Formulario_Principal frp =  new Formulario_Principal();
-            frp.Close();
             timer1.Start();
         }
 
         private void exe()
         {
-            Login Sesion = new Login();
-            Sesion.Show();
+            Application.Restart();  //Se reinicia la aplicacion para no cerrar todos los formularios
+            /*Login Sesion = new Login();
+            Sesion.Show();*/
         }
 
         private void timer1_Tick(object sender, EventArgs e)

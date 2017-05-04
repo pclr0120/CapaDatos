@@ -77,9 +77,9 @@ namespace LOGIN
             
             
         }
-        
-        private void txt_ingresar_Click(object sender, EventArgs e)
-        {
+
+        //Procedimiento ingresar para el evento enter en el txt_pass y al presionar el btn_ingresar
+        private void ingresar() {
             CapaLogica.Login l = new CapaLogica.Login();
 
             if (l.CheckLogin(Convert.ToInt32(txt_user.Text), txt_pass.Text) == 1)
@@ -89,16 +89,47 @@ namespace LOGIN
                 frp.ID = Convert.ToInt32(txt_user.Text);
                 frp.Show();
             }
-            else {
+            else
+            {
                 lbl_resul.Text = "Usuario y/o contraseña inconrrectos";
                 lbl_resul.Visible = true;
             }
-            
+        }
+
+        private void txt_ingresar_Click(object sender, EventArgs e)
+        {
+            ingresar();
         }
 
         private void txt_user_TextChanged(object sender, EventArgs e)
         {
             txt_user.Text = "";
+        }
+
+        private void txt_user_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            lbl_resul.Text = "";
+            if (e.KeyChar == 13) //Valido que al dar enter se enfoque el txt_pass
+            {
+                 txt_pass.Focus();
+            }
+            else if (Char.IsDigit(e.KeyChar) || Char.IsControl(e.KeyChar)) //Valido solo numeros y teclas de control sean permitidas
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_pass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            lbl_resul.Text = "";
+            if (e.KeyChar == 13) //Valido que al dar enter se ejecute el procedimiento ingresar
+            {
+                ingresar();
+            }
         }
 
         private void btn_min_Click(object sender, EventArgs e)
