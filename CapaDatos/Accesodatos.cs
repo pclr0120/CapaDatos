@@ -51,12 +51,14 @@ namespace CapaDatos
         public int ExeProcedimiento(string Procedimiento, string[] NombreParametros, params Object[] valparametros)
         {
             Bd con = new Bd();
-           
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.Connection = con.GetConexion();
 
+            MySqlCommand cmd = new MySqlCommand();
             cmd.CommandText = Procedimiento;
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con.GetConexion();
+            MySqlTransaction tranOperaciones = null;
+            tranOperaciones = cmd.Connection.BeginTransaction();
+            cmd.Transaction = tranOperaciones;
             if (Procedimiento.Length != 0 && NombreParametros.Length == valparametros.Length)
             {
                 int i = 0;
@@ -66,11 +68,12 @@ namespace CapaDatos
                     try
                     {
                         return cmd.ExecuteNonQuery();
-                    }
+                    tranOperaciones.Commit();
+                }
                     catch (Exception)
                     {
-                    throw;
-                    }
+                    tranOperaciones.Rollback();
+                }
                 finally
                 {
                     Bd cone = new Bd();
@@ -82,5 +85,49 @@ namespace CapaDatos
             }
             return 0;
         }
+        public int ExeProceVenta(string Procedimiento, string[] NombreParametros, params Object[] valparametros)
+        {
+            Bd con = new Bd();
+       
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandText = Procedimiento;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con.GetConexion();
+            MySqlTransaction tranOperaciones = null;
+            tranOperaciones = cmd.Connection.BeginTransaction();
+            cmd.Transaction = tranOperaciones;
+
+
+            if (Procedimiento.Length != 0 && NombreParametros.Length == valparametros.Length)
+            {
+                int i = 0;
+                foreach (string parametro in NombreParametros)
+                    cmd.Parameters.AddWithValue(parametro, valparametros[i++]);
+
+                try
+                {
+                    int x;
+                    x = Convert.ToInt32(cmd.ExecuteScalar());
+                  
+                    tranOperaciones.Commit();
+                    return 0;
+                }
+                catch (Exception e)
+                {
+                 
+                    tranOperaciones.Rollback();
+                }
+                finally
+                {
+                    Bd cone = new Bd();
+                    cone.CerrarConexion();
+
+                }
+
+
+            }
+            return 0;
+        }
+
     }
 }
