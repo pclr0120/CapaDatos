@@ -95,96 +95,55 @@ namespace CapaPresentacion
 
         #region  agregarVenta
 
-        Producto producto = new Producto();
-        List<Producto> ListaProducto = new List<Producto>();
+        //Producto producto = new Producto();
+        //List<Producto> ListaProducto = new List<Producto>();
+        VentaMaestra Vm = new VentaMaestra();
      
         public void AgregarProducto()
         {
-            dataGrid.ItemsSource = CProducto() ;
+            dataGrid.ItemsSource = Vm.CProducto(TxtCodigo.Text); //agrega al datagrid los productos
             dataGrid.Items.Refresh();
-            VentaMaestra();
+            if (Vm.Encontrado != true)
+                MessageBox.Show("Producto no encontrado");
+            calVenta();  //acutliza los totaltes
         }
 
-        #endregion
-        #region ConsultaProducto
+     
 
-        public List<Producto> CProducto()
+
+
+        public void calVenta()
         {
-            try
-            {
-                bool Encontrado=false;
-                foreach (DataRow row in producto.ConsultaProducto(TxtCodigo.Text).Rows)
-                {
-                    Encontrado = true;
-                    Producto p = new Producto();
-                    p.Registro = ListaProducto.Count + 1;
-                    p.Nombre = row["Nombre"].ToString();
-                    p.Precio = row.Field<double>("Precio");
-                    p.IVA = row.Field<double>("IVA");
-                    ListaProducto.Add(p);
-                }
-                if (Encontrado!=true)
-                {
-                    MessageBox.Show("No se encontro el producto en la Base de datos", "Mensaje Consulta");
-                }
-                
-            }
-            catch(Exception e)
-            {
-                MessageBox.Show( "Error en la consulta Consule consulte Administrador:" + e, "Mensaje Error");
-            }
-            return ListaProducto;
+            LblIVA.Content = "$" + Vm.IVA.ToString();
+            LblSubtotal.Content = "$" + Vm.Subtotal.ToString();
+            LblTotal.Content = "$" + Vm.Total.ToString();
 
         }
-        #endregion
 
-        VentaMaestra Vm = new VentaMaestra();
-        public void VentaMaestra()
-        {
-            Vm.IVA = 0;
-            Vm.Subtotal = 0;
-            Vm.Total = 0;
-            int c = 0;
-            for (int i = 0; i < ListaProducto.Count; i++)
-            {
+     
 
-                Vm.IVA += ListaProducto[i].IVA;
-                Vm.Subtotal += ListaProducto[i].Precio;
-                Vm.Total = Vm.IVA + Vm.Subtotal;
-
-                c += 1;
-            }
-            LblIVA.Content = "$"+ Vm.IVA.ToString() ;
-            LblSubtotal.Content = "$"+ Vm.Subtotal.ToString() ;
-            LblTotal.Content = "$"+ Vm.Total.ToString() ;
-           
-        }
-
-        #region eliminar
-
-        public void ActualizarRegistro()
-        {
-            int c = 1;
-            for (int i = 0; i < ListaProducto.Count; i++)
-            {
-
-                ListaProducto[i].Registro = c;
-                c += 1;
-            }
-        }
+ 
         public void Eliminar()
         {
-            ListaProducto.Remove(ListaProducto.FirstOrDefault(c => c.Registro == int.Parse(TxtCodigo.Text)));
-            ActualizarRegistro();
-            dataGrid.ItemsSource = ListaProducto;
+            dataGrid.ItemsSource = Vm.EliminarProducto(TxtCodigo.Text);
             dataGrid.Items.Refresh();
-            VentaMaestra();
+            calVenta();
+          
         }
 
         #endregion
 
-        
 
+        #region FinalizarLAVenta
+        public void RealizarVenta()
+        {
+            Vm.InsertarVentaMaestra(Vm.IdUsuario, Vm.IdCliente, Vm.CantidadProducto, Vm.Total, Vm.IVA, Vm.Subtotal);
+            
+
+        }
+
+
+        #endregion
 
 
     }
