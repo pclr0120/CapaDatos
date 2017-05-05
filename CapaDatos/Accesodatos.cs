@@ -67,10 +67,11 @@ namespace CapaDatos
 
                     try
                     {
-                        return cmd.ExecuteNonQuery();
                     tranOperaciones.Commit();
+                    return cmd.ExecuteNonQuery();
+
                 }
-                    catch (Exception)
+                    catch (Exception e)
                     {
                     tranOperaciones.Rollback();
                 }
@@ -107,9 +108,10 @@ namespace CapaDatos
                 try
                 {
                     int x;
+                    tranOperaciones.Commit();
                     x = Convert.ToInt32(cmd.ExecuteScalar());
                   
-                    tranOperaciones.Commit();
+                
                     return x;
                 }
                 catch (Exception e)

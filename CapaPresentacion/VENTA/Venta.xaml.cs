@@ -59,6 +59,14 @@ namespace CapaPresentacion
 
 
             }
+            if (Key.F == e.Key)
+            {
+                RealizarVenta();
+
+                
+
+
+            }
 
             if (Key.V == e.Key)
             {
@@ -137,7 +145,13 @@ namespace CapaPresentacion
         #region FinalizarLAVenta
         public void RealizarVenta()
         {
-            Vm.InsertarVentaMaestra(Vm.IdUsuario, Vm.IdCliente, Vm.CantidadProducto, Vm.Total, Vm.IVA, Vm.Subtotal);
+            if (Vm.GuardarVenta() == 1)
+            {
+                MessageBox.Show("Venta Realizada");
+            }
+            else {
+                MessageBox.Show("Error al guardar la venta");
+            }
             
 
         }

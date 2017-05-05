@@ -43,6 +43,7 @@ namespace CapaLogica
                     Encontrado = true;
                     Producto p = new Producto();
                     p.Registro = ListaProducto.Count + 1;
+                    p.Codigo = row["Codigo"].ToString();
                     p.Nombre = row["Nombre"].ToString();
                     p.Precio = row.Field<double>("Precio");
                     p.IVA = row.Field<double>("IVA");
@@ -117,10 +118,10 @@ namespace CapaLogica
                 string[] parametros = { "_IdUsuario", "_IdCliente", "_CantidadP", "_Total", "_Iva", "_Subtotal" };
                 IdVenta = Convert.ToInt32(Acceso.ExeProceVenta("FinalizarVenta", parametros, IdUsuario, IdCliente, CantidadProducto, Total, IVA, Subtotal));
 
-                string[] parametros2 = { "_IdVenta", "_IdProducto", "_PrecioProducto" };
+                string[] parametros2 = { "_IdVenta", "_Codigo", "_PrecioProducto" };
                 for (int i = 0; i < ListaProducto.Count; i++)
                 {
-                    Acceso.ExeProcedimiento("I_DetalleVenta", parametros2, IdVenta, ListaProducto[i].IdProducto, ListaProducto[i].Precio);
+                    Acceso.ExeProcedimiento("I_DetalleVenta", parametros2, IdVenta, ListaProducto[i].Codigo, ListaProducto[i].Precio);
                 }
                 return 1;
             }
