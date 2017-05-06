@@ -18,6 +18,7 @@ namespace CapaLogica
         public int IdCliente { get; set; }
         public int IdUsuario { get; set; }
         public int IdVenta { get; set; }
+        public int valor { get; set; }
   
 
 
@@ -31,8 +32,9 @@ namespace CapaLogica
         /// ///Metodo para agregar Al grid Los producto a comprar
         /// </summary>
         Producto producto = new Producto();
-        List<Producto> ListaProducto = new List<Producto>();
+       public  List<Producto> ListaProducto = new List<Producto>();
        public  bool Encontrado;
+        
         public List<Producto> CProducto(string Codigo)
         {
             try
@@ -99,9 +101,11 @@ namespace CapaLogica
             }
         }
 
-        public List<Producto> EliminarProducto(string codigo)
+        public List<Producto> EliminarProducto()
         {
-            ListaProducto.Remove(ListaProducto.FirstOrDefault(c => c.Registro == int.Parse(codigo)));
+            ListaProducto.Remove(ListaProducto.FirstOrDefault(c => c.Registro == valor));
+          
+        
             ActualizarRegistro();
             
             CalVenta();
@@ -124,6 +128,7 @@ namespace CapaLogica
                     Acceso.ExeProcedimiento("I_DetalleVenta", parametros2, IdVenta, ListaProducto[i].Codigo, ListaProducto[i].Precio);
                 }
                 return 1;
+
             }
             catch(Exception ) {
                 return 0;

@@ -48,7 +48,7 @@ namespace CapaPresentacion
 
         #region ControlTeclas   
 
-
+        VentaMaestra Vm = new VentaMaestra();
         public void EvaluarTecla(object sender, KeyEventArgs e)
         {
             if (Key.A == e.Key)
@@ -71,7 +71,7 @@ namespace CapaPresentacion
             if (Key.V == e.Key)
             {
 
-
+              
                 AgregarProducto();
 
 
@@ -79,11 +79,31 @@ namespace CapaPresentacion
             if (Key.D == e.Key)
             {
 
+                if (dataGrid.Items.Count > 0)
+                {
 
-                Eliminar();
+                    Mensaje.MensajeCaptura M = new Mensaje.MensajeCaptura("Eliminar producto", "Capture el # registro del producto a eliminar:", "S=Eliminar", "N=Cancelar", true);
+                    M.ShowDialog();
+                    if (M.Opc)
+                    {
+                        if (M.valor != 0 && Vm.ListaProducto.Exists(c => c.Registro == M.valor))
+                        {
+                            Vm.valor = M.valor;   //registro a eliminar
+                            Eliminar();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No existe el # registro:" + M.valor.ToString(), "Mensaje");
+                            Mensaje.MensajeCaptura Mm = new CapaPresentacion.Mensaje.MensajeCaptura("Eliminar producto", "Capture el # registro del producto a eliminar:", "S=Elimnar", "N=Cancelar", true);
+                            Mm.ShowDialog();
+                        }
+                    }
 
-            }
-            if (Key.F1 == e.Key && dataGrid.Items.Count > 0)
+
+
+                }
+                }
+                if (Key.F1 == e.Key && dataGrid.Items.Count > 0)
             {
                 this.Close();
             }
@@ -105,7 +125,7 @@ namespace CapaPresentacion
 
         //Producto producto = new Producto();
         //List<Producto> ListaProducto = new List<Producto>();
-        VentaMaestra Vm = new VentaMaestra();
+
      
         public void AgregarProducto()
         {
@@ -133,7 +153,7 @@ namespace CapaPresentacion
  
         public void Eliminar()
         {
-            dataGrid.ItemsSource = Vm.EliminarProducto(TxtCodigo.Text);
+            dataGrid.ItemsSource = Vm.EliminarProducto();
             dataGrid.Items.Refresh();
             calVenta();
           
@@ -145,12 +165,17 @@ namespace CapaPresentacion
         #region FinalizarLAVenta
         public void RealizarVenta()
         {
+         
             if (Vm.GuardarVenta() == 1)
             {
-                MessageBox.Show("Venta Realizada");
+                Mensaje.Mesaje m = new Mensaje.Mesaje("Mensaje:", "La venta se realizo exitoxamente.");
+
+                m.Show();
             }
             else {
-                MessageBox.Show("Error al guardar la venta");
+                Mensaje.Mesaje m = new Mensaje.Mesaje("Mensaje:Error", "Error, Consulte con su administrador.");
+
+                m.Show();
             }
             
 
