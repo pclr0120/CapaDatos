@@ -42,7 +42,7 @@ namespace CapaPresentacion
 
         private void tickeven(object sender, EventArgs e)
         {
-            LblReloj.Content= DateTime.Now.ToString();
+            LblReloj.Content = DateTime.Now.ToString();
         }
         #endregion
 
@@ -54,7 +54,7 @@ namespace CapaPresentacion
             if (Key.A == e.Key)
             {
 
-                
+
                 this.Close();
 
 
@@ -63,15 +63,12 @@ namespace CapaPresentacion
             {
                 RealizarVenta();
 
-                
-
-
             }
 
             if (Key.V == e.Key)
             {
 
-              
+
                 AgregarProducto();
 
 
@@ -102,13 +99,13 @@ namespace CapaPresentacion
 
 
                 }
-                }
-                if (Key.F1 == e.Key && dataGrid.Items.Count > 0)
+            }
+            if (Key.C == e.Key && dataGrid.Items.Count > 0)
             {
-                this.Close();
+                CancelarVenta();
             }
 
-           
+
 
         }
 
@@ -126,7 +123,7 @@ namespace CapaPresentacion
         //Producto producto = new Producto();
         //List<Producto> ListaProducto = new List<Producto>();
 
-     
+
         public void AgregarProducto()
         {
             dataGrid.ItemsSource = Vm.CProducto(TxtCodigo.Text); //agrega al datagrid los productos
@@ -136,7 +133,7 @@ namespace CapaPresentacion
             calVenta();  //acutliza los totaltes
         }
 
-     
+
 
 
 
@@ -148,15 +145,15 @@ namespace CapaPresentacion
 
         }
 
-     
 
- 
+
+
         public void Eliminar()
         {
             dataGrid.ItemsSource = Vm.EliminarProducto();
             dataGrid.Items.Refresh();
             calVenta();
-          
+
         }
 
         #endregion
@@ -165,19 +162,36 @@ namespace CapaPresentacion
         #region FinalizarLAVenta
         public void RealizarVenta()
         {
-         
-            if (Vm.GuardarVenta() == 1)
-            {
-                Mensaje.Mesaje m = new Mensaje.Mesaje("Mensaje:", "La venta se realizo exitoxamente.");
+            if (dataGrid.Items.Count > 0)
 
-                m.Show();
-            }
-            else {
-                Mensaje.Mesaje m = new Mensaje.Mesaje("Mensaje:Error", "Error, Consulte con su administrador.");
+                if (Vm.GuardarVenta() == 1)
+                {
 
-                m.Show();
-            }
-            
+                    Mensaje.MensajeOk m = new Mensaje.MensajeOk("Mensaje:", "La venta se realizo exitoxamente.");
+
+                    m.ShowDialog();
+                    dataGrid.ItemsSource = Vm.ListaProducto; //para limpiar la venta
+                    dataGrid.Items.Refresh();//para limpiar la venta
+                }
+                else
+                {
+
+                    Mensaje.MensajeOk m = new Mensaje.MensajeOk("Mensaje:Error", "Error, Consulte con su administrador.");
+
+                    m.Show();
+                }
+
+
+            //para limpiar la venta
+        }
+
+        public void CancelarVenta()
+        {
+            Mensaje.Mesaje Mm = new CapaPresentacion.Mensaje.Mesaje("Cancelar Venta", "Desea Cancelar la venta", "S=Si", "N=No");
+            Mm.ShowDialog();
+            if (Mm.Si)
+                dataGrid.ItemsSource = null;
+            Vm.CancelarVenta();
 
         }
 

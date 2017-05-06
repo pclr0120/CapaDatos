@@ -22,11 +22,13 @@ namespace CapaPresentacion.Mensaje
         public bool Si { get; set; }
 
 
-        public Mesaje(string Titulo,string mens)
+        public Mesaje(string Titulo,string mens,string btSi,string btNo)
         {
             InitializeComponent();
             lblMensajeT.Content = Titulo;
             lblMensajeM.Content = mens;
+            BtNo.Content = btNo;
+            BtSi.Content = btSi;
         }
 
         private void BtSi_Click(object sender, RoutedEventArgs e)
@@ -39,6 +41,31 @@ namespace CapaPresentacion.Mensaje
         {
             Si = false;
             this.Close();
+        }
+
+        public void EvaluarTecla(object sender, KeyEventArgs e)
+        {
+            if (Key.S == e.Key)
+            {
+
+
+                Si = true;
+                this.Close();
+
+
+            }
+            if (Key.N == e.Key)
+            {
+
+
+                Si = false;
+                this.Close();
+
+            }
+
+
+
+
         }
     }
 }

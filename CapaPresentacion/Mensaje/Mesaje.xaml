@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CapaPresentacion.Mensaje"
         mc:Ignorable="d"
+          KeyDown="EvaluarTecla"
         Title="Mesaje" Height="200" Width="500" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>

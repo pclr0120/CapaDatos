@@ -30,5 +30,29 @@ namespace CapaPresentacion.Mensaje
         {
             this.Close();
         }
+        public void EvaluarTecla(object sender, KeyEventArgs e)
+        {
+            if (Key.S == e.Key)
+            {
+
+
+           
+                this.Close();
+
+
+            }
+            if (Key.N == e.Key)
+            {
+
+
+          
+                this.Close();
+
+            }
+
+
+
+
+        }
     }
 }
