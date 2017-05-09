@@ -16,7 +16,7 @@ namespace Modulo_Empleados
         {
             InitializeComponent();
         }
-
+        public int respuesta;
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -24,7 +24,14 @@ namespace Modulo_Empleados
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
-            
+            respuesta = 1;
+            this.Close();
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            respuesta = 0;
+            this.Close();
         }
     }
 }

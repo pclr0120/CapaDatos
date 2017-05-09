@@ -59,5 +59,21 @@ namespace Modulo_Empleados
         {
 
         }
+
+        private void txt_clave_empleado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13) //Valido que al dar enter sea como dar siguiente
+            {
+                //Insertar codigo
+            }
+            else if (Char.IsDigit(e.KeyChar) || Char.IsControl(e.KeyChar)) //Valido solo numeros y teclas de control sean permitidas
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
