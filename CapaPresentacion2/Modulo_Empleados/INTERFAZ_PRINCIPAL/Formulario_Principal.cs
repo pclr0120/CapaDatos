@@ -104,5 +104,15 @@ namespace EMBLEMA
         {
 
         }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rb_empleados_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

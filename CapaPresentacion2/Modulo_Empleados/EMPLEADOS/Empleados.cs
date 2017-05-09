@@ -25,6 +25,7 @@ namespace Modulo_Empleados
         string accion;
         Puesto P = new Puesto();
         CapaLogica.Empleados E = new CapaLogica.Empleados();
+
         private void btn_cambiar_foto_Click(object sender, EventArgs e)
         {
             // Se crea el OpenFileDialog
@@ -60,7 +61,7 @@ namespace Modulo_Empleados
             DialogResult result = MessageBox.Show("Está seguro que desea salir?" + Environment.NewLine + "Si usted lo hace se perderán todos los datos ingresados", "Cancelar Registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
-                TabControl_Empleados.SelectedTab = Empleados_Inicio;
+                TabControl_Empleados.SelectedTab = TabEmpleados_Lista;
             }
             else if (result == DialogResult.No) { }
         }
@@ -82,43 +83,17 @@ namespace Modulo_Empleados
          La variable accion podría hacer eso */
         private void btn_mod_empleado_Click(object sender, EventArgs e)
         {
-            //TabControlEmpleados.SelectedTab = TabPuesto_Registro;
-            /*Deberá mostrar un nuevo formulario donde se le permita al usuario elegir si ya cuenta
-             con la C.U.R.P. del empleado o si desea encontrarlo en la lista de empleados*/
-            ABC_Empleados ABC_Modificar = new ABC_Empleados();
-            ABC_Modificar.lbl_accion.Text = "Modificar datos de empleado";
-            accion = "M";
-            ABC_Modificar.Show();
+            
         }
-        private void btn_alta_empleado_Click(object sender, EventArgs e)
-        {
-            // Esto es un comentario momentaneo para checar el tab del registro del empleados
-            Nuevo_Empleado Nuevo = new Nuevo_Empleado();
-            Nuevo.ShowDialog();
-            if (Nuevo.valor == 1)
-            {
-                MessageBox.Show(Nuevo.valor.ToString());
-            }
-            //TabControl_Empleados.SelectedTab = TabEmpleados_Registro;
-        }
+      
         private void btn_baja_empleado_Click(object sender, EventArgs e)
         {
-            //TabControlEmpleados.SelectedTab = TabPuesto_Registro;
-            /*Deberá mostrar un nuevo formulario donde se le permita al usuario elegir si ya cuenta
-             con la C.U.R.P. del empleado o si desea encontrarlo en la lista de empleados*/
-            ABC_Empleados ABC_Baja = new ABC_Empleados();
-            ABC_Baja.lbl_accion.Text = "Dar de baja a un empleado";
-            accion = "B";
-            ABC_Baja.Show();
+            
         }
 
         private void btn_nvo_puesto_Click(object sender, EventArgs e)
         {
-            TabControl_Empleados.SelectedTab = TabPuesto_Registro;
-            txt_nom.Clear(); //Limpio todo los campos de registro
-            txt_num_vac.Value = 0;
-            txt_sueldo.Clear();
-            txt_desc.Clear();
+            
         }
 
         private void btn_puesto_lista_Click(object sender, EventArgs e)
@@ -129,7 +104,7 @@ namespace Modulo_Empleados
 
         private void btn_retorno2_Click(object sender, EventArgs e)
         {
-            TabControl_Empleados.SelectedTab = Empleados_Inicio;
+            TabControl_Empleados.SelectedTab = TabEmpleados_Lista;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -554,7 +529,49 @@ namespace Modulo_Empleados
         }
 
         private void btn_reg_e_Click(object sender, EventArgs e)
+        { // Esto es un comentario momentaneo para checar el tab del registro del empleados
+
+            Autentificar_Nuevo_Empleado Nuevo = new Autentificar_Nuevo_Empleado();
+            Nuevo.ShowDialog();
+            if (Nuevo.valor == 1)
+            {
+                TabControl_Empleados.SelectedTab = TabEmpleados_Registro;
+                lbl_curp_nvo_empleado.Text = Nuevo.CURP;
+
+            }
+            //TabControl_Empleados.SelectedTab = TabEmpleados_Registro;
+        }
+
+        private void btn_mod_e_Click(object sender, EventArgs e)
         {
+            //TabControlEmpleados.SelectedTab = TabPuesto_Registro;
+            /*Deberá mostrar un nuevo formulario donde se le permita al usuario elegir si ya cuenta
+             con la C.U.R.P. del empleado o si desea encontrarlo en la lista de empleados*/
+            ABC_Empleados ABC_Modificar = new ABC_Empleados();
+            ABC_Modificar.lbl_accion.Text = "Modificar datos de empleado";
+            accion = "M";
+            ABC_Modificar.Show();
+        }
+
+        private void btn_puestos_Click(object sender, EventArgs e)
+        {
+            TabControl_Empleados.SelectedTab = TabPuesto_Lista;
+            dgv_puestos.DataSource = P.PuestoBuscar();
+        }
+
+        private void oval_Button1_Click(object sender, EventArgs e)
+        {
+            TabControl_Empleados.SelectedTab = TabEmpleados_Lista;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TabControl_Empleados.SelectedTab = TabEmpleados_Lista;
+        }
+
+        private void btn_mod_e_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

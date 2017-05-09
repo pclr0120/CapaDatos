@@ -30,31 +30,44 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Autentificar_Nuevo_Empleado));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_cerrar = new System.Windows.Forms.Button();
             this.lbl_emblema = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_curp_nvo_empleado = new System.Windows.Forms.TextBox();
             this.btn_nuevo_empleado = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txt_curp2 = new System.Windows.Forms.MaskedTextBox();
+            this.lbl_curp = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.BackColor = System.Drawing.Color.DarkGray;
+            this.panel2.Controls.Add(this.btn_nuevo_empleado);
+            this.panel2.Controls.Add(this.txt_curp2);
+            this.panel2.Controls.Add(this.lbl_curp);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.btn_cerrar);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lbl_emblema);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(591, 168);
+            this.panel2.Size = new System.Drawing.Size(591, 248);
             this.panel2.TabIndex = 8;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(13, 55);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(137, 121);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // btn_cerrar
             // 
@@ -78,36 +91,13 @@
             // 
             this.lbl_emblema.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_emblema.AutoSize = true;
-            this.lbl_emblema.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_emblema.ForeColor = System.Drawing.Color.White;
-            this.lbl_emblema.Location = new System.Drawing.Point(12, 7);
+            this.lbl_emblema.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_emblema.ForeColor = System.Drawing.Color.Black;
+            this.lbl_emblema.Location = new System.Drawing.Point(10, 4);
             this.lbl_emblema.Name = "lbl_emblema";
-            this.lbl_emblema.Size = new System.Drawing.Size(254, 18);
+            this.lbl_emblema.Size = new System.Drawing.Size(255, 16);
             this.lbl_emblema.TabIndex = 0;
             this.lbl_emblema.Text = "Autentificación de Nuevo Empleado";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(225, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(249, 18);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "INGRESE C.U.R.P DEL NUEVO EMPLEADO";
-            // 
-            // txt_curp_nvo_empleado
-            // 
-            this.txt_curp_nvo_empleado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txt_curp_nvo_empleado.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_curp_nvo_empleado.Location = new System.Drawing.Point(158, 65);
-            this.txt_curp_nvo_empleado.Name = "txt_curp_nvo_empleado";
-            this.txt_curp_nvo_empleado.Size = new System.Drawing.Size(410, 26);
-            this.txt_curp_nvo_empleado.TabIndex = 1;
-            this.txt_curp_nvo_empleado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_nuevo_empleado
             // 
@@ -118,7 +108,7 @@
             this.btn_nuevo_empleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_nuevo_empleado.Font = new System.Drawing.Font("Open Sans", 8.25F);
             this.btn_nuevo_empleado.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_nuevo_empleado.Location = new System.Drawing.Point(277, 108);
+            this.btn_nuevo_empleado.Location = new System.Drawing.Point(440, 202);
             this.btn_nuevo_empleado.Name = "btn_nuevo_empleado";
             this.btn_nuevo_empleado.Size = new System.Drawing.Size(139, 34);
             this.btn_nuevo_empleado.TabIndex = 2;
@@ -126,16 +116,25 @@
             this.btn_nuevo_empleado.UseVisualStyleBackColor = false;
             this.btn_nuevo_empleado.Click += new System.EventHandler(this.btn_nuevo_empleado_Click);
             // 
-            // pictureBox1
+            // txt_curp2
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 35);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(137, 121);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.txt_curp2.Font = new System.Drawing.Font("Lucida Sans", 12F);
+            this.txt_curp2.Location = new System.Drawing.Point(179, 117);
+            this.txt_curp2.Mask = ">LLLL999999LLLLLL99";
+            this.txt_curp2.Name = "txt_curp2";
+            this.txt_curp2.Size = new System.Drawing.Size(304, 26);
+            this.txt_curp2.TabIndex = 21;
+            // 
+            // lbl_curp
+            // 
+            this.lbl_curp.AutoSize = true;
+            this.lbl_curp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_curp.ForeColor = System.Drawing.Color.Black;
+            this.lbl_curp.Location = new System.Drawing.Point(176, 87);
+            this.lbl_curp.Name = "lbl_curp";
+            this.lbl_curp.Size = new System.Drawing.Size(110, 16);
+            this.lbl_curp.TabIndex = 22;
+            this.lbl_curp.Text = "Ingresar C.U.R.P.";
             // 
             // Autentificar_Nuevo_Empleado
             // 
@@ -144,9 +143,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.CancelButton = this.btn_cerrar;
-            this.ClientSize = new System.Drawing.Size(591, 168);
-            this.Controls.Add(this.btn_nuevo_empleado);
-            this.Controls.Add(this.txt_curp_nvo_empleado);
+            this.ClientSize = new System.Drawing.Size(591, 248);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Autentificar_Nuevo_Empleado";
@@ -157,7 +154,6 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -166,9 +162,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_cerrar;
         private System.Windows.Forms.Label lbl_emblema;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_nuevo_empleado;
-        public System.Windows.Forms.TextBox txt_curp_nvo_empleado;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MaskedTextBox txt_curp2;
+        private System.Windows.Forms.Label lbl_curp;
     }
 }

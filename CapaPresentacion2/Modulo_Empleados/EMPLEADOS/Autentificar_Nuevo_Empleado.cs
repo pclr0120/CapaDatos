@@ -51,12 +51,14 @@ namespace Modulo_Empleados
             //If Arrastre Then Me.Location = Me.PointToScreen(New Point(Me.MousePosition.X - Me.Location.X - ex, Me.MousePosition.Y - Me.Location.Y - ey))
         }
         public string CURP; //variable para pasar informacion
+        public int valor;
         private void btn_nuevo_empleado_Click(object sender, EventArgs e)
         {
             //TabControlEmpleados.SelectedTab = TabEmpleados_Registro;
-            CURP = txt_curp_nvo_empleado.Text; 
+            CURP = txt_curp2.Text;
+            valor = 1;
             //asignamos a la variable lo capturado en el textbox
-            
-            }
+
+        }
         }
 }
