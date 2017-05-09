@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Empleados));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabControl_Empleados = new System.Windows.Forms.TabControl();
             this.TabEmpleados_Registro = new System.Windows.Forms.TabPage();
             this.txt_col_e = new System.Windows.Forms.MaskedTextBox();
@@ -67,6 +67,8 @@
             this.btn_cancelar = new EMBLEMA.Oval_Button();
             this.pb_foto_nvo_empleado = new EMBLEMA.Class_Ovalo();
             this.TabEmpleados_Lista = new System.Windows.Forms.TabPage();
+            this.btn_puestos = new System.Windows.Forms.Button();
+            this.btn_mod_e = new System.Windows.Forms.Button();
             this.panel_search = new System.Windows.Forms.Panel();
             this.txt_buscar_e = new System.Windows.Forms.TextBox();
             this.cb_filtro_e = new System.Windows.Forms.ComboBox();
@@ -150,8 +152,6 @@
             this.oval_Button2 = new EMBLEMA.Oval_Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_mod_e = new System.Windows.Forms.Button();
-            this.btn_puestos = new System.Windows.Forms.Button();
             this.TabControl_Empleados.SuspendLayout();
             this.TabEmpleados_Registro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_foto_nvo_empleado)).BeginInit();
@@ -218,7 +218,7 @@
             this.TabEmpleados_Registro.Controls.Add(this.pb_foto_nvo_empleado);
             this.TabEmpleados_Registro.Location = new System.Drawing.Point(4, 22);
             this.TabEmpleados_Registro.Name = "TabEmpleados_Registro";
-            this.TabEmpleados_Registro.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.TabEmpleados_Registro.Padding = new System.Windows.Forms.Padding(3);
             this.TabEmpleados_Registro.Size = new System.Drawing.Size(958, 673);
             this.TabEmpleados_Registro.TabIndex = 1;
             this.TabEmpleados_Registro.Text = "Registrar Empleado";
@@ -544,11 +544,51 @@
             this.TabEmpleados_Lista.Controls.Add(this.btn_retorno2);
             this.TabEmpleados_Lista.Location = new System.Drawing.Point(4, 22);
             this.TabEmpleados_Lista.Name = "TabEmpleados_Lista";
-            this.TabEmpleados_Lista.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.TabEmpleados_Lista.Padding = new System.Windows.Forms.Padding(3);
             this.TabEmpleados_Lista.Size = new System.Drawing.Size(958, 673);
             this.TabEmpleados_Lista.TabIndex = 2;
             this.TabEmpleados_Lista.Text = "Empleados_Lista";
             this.TabEmpleados_Lista.UseVisualStyleBackColor = true;
+            // 
+            // btn_puestos
+            // 
+            this.btn_puestos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_puestos.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_puestos.FlatAppearance.BorderSize = 0;
+            this.btn_puestos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_puestos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_puestos.Font = new System.Drawing.Font("NewsGoth BT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_puestos.Image = ((System.Drawing.Image)(resources.GetObject("btn_puestos.Image")));
+            this.btn_puestos.Location = new System.Drawing.Point(766, 514);
+            this.btn_puestos.Name = "btn_puestos";
+            this.btn_puestos.Size = new System.Drawing.Size(149, 110);
+            this.btn_puestos.TabIndex = 39;
+            this.btn_puestos.Text = "VER PUESTOS";
+            this.btn_puestos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_puestos.UseVisualStyleBackColor = false;
+            this.btn_puestos.Click += new System.EventHandler(this.btn_puestos_Click);
+            // 
+            // btn_mod_e
+            // 
+            this.btn_mod_e.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_mod_e.BackColor = System.Drawing.Color.Transparent;
+            this.btn_mod_e.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_mod_e.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_mod_e.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btn_mod_e.FlatAppearance.BorderSize = 0;
+            this.btn_mod_e.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_mod_e.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_mod_e.Font = new System.Drawing.Font("Open Sans", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_mod_e.Image = ((System.Drawing.Image)(resources.GetObject("btn_mod_e.Image")));
+            this.btn_mod_e.Location = new System.Drawing.Point(787, 408);
+            this.btn_mod_e.Name = "btn_mod_e";
+            this.btn_mod_e.Size = new System.Drawing.Size(100, 100);
+            this.btn_mod_e.TabIndex = 38;
+            this.btn_mod_e.Text = "MODIFICAR DATOS DE EMPLEADO";
+            this.btn_mod_e.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_mod_e.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_mod_e.UseVisualStyleBackColor = false;
+            this.btn_mod_e.Click += new System.EventHandler(this.btn_mod_e_Click_1);
             // 
             // panel_search
             // 
@@ -673,29 +713,29 @@
             this.dgv_e.AllowUserToDeleteRows = false;
             this.dgv_e.AllowUserToResizeColumns = false;
             this.dgv_e.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_e.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_e.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.dgv_e.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_e.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_e.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_e.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_e.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_e.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_e.DefaultCellStyle = dataGridViewCellStyle20;
             this.dgv_e.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_e.Location = new System.Drawing.Point(45, 153);
             this.dgv_e.MultiSelect = false;
             this.dgv_e.Name = "dgv_e";
             this.dgv_e.ReadOnly = true;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_e.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_e.RowsDefaultCellStyle = dataGridViewCellStyle21;
             this.dgv_e.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_e.ShowCellToolTips = false;
             this.dgv_e.ShowEditingIcon = false;
@@ -732,7 +772,7 @@
             this.TabPuesto_Registro.Controls.Add(this.btn_cancelar2);
             this.TabPuesto_Registro.Location = new System.Drawing.Point(4, 22);
             this.TabPuesto_Registro.Name = "TabPuesto_Registro";
-            this.TabPuesto_Registro.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.TabPuesto_Registro.Padding = new System.Windows.Forms.Padding(3);
             this.TabPuesto_Registro.Size = new System.Drawing.Size(958, 673);
             this.TabPuesto_Registro.TabIndex = 3;
             this.TabPuesto_Registro.Text = "Registrar Puesto";
@@ -741,7 +781,7 @@
             // txt_nom
             // 
             this.txt_nom.Location = new System.Drawing.Point(45, 184);
-            this.txt_nom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_nom.Margin = new System.Windows.Forms.Padding(2);
             this.txt_nom.MaxLength = 30;
             this.txt_nom.Name = "txt_nom";
             this.txt_nom.Size = new System.Drawing.Size(344, 20);
@@ -911,7 +951,7 @@
             this.TabPuesto_Lista.Controls.Add(this.btn_salir2);
             this.TabPuesto_Lista.Location = new System.Drawing.Point(4, 22);
             this.TabPuesto_Lista.Name = "TabPuesto_Lista";
-            this.TabPuesto_Lista.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.TabPuesto_Lista.Padding = new System.Windows.Forms.Padding(3);
             this.TabPuesto_Lista.Size = new System.Drawing.Size(958, 673);
             this.TabPuesto_Lista.TabIndex = 4;
             this.TabPuesto_Lista.Text = "Puesto_Lista";
@@ -1030,8 +1070,8 @@
             this.dgv_puestos.AllowUserToDeleteRows = false;
             this.dgv_puestos.AllowUserToResizeColumns = false;
             this.dgv_puestos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_puestos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_puestos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
             this.dgv_puestos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_puestos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -1039,21 +1079,21 @@
             this.dgv_puestos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_puestos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgv_puestos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_puestos.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_puestos.DefaultCellStyle = dataGridViewCellStyle23;
             this.dgv_puestos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv_puestos.Location = new System.Drawing.Point(45, 153);
             this.dgv_puestos.MultiSelect = false;
             this.dgv_puestos.Name = "dgv_puestos";
             this.dgv_puestos.ReadOnly = true;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_puestos.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_puestos.RowsDefaultCellStyle = dataGridViewCellStyle24;
             this.dgv_puestos.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_puestos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_puestos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1156,7 +1196,7 @@
             this.TabEmpleado_Mod.Controls.Add(this.class_Ovalo1);
             this.TabEmpleado_Mod.Location = new System.Drawing.Point(4, 22);
             this.TabEmpleado_Mod.Name = "TabEmpleado_Mod";
-            this.TabEmpleado_Mod.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.TabEmpleado_Mod.Padding = new System.Windows.Forms.Padding(3);
             this.TabEmpleado_Mod.Size = new System.Drawing.Size(958, 673);
             this.TabEmpleado_Mod.TabIndex = 5;
             this.TabEmpleado_Mod.Text = "Empleado_mod";
@@ -1502,7 +1542,7 @@
             this.TabPuesto_Mod.Controls.Add(this.oval_Button2);
             this.TabPuesto_Mod.Location = new System.Drawing.Point(4, 22);
             this.TabPuesto_Mod.Name = "TabPuesto_Mod";
-            this.TabPuesto_Mod.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.TabPuesto_Mod.Padding = new System.Windows.Forms.Padding(3);
             this.TabPuesto_Mod.Size = new System.Drawing.Size(958, 673);
             this.TabPuesto_Mod.TabIndex = 6;
             this.TabPuesto_Mod.Text = "Puesto_Mod";
@@ -1511,7 +1551,7 @@
             // txt_nombre
             // 
             this.txt_nombre.Location = new System.Drawing.Point(43, 184);
-            this.txt_nombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_nombre.Margin = new System.Windows.Forms.Padding(2);
             this.txt_nombre.MaxLength = 30;
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(336, 20);
@@ -1689,45 +1729,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_mod_e
-            // 
-            this.btn_mod_e.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_mod_e.BackColor = System.Drawing.Color.Transparent;
-            this.btn_mod_e.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_mod_e.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_mod_e.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btn_mod_e.FlatAppearance.BorderSize = 0;
-            this.btn_mod_e.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_mod_e.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_mod_e.Font = new System.Drawing.Font("Open Sans", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_mod_e.Image = ((System.Drawing.Image)(resources.GetObject("btn_mod_e.Image")));
-            this.btn_mod_e.Location = new System.Drawing.Point(787, 408);
-            this.btn_mod_e.Name = "btn_mod_e";
-            this.btn_mod_e.Size = new System.Drawing.Size(100, 100);
-            this.btn_mod_e.TabIndex = 38;
-            this.btn_mod_e.Text = "MODIFICAR DATOS DE EMPLEADO";
-            this.btn_mod_e.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_mod_e.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btn_mod_e.UseVisualStyleBackColor = false;
-            this.btn_mod_e.Click += new System.EventHandler(this.btn_mod_e_Click_1);
-            // 
-            // btn_puestos
-            // 
-            this.btn_puestos.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_puestos.FlatAppearance.BorderSize = 0;
-            this.btn_puestos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_puestos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_puestos.Font = new System.Drawing.Font("NewsGoth BT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_puestos.Image = ((System.Drawing.Image)(resources.GetObject("btn_puestos.Image")));
-            this.btn_puestos.Location = new System.Drawing.Point(766, 514);
-            this.btn_puestos.Name = "btn_puestos";
-            this.btn_puestos.Size = new System.Drawing.Size(149, 110);
-            this.btn_puestos.TabIndex = 39;
-            this.btn_puestos.Text = "VER PUESTOS";
-            this.btn_puestos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_puestos.UseVisualStyleBackColor = false;
-            this.btn_puestos.Click += new System.EventHandler(this.btn_puestos_Click);
-            // 
             // Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1791,7 +1792,6 @@
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label lbl_curp_nvo_empleado;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TabPage TabEmpleados_Lista;
         private EMBLEMA.Class_Ovalo pb_foto_nvo_empleado;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -1889,6 +1889,7 @@
         private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.Button btn_mod_e;
         private System.Windows.Forms.Button btn_puestos;
+        public System.Windows.Forms.TabPage TabEmpleados_Lista;
     }
 }
 

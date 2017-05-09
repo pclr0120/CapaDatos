@@ -30,12 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formulario_Principal));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btn_min = new System.Windows.Forms.Button();
+            this.class_Ovalo1 = new EMBLEMA.Class_Ovalo();
             this.lbl_emblema = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_id = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbl_control_sesion = new System.Windows.Forms.Label();
             this.lbl_usuario = new System.Windows.Forms.Label();
+            this.lbl_control_sesion = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.lbl_id = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.rb_config = new System.Windows.Forms.RadioButton();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.rb_empleados = new System.Windows.Forms.RadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.rb_equipo = new System.Windows.Forms.RadioButton();
+            this.rb_membre = new System.Windows.Forms.RadioButton();
+            this.rb_punto_vta = new System.Windows.Forms.RadioButton();
+            this.rb_inicio = new System.Windows.Forms.RadioButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,41 +62,22 @@
             this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuracionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.rb_config = new System.Windows.Forms.RadioButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.rb_empleados = new System.Windows.Forms.RadioButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.rb_equipo = new System.Windows.Forms.RadioButton();
-            this.rb_membre = new System.Windows.Forms.RadioButton();
-            this.rb_punto_vta = new System.Windows.Forms.RadioButton();
-            this.rb_inicio = new System.Windows.Forms.RadioButton();
-            this.class_Ovalo2 = new EMBLEMA.Class_Ovalo();
-            this.btn_min = new System.Windows.Forms.Button();
-            this.class_Ovalo1 = new EMBLEMA.Class_Ovalo();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.class_Ovalo1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.class_Ovalo2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.class_Ovalo1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.class_Ovalo2);
             this.panel2.Controls.Add(this.btn_min);
             this.panel2.Controls.Add(this.class_Ovalo1);
             this.panel2.Controls.Add(this.lbl_emblema);
@@ -92,17 +89,87 @@
             this.panel2.Size = new System.Drawing.Size(1307, 89);
             this.panel2.TabIndex = 7;
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label3.Font = new System.Drawing.Font("NewsGoth Cn BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(1178, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(126, 19);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Sistema EMBLEMA ®";
+            // 
+            // btn_min
+            // 
+            this.btn_min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_min.BackColor = System.Drawing.Color.Transparent;
+            this.btn_min.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_min.BackgroundImage")));
+            this.btn_min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_min.FlatAppearance.BorderSize = 0;
+            this.btn_min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btn_min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_min.Location = new System.Drawing.Point(1267, 0);
+            this.btn_min.Name = "btn_min";
+            this.btn_min.Size = new System.Drawing.Size(40, 25);
+            this.btn_min.TabIndex = 1;
+            this.btn_min.UseVisualStyleBackColor = false;
+            this.btn_min.Click += new System.EventHandler(this.btn_min_Click);
+            // 
+            // class_Ovalo1
+            // 
+            this.class_Ovalo1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.class_Ovalo1.BackColor = System.Drawing.Color.DarkGray;
+            this.class_Ovalo1.Image = ((System.Drawing.Image)(resources.GetObject("class_Ovalo1.Image")));
+            this.class_Ovalo1.Location = new System.Drawing.Point(20, 13);
+            this.class_Ovalo1.Name = "class_Ovalo1";
+            this.class_Ovalo1.Size = new System.Drawing.Size(69, 65);
+            this.class_Ovalo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.class_Ovalo1.TabIndex = 12;
+            this.class_Ovalo1.TabStop = false;
+            // 
             // lbl_emblema
             // 
-            this.lbl_emblema.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_emblema.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_emblema.AutoSize = true;
-            this.lbl_emblema.Font = new System.Drawing.Font("NewsGoth Cn BT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_emblema.Font = new System.Drawing.Font("NewsGoth Cn BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_emblema.ForeColor = System.Drawing.Color.White;
-            this.lbl_emblema.Location = new System.Drawing.Point(609, 56);
+            this.lbl_emblema.Location = new System.Drawing.Point(598, 30);
             this.lbl_emblema.Name = "lbl_emblema";
-            this.lbl_emblema.Size = new System.Drawing.Size(89, 22);
+            this.lbl_emblema.Size = new System.Drawing.Size(111, 29);
             this.lbl_emblema.TabIndex = 0;
             this.lbl_emblema.Text = "GYMCENTER";
+            // 
+            // lbl_usuario
+            // 
+            this.lbl_usuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_usuario.AutoSize = true;
+            this.lbl_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_usuario.ForeColor = System.Drawing.Color.White;
+            this.lbl_usuario.Location = new System.Drawing.Point(99, 30);
+            this.lbl_usuario.Name = "lbl_usuario";
+            this.lbl_usuario.Size = new System.Drawing.Size(154, 20);
+            this.lbl_usuario.TabIndex = 13;
+            this.lbl_usuario.Text = "Frank Donaldo Crow";
+            // 
+            // lbl_control_sesion
+            // 
+            this.lbl_control_sesion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_control_sesion.AutoSize = true;
+            this.lbl_control_sesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_control_sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_control_sesion.ForeColor = System.Drawing.Color.Red;
+            this.lbl_control_sesion.Location = new System.Drawing.Point(101, 50);
+            this.lbl_control_sesion.Name = "lbl_control_sesion";
+            this.lbl_control_sesion.Size = new System.Drawing.Size(83, 12);
+            this.lbl_control_sesion.TabIndex = 14;
+            this.lbl_control_sesion.Text = "CERRAR SESIÓN";
+            this.lbl_control_sesion.Click += new System.EventHandler(this.lbl_control_sesion_Click);
             // 
             // panel1
             // 
@@ -129,130 +196,6 @@
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // lbl_id
-            // 
-            this.lbl_id.AutoSize = true;
-            this.lbl_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_id.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lbl_id.Location = new System.Drawing.Point(93, 409);
-            this.lbl_id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_id.Name = "lbl_id";
-            this.lbl_id.Size = new System.Drawing.Size(59, 20);
-            this.lbl_id.TabIndex = 16;
-            this.lbl_id.Text = "_____";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label1.Location = new System.Drawing.Point(67, 389);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 20);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "ID USUARIO: ";
-            // 
-            // lbl_control_sesion
-            // 
-            this.lbl_control_sesion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_control_sesion.AutoSize = true;
-            this.lbl_control_sesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_control_sesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_control_sesion.ForeColor = System.Drawing.Color.Red;
-            this.lbl_control_sesion.Location = new System.Drawing.Point(139, 55);
-            this.lbl_control_sesion.Name = "lbl_control_sesion";
-            this.lbl_control_sesion.Size = new System.Drawing.Size(95, 13);
-            this.lbl_control_sesion.TabIndex = 14;
-            this.lbl_control_sesion.Text = "CERRAR SESIÓN";
-            this.lbl_control_sesion.Click += new System.EventHandler(this.lbl_control_sesion_Click);
-            // 
-            // lbl_usuario
-            // 
-            this.lbl_usuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_usuario.AutoSize = true;
-            this.lbl_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_usuario.ForeColor = System.Drawing.Color.White;
-            this.lbl_usuario.Location = new System.Drawing.Point(110, 22);
-            this.lbl_usuario.Name = "lbl_usuario";
-            this.lbl_usuario.Size = new System.Drawing.Size(179, 20);
-            this.lbl_usuario.TabIndex = 13;
-            this.lbl_usuario.Text = "No se ha iniciado sesión";
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inicioToolStripMenuItem,
-            this.puntoDeVentaToolStripMenuItem,
-            this.membresíasToolStripMenuItem,
-            this.visitasToolStripMenuItem,
-            this.equipoToolStripMenuItem,
-            this.empleadosToolStripMenuItem,
-            this.configuracionesToolStripMenuItem,
-            this.windowToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.MdiWindowListItem = this.windowToolStripMenuItem;
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1307, 24);
-            this.menuStrip1.TabIndex = 9;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // inicioToolStripMenuItem
-            // 
-            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.inicioToolStripMenuItem.Text = "Inicio";
-            // 
-            // puntoDeVentaToolStripMenuItem
-            // 
-            this.puntoDeVentaToolStripMenuItem.Name = "puntoDeVentaToolStripMenuItem";
-            this.puntoDeVentaToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
-            this.puntoDeVentaToolStripMenuItem.Text = "Punto de Venta";
-            // 
-            // membresíasToolStripMenuItem
-            // 
-            this.membresíasToolStripMenuItem.Name = "membresíasToolStripMenuItem";
-            this.membresíasToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.membresíasToolStripMenuItem.Text = "Clientes";
-            // 
-            // visitasToolStripMenuItem
-            // 
-            this.visitasToolStripMenuItem.Name = "visitasToolStripMenuItem";
-            this.visitasToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.visitasToolStripMenuItem.Text = "Visitas";
-            // 
-            // equipoToolStripMenuItem
-            // 
-            this.equipoToolStripMenuItem.Name = "equipoToolStripMenuItem";
-            this.equipoToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.equipoToolStripMenuItem.Text = "Equipo";
-            // 
-            // empleadosToolStripMenuItem
-            // 
-            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
-            this.empleadosToolStripMenuItem.Text = "Empleados";
-            this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
-            // 
-            // configuracionesToolStripMenuItem
-            // 
-            this.configuracionesToolStripMenuItem.Name = "configuracionesToolStripMenuItem";
-            this.configuracionesToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
-            this.configuracionesToolStripMenuItem.Text = "Configuraciones";
-            // 
-            // windowToolStripMenuItem
-            // 
-            this.windowToolStripMenuItem.Name = "windowToolStripMenuItem";
-            this.windowToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.windowToolStripMenuItem.Text = "Ventanas";
-            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -265,18 +208,6 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "________________________________";
             // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("NewsGoth Cn BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1178, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 19);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Sistema EMBLEMA ®";
-            // 
             // pictureBox6
             // 
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -288,6 +219,18 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 26;
             this.pictureBox6.TabStop = false;
+            // 
+            // lbl_id
+            // 
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lbl_id.Location = new System.Drawing.Point(93, 409);
+            this.lbl_id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(59, 20);
+            this.lbl_id.TabIndex = 16;
+            this.lbl_id.Text = "_____";
             // 
             // pictureBox5
             // 
@@ -312,6 +255,18 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 24;
             this.pictureBox4.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label1.Location = new System.Drawing.Point(67, 389);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 20);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "ID USUARIO: ";
             // 
             // rb_config
             // 
@@ -472,48 +427,77 @@
             this.rb_inicio.UseVisualStyleBackColor = false;
             this.rb_inicio.CheckedChanged += new System.EventHandler(this.rb_inicio_CheckedChanged);
             // 
-            // class_Ovalo2
+            // openFileDialog1
             // 
-            this.class_Ovalo2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.class_Ovalo2.BackColor = System.Drawing.Color.Transparent;
-            this.class_Ovalo2.Image = ((System.Drawing.Image)(resources.GetObject("class_Ovalo2.Image")));
-            this.class_Ovalo2.Location = new System.Drawing.Point(633, 13);
-            this.class_Ovalo2.Name = "class_Ovalo2";
-            this.class_Ovalo2.Size = new System.Drawing.Size(40, 40);
-            this.class_Ovalo2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.class_Ovalo2.TabIndex = 15;
-            this.class_Ovalo2.TabStop = false;
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // btn_min
+            // menuStrip1
             // 
-            this.btn_min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_min.BackColor = System.Drawing.Color.Transparent;
-            this.btn_min.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_min.BackgroundImage")));
-            this.btn_min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_min.FlatAppearance.BorderSize = 0;
-            this.btn_min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btn_min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_min.Location = new System.Drawing.Point(1267, 0);
-            this.btn_min.Name = "btn_min";
-            this.btn_min.Size = new System.Drawing.Size(40, 25);
-            this.btn_min.TabIndex = 1;
-            this.btn_min.UseVisualStyleBackColor = false;
-            this.btn_min.Click += new System.EventHandler(this.btn_min_Click);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inicioToolStripMenuItem,
+            this.puntoDeVentaToolStripMenuItem,
+            this.membresíasToolStripMenuItem,
+            this.visitasToolStripMenuItem,
+            this.equipoToolStripMenuItem,
+            this.empleadosToolStripMenuItem,
+            this.configuracionesToolStripMenuItem,
+            this.windowToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.MdiWindowListItem = this.windowToolStripMenuItem;
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1307, 24);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // class_Ovalo1
+            // inicioToolStripMenuItem
             // 
-            this.class_Ovalo1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.class_Ovalo1.BackColor = System.Drawing.Color.DarkGray;
-            this.class_Ovalo1.Image = ((System.Drawing.Image)(resources.GetObject("class_Ovalo1.Image")));
-            this.class_Ovalo1.Location = new System.Drawing.Point(20, 13);
-            this.class_Ovalo1.Name = "class_Ovalo1";
-            this.class_Ovalo1.Size = new System.Drawing.Size(69, 65);
-            this.class_Ovalo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.class_Ovalo1.TabIndex = 12;
-            this.class_Ovalo1.TabStop = false;
+            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.inicioToolStripMenuItem.Text = "Inicio";
+            // 
+            // puntoDeVentaToolStripMenuItem
+            // 
+            this.puntoDeVentaToolStripMenuItem.Name = "puntoDeVentaToolStripMenuItem";
+            this.puntoDeVentaToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.puntoDeVentaToolStripMenuItem.Text = "Punto de Venta";
+            // 
+            // membresíasToolStripMenuItem
+            // 
+            this.membresíasToolStripMenuItem.Name = "membresíasToolStripMenuItem";
+            this.membresíasToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.membresíasToolStripMenuItem.Text = "Clientes";
+            // 
+            // visitasToolStripMenuItem
+            // 
+            this.visitasToolStripMenuItem.Name = "visitasToolStripMenuItem";
+            this.visitasToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.visitasToolStripMenuItem.Text = "Visitas";
+            // 
+            // equipoToolStripMenuItem
+            // 
+            this.equipoToolStripMenuItem.Name = "equipoToolStripMenuItem";
+            this.equipoToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.equipoToolStripMenuItem.Text = "Equipo";
+            // 
+            // empleadosToolStripMenuItem
+            // 
+            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.empleadosToolStripMenuItem.Text = "Empleados";
+            this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
+            // 
+            // configuracionesToolStripMenuItem
+            // 
+            this.configuracionesToolStripMenuItem.Name = "configuracionesToolStripMenuItem";
+            this.configuracionesToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.configuracionesToolStripMenuItem.Text = "Configuraciones";
+            // 
+            // windowToolStripMenuItem
+            // 
+            this.windowToolStripMenuItem.Name = "windowToolStripMenuItem";
+            this.windowToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.windowToolStripMenuItem.Text = "Ventanas";
             // 
             // Formulario_Principal
             // 
@@ -533,18 +517,17 @@
             this.Load += new System.EventHandler(this.Formulario_Principal_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.class_Ovalo1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.class_Ovalo2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.class_Ovalo1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -583,7 +566,6 @@
         private System.Windows.Forms.Label lbl_control_sesion;
         private System.Windows.Forms.Label lbl_id;
         private System.Windows.Forms.Label label1;
-        private Class_Ovalo class_Ovalo2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
     }

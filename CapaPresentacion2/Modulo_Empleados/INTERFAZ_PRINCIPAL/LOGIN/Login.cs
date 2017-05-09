@@ -25,12 +25,17 @@ namespace LOGIN
 
         private void Login_Load(object sender, EventArgs e)
         {
+            cargar_logo();
+            txt_user.Focus();
+        }
+
+        public void cargar_logo()
+        {
             Bitmap b = (Bitmap)logo.Image;
             IntPtr pIcon = b.GetHicon();
             Icon i = Icon.FromHandle(pIcon);
             this.Icon = i;
             i.Dispose();
-            txt_user.Focus();
         }
 
         private void Login_MouseDown(object sender, MouseEventArgs e)
@@ -87,6 +92,11 @@ namespace LOGIN
                 this.Hide();
                 Formulario_Principal frp = new Formulario_Principal();
                 frp.ID = Convert.ToInt32(txt_user.Text);
+                Bitmap b = (Bitmap)logo.Image;
+                IntPtr pIcon = b.GetHicon();
+                Icon i = Icon.FromHandle(pIcon);
+                frp.Icon = i;
+                i.Dispose();
                 frp.Show();
             }
             else

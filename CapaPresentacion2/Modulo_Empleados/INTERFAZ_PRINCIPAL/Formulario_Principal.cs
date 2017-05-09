@@ -70,6 +70,7 @@ namespace EMBLEMA
             Empleados.MdiParent = this;
             Empleados.WindowState = FormWindowState.Maximized;
             Empleados.Dock = DockStyle.Fill;
+            Empleados.TabControl_Empleados.SelectedTab = Empleados.TabEmpleados_Lista;
             Empleados.Show();
         }
 
@@ -82,6 +83,7 @@ namespace EMBLEMA
 
         private void Formulario_Principal_Load(object sender, EventArgs e)
         {
+            
             menuStrip1.Visible = false;
             lbl_id.Text = Convert.ToString(ID);
         }
