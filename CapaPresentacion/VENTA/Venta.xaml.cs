@@ -191,7 +191,8 @@ namespace CapaPresentacion
             Mm.ShowDialog();
             if (Mm.Si)
                 dataGrid.ItemsSource = null;
-            Vm.CancelarVenta();
+            Vm.LimpiarVenta() ;
+            calVenta();
 
         }
 

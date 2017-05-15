@@ -44,7 +44,10 @@ namespace CapaLogica
                 {
                     Encontrado = true;
                     Producto p = new Producto();
-                    p.Registro = ListaProducto.Count + 1;
+                   
+                        p.Registro = ListaProducto.Count + 1;
+                    
+                   
                     p.Codigo = row["Codigo"].ToString();
                     p.Nombre = row["Nombre"].ToString();
                     p.Precio = row.Field<double>("Precio");
@@ -136,7 +139,22 @@ namespace CapaLogica
         
         }
 
-      
+      //========CAncelar venta
+
+        public void LimpiarVenta()
+        {
+
+            for (int i = 0; i < ListaProducto.Count; i++)
+            {
+                ListaProducto.RemoveAt(i);
+            }
+            IVA = 0;
+            Subtotal = 0;
+            Total = 0;
+
+
+
+        }
 
     }
 }
