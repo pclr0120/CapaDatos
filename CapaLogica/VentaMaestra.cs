@@ -19,7 +19,7 @@ namespace CapaLogica
         public int IdUsuario { get; set; }
         public int IdVenta { get; set; }
         public int valor { get; set; }
-  
+     
 
 
         Accesodatos Acceso = new Accesodatos();
@@ -34,26 +34,47 @@ namespace CapaLogica
         Producto producto = new Producto();
        public  List<Producto> ListaProducto = new List<Producto>();
        public  bool Encontrado;
-        
+        public Producto p = new Producto();
+   
         public List<Producto> CProducto(string Codigo)
         {
             try
             {
+                p.Stock0 = false;
                  Encontrado = false;
                 foreach (DataRow row in producto.ConsultaProducto(Codigo).Rows)
                 {
                     Encontrado = true;
-                    Producto p = new Producto();
-                   
-                        p.Registro = ListaProducto.Count + 1;
-                    
-                   
-                    p.Codigo = row["Codigo"].ToString();
-                    p.Nombre = row["Nombre"].ToString();
-                    p.Precio = row.Field<double>("Precio");
-                    p.IVA = row.Field<double>("IVA");
-                    ListaProducto.Add(p);
-                    CalVenta();
+
+                    ///=====
+                    if (p.obtenerStock(Convert.ToInt32(Codigo)) > 0)
+                    {
+                        Producto p = new Producto();
+                        if (ListaProducto.Count == 0)
+                        {
+                            p.Registro = 1;
+                        }
+                        else
+                        {
+                            p.Registro = ListaProducto.Count + 1;
+                        }
+                      
+
+
+                        p.Codigo = row["Codigo"].ToString();
+                        p.Nombre = row["Nombre"].ToString();
+                        p.Precio = row.Field<double>("Precio");
+                        p.IVA = row.Field<double>("IVA");
+                        ListaProducto.Add(p);
+                        CalVenta();
+                    }
+                    else
+                    {
+                        p.Stock0 = true;
+                    }
+                      
+                       
+                    ///=====
                 }
                 if (Encontrado != true)
                 {
@@ -123,12 +144,12 @@ namespace CapaLogica
             {
 
                 string[] parametros = { "_IdUsuario", "_IdCliente", "_CantidadP", "_Total", "_Iva", "_Subtotal" };
-                IdVenta = Convert.ToInt32(Acceso.ExeProceVenta("FinalizarVenta", parametros, IdUsuario, IdCliente, CantidadProducto, Total, IVA, Subtotal));
+                IdVenta = Convert.ToInt32(Acceso.ExeProceVenta("Venta_FinalizarVenta", parametros, IdUsuario, IdCliente, CantidadProducto, Total, IVA, Subtotal));
 
                 string[] parametros2 = { "_IdVenta", "_Codigo", "_PrecioProducto" };
                 for (int i = 0; i < ListaProducto.Count; i++)
                 {
-                    Acceso.ExeProcedimiento("I_DetalleVenta", parametros2, IdVenta, ListaProducto[i].Codigo, ListaProducto[i].Precio);
+                    Acceso.ExeProcedimiento("Venta_InsertarDetalleVenta", parametros2, IdVenta, ListaProducto[i].Codigo, ListaProducto[i].Precio);
                 }
                 return 1;
 
@@ -141,13 +162,12 @@ namespace CapaLogica
 
       //========CAncelar venta
 
-        public void LimpiarVenta()
+        public List<Producto> LimpiarVenta()
         {
 
-            for (int i = 0; i < ListaProducto.Count; i++)
-            {
-                ListaProducto.RemoveAt(i);
-            }
+
+            ListaProducto = new List<Producto>();
+            return ListaProducto;
             IVA = 0;
             Subtotal = 0;
             Total = 0;

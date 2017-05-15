@@ -16,6 +16,7 @@ namespace CapaLogica
         public string Codigo { get; set; }
         public int Stock { get; set; }
         public int StockMin { get; set; }
+        public bool Stock0 { get; set; }
         public double Costo { get; set; }
         public double Precio { get; set; }
         public string Promocion { get; set; }
@@ -34,7 +35,13 @@ namespace CapaLogica
         public DataTable ConsultaProducto(string codigo)
         {
             string[] parametros = { "_codigo" };
-            return Acceso.GetTabla("CProducto", parametros,codigo);
+            return Acceso.GetTabla("Venta_ConsultarProducto", parametros,codigo);
+
+        }
+        public int obtenerStock(int codigo)
+        {
+            string[] parametros = { "id" };
+            return Math.Abs((Acceso.ExeProceVenta("Venta_ActulizarStock", parametros, codigo)));
 
         }
 
