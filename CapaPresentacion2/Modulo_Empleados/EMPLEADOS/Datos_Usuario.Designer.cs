@@ -59,10 +59,10 @@
             this.panel2.Controls.Add(this.btn_ok);
             this.panel2.Controls.Add(this.btn_cerrar);
             this.panel2.Controls.Add(this.lbl_accion);
-            this.panel2.Location = new System.Drawing.Point(10, 10);
+            this.panel2.Location = new System.Drawing.Point(13, 12);
             this.panel2.Margin = new System.Windows.Forms.Padding(1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(368, 470);
+            this.panel2.Size = new System.Drawing.Size(491, 578);
             this.panel2.TabIndex = 10;
             // 
             // btn_cancel
@@ -75,24 +75,26 @@
             this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancel.Font = new System.Drawing.Font("Open Sans", 8.25F);
             this.btn_cancel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_cancel.Location = new System.Drawing.Point(13, 424);
+            this.btn_cancel.Location = new System.Drawing.Point(17, 522);
+            this.btn_cancel.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(139, 34);
+            this.btn_cancel.Size = new System.Drawing.Size(185, 42);
             this.btn_cancel.TabIndex = 14;
-            this.btn_cancel.Text = "CANCELAR";
+            this.btn_cancel.Text = "CANCELAR (ESC)";
             this.btn_cancel.UseVisualStyleBackColor = false;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // lbl_clave
             // 
             this.lbl_clave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_clave.AutoSize = true;
             this.lbl_clave.Font = new System.Drawing.Font("Open Sans Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_clave.Location = new System.Drawing.Point(163, 363);
+            this.lbl_clave.Location = new System.Drawing.Point(17, 447);
+            this.lbl_clave.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_clave.Name = "lbl_clave";
-            this.lbl_clave.Size = new System.Drawing.Size(43, 18);
+            this.lbl_clave.Size = new System.Drawing.Size(457, 23);
             this.lbl_clave.TabIndex = 13;
             this.lbl_clave.Text = "label6";
+            this.lbl_clave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -101,22 +103,24 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("NewsGoth BT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(119, 345);
+            this.label5.Location = new System.Drawing.Point(159, 425);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 18);
+            this.label5.Size = new System.Drawing.Size(165, 22);
             this.label5.TabIndex = 12;
             this.label5.Text = "Clave de empleado";
             // 
             // lbl_curp
             // 
             this.lbl_curp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_curp.AutoSize = true;
             this.lbl_curp.Font = new System.Drawing.Font("Open Sans Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_curp.Location = new System.Drawing.Point(163, 306);
+            this.lbl_curp.Location = new System.Drawing.Point(17, 377);
+            this.lbl_curp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_curp.Name = "lbl_curp";
-            this.lbl_curp.Size = new System.Drawing.Size(43, 18);
+            this.lbl_curp.Size = new System.Drawing.Size(457, 23);
             this.lbl_curp.TabIndex = 11;
             this.lbl_curp.Text = "label4";
+            this.lbl_curp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -125,22 +129,24 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("NewsGoth BT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(150, 288);
+            this.label3.Location = new System.Drawing.Point(200, 354);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 18);
+            this.label3.Size = new System.Drawing.Size(85, 22);
             this.label3.TabIndex = 10;
             this.label3.Text = "C.U.R.P.";
             // 
             // lbl_nombre
             // 
             this.lbl_nombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_nombre.AutoSize = true;
             this.lbl_nombre.Font = new System.Drawing.Font("Open Sans Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nombre.Location = new System.Drawing.Point(163, 243);
+            this.lbl_nombre.Location = new System.Drawing.Point(17, 299);
+            this.lbl_nombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_nombre.Name = "lbl_nombre";
-            this.lbl_nombre.Size = new System.Drawing.Size(43, 18);
+            this.lbl_nombre.Size = new System.Drawing.Size(457, 23);
             this.lbl_nombre.TabIndex = 9;
             this.lbl_nombre.Text = "label2";
+            this.lbl_nombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -149,9 +155,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("NewsGoth BT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(155, 225);
+            this.label1.Location = new System.Drawing.Point(207, 277);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 18);
+            this.label1.Size = new System.Drawing.Size(76, 22);
             this.label1.TabIndex = 8;
             this.label1.Text = "Nombre";
             // 
@@ -162,9 +169,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pb_foto.BackColor = System.Drawing.Color.DarkGray;
             this.pb_foto.Image = ((System.Drawing.Image)(resources.GetObject("pb_foto.Image")));
-            this.pb_foto.Location = new System.Drawing.Point(109, 54);
+            this.pb_foto.Location = new System.Drawing.Point(145, 66);
+            this.pb_foto.Margin = new System.Windows.Forms.Padding(4);
             this.pb_foto.Name = "pb_foto";
-            this.pb_foto.Size = new System.Drawing.Size(150, 150);
+            this.pb_foto.Size = new System.Drawing.Size(200, 185);
             this.pb_foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_foto.TabIndex = 7;
             this.pb_foto.TabStop = false;
@@ -179,11 +187,12 @@
             this.btn_ok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ok.Font = new System.Drawing.Font("Open Sans", 8.25F);
             this.btn_ok.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_ok.Location = new System.Drawing.Point(217, 424);
+            this.btn_ok.Location = new System.Drawing.Point(289, 522);
+            this.btn_ok.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ok.Name = "btn_ok";
-            this.btn_ok.Size = new System.Drawing.Size(139, 34);
+            this.btn_ok.Size = new System.Drawing.Size(185, 42);
             this.btn_ok.TabIndex = 6;
-            this.btn_ok.Text = "CONFIRMAR";
+            this.btn_ok.Text = "CONFIRMAR (F1)";
             this.btn_ok.UseVisualStyleBackColor = false;
             this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 
@@ -198,9 +207,10 @@
             this.btn_cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.btn_cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
             this.btn_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cerrar.Location = new System.Drawing.Point(322, 0);
+            this.btn_cerrar.Location = new System.Drawing.Point(429, 0);
+            this.btn_cerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(45, 25);
+            this.btn_cerrar.Size = new System.Drawing.Size(60, 31);
             this.btn_cerrar.TabIndex = 2;
             this.btn_cerrar.UseVisualStyleBackColor = false;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
@@ -211,20 +221,22 @@
             this.lbl_accion.AutoSize = true;
             this.lbl_accion.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_accion.ForeColor = System.Drawing.Color.Black;
-            this.lbl_accion.Location = new System.Drawing.Point(3, 3);
+            this.lbl_accion.Location = new System.Drawing.Point(4, 4);
+            this.lbl_accion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_accion.Name = "lbl_accion";
-            this.lbl_accion.Size = new System.Drawing.Size(149, 18);
+            this.lbl_accion.Size = new System.Drawing.Size(187, 23);
             this.lbl_accion.TabIndex = 0;
             this.lbl_accion.Text = "Confirmar empleado";
             // 
             // Datos_Usuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(388, 490);
+            this.ClientSize = new System.Drawing.Size(517, 603);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Datos_Usuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos_Usuario";

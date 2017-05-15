@@ -16,7 +16,9 @@ namespace Modulo_Empleados
         {
             InitializeComponent();
         }
+
         public int respuesta;
+
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
             this.Close();

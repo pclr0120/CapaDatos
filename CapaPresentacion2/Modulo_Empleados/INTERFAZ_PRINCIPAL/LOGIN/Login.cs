@@ -50,9 +50,7 @@ namespace LOGIN
             if (arrastre) 
             {
                 this.Location = this.PointToScreen(new Point(MousePosition.X - Location.X - ex, MousePosition.Y - Location.Y - ey));
-            
             }
-
             //If Arrastre Then Me.Location = Me.PointToScreen(New Point(Me.MousePosition.X - Me.Location.X - ex, Me.MousePosition.Y - Me.Location.Y - ey))
         }
 
@@ -79,31 +77,39 @@ namespace LOGIN
                 this.Close();
             }
                else if (result == DialogResult.No) { }
-            
-            
         }
 
         //Procedimiento ingresar para el evento enter en el txt_pass y al presionar el btn_ingresar
         private void ingresar() {
             CapaLogica.Login l = new CapaLogica.Login();
 
-            if (l.CheckLogin(Convert.ToInt32(txt_user.Text), txt_pass.Text) == 1)
+            if (txt_user.Text != "")
             {
-                this.Hide();
-                Formulario_Principal frp = new Formulario_Principal();
-                frp.ID = Convert.ToInt32(txt_user.Text);
-                Bitmap b = (Bitmap)logo.Image;
-                IntPtr pIcon = b.GetHicon();
-                Icon i = Icon.FromHandle(pIcon);
-                frp.Icon = i;
-                i.Dispose();
-                frp.Show();
+                if (txt_pass.Text != "")
+                {
+                    if (l.CheckLogin(Convert.ToInt32(txt_user.Text), txt_pass.Text) == 1)
+                    {
+                        this.Hide();
+                        Formulario_Principal frp = new Formulario_Principal();
+                        frp.ID = Convert.ToInt32(txt_user.Text);
+                        Bitmap b = (Bitmap)logo.Image;
+                        IntPtr pIcon = b.GetHicon();
+                        Icon i = Icon.FromHandle(pIcon);
+                        frp.Icon = i;
+                        i.Dispose();
+                        frp.Show();
+                    }
+                    else
+                    {
+                        lbl_resul.Text = "Usuario y/o contraseña inconrrectos";
+                        lbl_resul.Visible = true;
+                    }
+                }
+                else
+                    MessageBox.Show("Ingrese la CONTRASEÑA del usuario.");
             }
             else
-            {
-                lbl_resul.Text = "Usuario y/o contraseña inconrrectos";
-                lbl_resul.Visible = true;
-            }
+                MessageBox.Show("Ingrese el ID del usuario.");
         }
 
         private void txt_ingresar_Click(object sender, EventArgs e)

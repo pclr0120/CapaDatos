@@ -28,6 +28,14 @@ namespace CapaLogica
             }
             
         }
+
+        //MAVO
+        public DataTable LoginDatosUsuario(int Id) //Procedimiento para obtener los datos del usuario
+        {
+            string[] parametros = { "_Id" };
+            DataTable Tabla = Acceso.GetTabla("LoginDatosUsuario", parametros, Id);
+            return Tabla;
+        }
     }
 
 }

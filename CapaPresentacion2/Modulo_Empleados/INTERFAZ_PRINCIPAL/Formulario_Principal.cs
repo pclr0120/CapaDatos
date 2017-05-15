@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modulo_Empleados;
+using CapaLogica;
 
 
 namespace EMBLEMA
@@ -15,6 +16,8 @@ namespace EMBLEMA
     public partial class Formulario_Principal : Form
     {
         public int ID;
+        CapaLogica.Empleados E = new CapaLogica.Empleados();
+        CapaLogica.Login L = new CapaLogica.Login();
 
         public Formulario_Principal()
         {
@@ -47,7 +50,6 @@ namespace EMBLEMA
             //newMDIChild.MdiParent = this;
             // Display the new form.
             //newMDIChild.Show();
-            
         }
 
         private void rb_punto_vta_CheckedChanged(object sender, EventArgs e)
@@ -71,6 +73,7 @@ namespace EMBLEMA
             Empleados.WindowState = FormWindowState.Maximized;
             Empleados.Dock = DockStyle.Fill;
             Empleados.TabControl_Empleados.SelectedTab = Empleados.TabEmpleados_Lista;
+            Empleados.dgv_e.DataSource = E.EmpleadoBuscar();
             Empleados.Show();
         }
 
@@ -79,17 +82,13 @@ namespace EMBLEMA
             //TabControlPrincipal.SelectedTab = tabPage_config;
         }
         
-        
-
         private void Formulario_Principal_Load(object sender, EventArgs e)
         {
-            
             menuStrip1.Visible = false;
-            lbl_id.Text = Convert.ToString(ID);
+            DataRow row = L.LoginDatosUsuario(ID).Rows[0]; //La variable --row-- recive una tabla con todos los datos del usurio logeado
+            lbl_usuario.Text = row["Nom"].ToString() + " " + row["App"].ToString() + " " + row["Apm"].ToString(); //Concateno solo las columnas del nombre en el lbl_usuario
         }
-
-       
-
+        
         private void lbl_control_sesion_Click(object sender, EventArgs e)
         {
             Modulo_Empleados.INTERFAZ_PRINCIPAL.LOGIN.Warning adver = new Modulo_Empleados.INTERFAZ_PRINCIPAL.LOGIN.Warning();
@@ -108,11 +107,6 @@ namespace EMBLEMA
         }
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rb_empleados_CheckedChanged_1(object sender, EventArgs e)
         {
 
         }

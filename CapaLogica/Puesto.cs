@@ -40,6 +40,26 @@ namespace CapaLogica
             return Tabla;
         }
 
+        public DataTable PuestoBuscarId(int Id)
+        {
+            string[] parametros = { "_Id" };
+            DataTable Tabla = Acceso.GetTabla("PuestoBuscarId", parametros, Id);
+            return Tabla;
+        }
+
+        public int PuestoBuscarCoincidenciaNombre(string Nombre)
+        {
+            string[] parametros = { "_Nombre" };
+            if (Acceso.GetTabla("PuestoBuscarCoincidenciaNombre", parametros, Nombre).Rows.Count > 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
         public void PuestoAlta(int Id)
         {
             string[] parametros = { "_Id" };
