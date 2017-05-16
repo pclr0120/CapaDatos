@@ -14,6 +14,7 @@ namespace CapaLogica
 
         public int IdProducto { get; set; }
         public string Codigo { get; set; }
+        public string Descripcion { get; set; }
         public int Stock { get; set; }
         public int StockMin { get; set; }
         public bool Stock0 { get; set; }
@@ -28,7 +29,7 @@ namespace CapaLogica
         public string Estatus { get; set; }
         public string Nombre { get; set; }
         public double IVA { get; set; }
-
+        public List<Producto> ListaProducto2 = new List<Producto>();
 
         Accesodatos Acceso = new Accesodatos();
         //pclr
@@ -44,8 +45,59 @@ namespace CapaLogica
             return Math.Abs((Acceso.ExeProceVenta("Venta_ActulizarStock", parametros, codigo)));
 
         }
+        public DataTable ConsultaProductoDetalle(string codigo)
+        {
+            string[] parametros = { "id" };
+            return (Acceso.GetTabla("Venta_ConsultaDetalleProducto", parametros, codigo));
+
+        }
+
+        public List<Producto> ConsultaDetallePProducto(string Codigo)
+        {
+            try
+            {
+             
+                foreach (DataRow row in ConsultaProductoDetalle(Codigo).Rows)
+                {
+                  
+
+                    ///=====
+                  
+                        Producto p = new Producto();
+                        if (ListaProducto2.Count == 0)
+                        {
+                            p.Registro = 1;
+                        }
+                        else
+                        {
+                            p.Registro = ListaProducto2.Count + 1;
+                        }
 
 
+
+                        p.Codigo = row["Codigo"].ToString();
+                        p.Nombre = row["Nombre"].ToString();
+                        p.Precio = row.Field<double>("Precio");
+                        p.Descripcion = row.Field<string>("Descripcion");
+                        p.FechaCaducidad = row.Field<string>("FechaCaducidad");
+                        ListaProducto2.Add(p);
+                      
+                  
+
+
+                    ///=====
+                }
+            
+
+            }
+            catch (Exception e)
+            {
+
+                //MessageBox.Show("Error en la consulta Consule consulte Administrador:" + e, "Mensaje Error");
+            }
+            return ListaProducto2;
+
+        }
 
     }
 }

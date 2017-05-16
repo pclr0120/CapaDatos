@@ -15,6 +15,7 @@ using System.Timers;
 using System.Windows.Threading;
 using CapaLogica;
 using System.Data;
+using CapaPresentacion.VENTA;
 
 namespace CapaPresentacion
 {
@@ -49,12 +50,19 @@ namespace CapaPresentacion
         #region ControlTeclas   
 
         VentaMaestra Vm = new VentaMaestra();
+        Producto p = new Producto();
+     
         public void EvaluarTecla(object sender, KeyEventArgs e)
         {
-            if (Key.A == e.Key)
+            if (Key.P == e.Key)
+            {
+                ConsultaProducto cp = new ConsultaProducto();
+                cp.Show();
+            }
+                if (Key.A == e.Key)
             {
 
-
+              
                 this.Close();
 
 
@@ -123,14 +131,19 @@ namespace CapaPresentacion
         //Producto producto = new Producto();
         //List<Producto> ListaProducto = new List<Producto>();
 
-
         public void AgregarProducto()
         {
             dataGrid.ItemsSource = Vm.CProducto(TxtCodigo.Text); //agrega al datagrid los productos
             dataGrid.Items.Refresh();
-            if (Vm.Encontrado != true)
-                MessageBox.Show("Producto no encontrado");
             calVenta();  //acutliza los totaltes
+            if (Vm.Encontrado != true) {
+                MessageBox.Show("Producto no encontrado");
+             
+            }
+            if (Vm.p.Stock0) {
+                MessageBox.Show("No se encuentra en stock");
+            }
+              
         }
 
 
@@ -139,6 +152,7 @@ namespace CapaPresentacion
 
         public void calVenta()
         {
+            Vm.CalVenta();
             LblIVA.Content = "$" + Vm.IVA.ToString();
             LblSubtotal.Content = "$" + Vm.Subtotal.ToString();
             LblTotal.Content = "$" + Vm.Total.ToString();
@@ -170,8 +184,11 @@ namespace CapaPresentacion
                     Mensaje.MensajeOk m = new Mensaje.MensajeOk("Mensaje:", "La venta se realizo exitoxamente.");
 
                     m.ShowDialog();
-                    dataGrid.ItemsSource = Vm.ListaProducto; //para limpiar la venta
+                   
+                 
+                    dataGrid.ItemsSource = Vm.LimpiarVenta(); //para limpiar la venta
                     dataGrid.Items.Refresh();//para limpiar la venta
+                    calVenta();
                 }
                 else
                 {
@@ -191,6 +208,7 @@ namespace CapaPresentacion
             Mm.ShowDialog();
             if (Mm.Si)
                 dataGrid.ItemsSource = null;
+            dataGrid.Items.Refresh();//para limpiar la venta
             Vm.LimpiarVenta() ;
             calVenta();
 

@@ -1,0 +1,67 @@
+﻿<Window x:Class="CapaPresentacion.VENTA.ConsultaProducto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CapaPresentacion.VENTA"
+        mc:Ignorable="d"
+      KeyUp="EvaluarTecla"
+        
+           WindowStyle="None"
+        ResizeMode="NoResize"
+        Title="Consulta de Producto" WindowStartupLocation="CenterScreen" Height="300" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+
+
+        </Grid.RowDefinitions>
+      
+       
+            <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+
+            </Grid.ColumnDefinitions>
+            <Label Content="Codigo"></Label>
+            <TextBox Grid.Column="1" Name="txtProducto" Width="100" Height="20" TextChanged="txtProducto_TextChanged"></TextBox>
+            <Button Grid.Column="2"  Margin="5,5,5,5" Content="F1=Salir"></Button>
+                
+            </Grid>
+        <Grid Grid.Row="2">
+            <DataGrid ></DataGrid>
+            
+            
+        </Grid>
+        <Grid Grid.Row="2">
+            <DataGrid x:Name="dataGrid"     HorizontalAlignment="Left" Margin="10,0,0,0"
+                  VerticalAlignment="Top" Height="200" Width="500" Grid.Row="3"  
+                  IsReadOnly="True" AutoGenerateColumns="False"  CanUserAddRows="False"  
+                   CanUserDeleteRows="False"
+                 FontSize="18"
+                  
+                ItemsSource="{Binding tablap}"
+                  FontStyle="Oblique" FontFamily="18"
+                  >
+                <DataGrid.Effect>
+                    <DropShadowEffect/>
+                </DataGrid.Effect>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Codigo" Binding="{Binding Codigo}" Width="auto" ></DataGridTextColumn>
+                    <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="auto" ></DataGridTextColumn>
+                    <DataGridTextColumn Header="Descripcion" Binding="{Binding Descripcion}" Width="auto" ></DataGridTextColumn>
+                    <DataGridTextColumn Header="Precio$" Binding="{Binding Precio}" Width="auto" ></DataGridTextColumn>
+                    <DataGridTextColumn Header="Caducidad" Binding="{Binding FechaCaducidad}" Width="auto" ></DataGridTextColumn>
+
+
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        </Grid>
+</Window>
