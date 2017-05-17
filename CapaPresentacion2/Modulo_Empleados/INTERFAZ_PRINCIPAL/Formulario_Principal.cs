@@ -24,47 +24,12 @@ namespace EMBLEMA
             InitializeComponent();
         }
         Modulo_Empleados.Empleados Empleados = new Modulo_Empleados.Empleados();
+        Modulo_Clientes.Clientes Clientes = new Modulo_Clientes.Clientes();
 
- 
-        private void btn_cerrar_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Está seguro que desea salir?", "GYMCENTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-            if (result == DialogResult.Yes)
-            {
-                //this.Close();
-                Application.Exit();
-            }
-            else if (result == DialogResult.No) { }
-        }
 
         private void btn_min_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void rb_inicio_CheckedChanged(object sender, EventArgs e)
-        {
-            //TabControlPrincipal.SelectedTab = tabPage_inicio;
-            //Modulo_Empleados.Empleados newMDIChild = new Modulo_Empleados.Empleados();
-            // Set the parent form of the child window.
-            //newMDIChild.MdiParent = this;
-            // Display the new form.
-            //newMDIChild.Show();
-        }
-
-        private void rb_punto_vta_CheckedChanged(object sender, EventArgs e)
-        {
-            //TabControlPrincipal.SelectedTab = tabPage_pto_vta;
-        }
-
-        private void rb_membre_CheckedChanged(object sender, EventArgs e)
-        {
-            //TabControlPrincipal.SelectedTab = tabPage_membre;
-        }
-
-        private void rb_equipo_CheckedChanged(object sender, EventArgs e)
-        {
-            //TabControlPrincipal.SelectedTab = tabPage_equipo;
         }
 
         private void rb_empleados_CheckedChanged(object sender, EventArgs e)
@@ -76,12 +41,21 @@ namespace EMBLEMA
             Empleados.dgv_e.DataSource = E.EmpleadoBuscar();
             Empleados.Show();
         }
-
+        private void rb_membre_Click(object sender, EventArgs e)
+        {
+            Clientes.MdiParent = this;
+            Clientes.WindowState = FormWindowState.Maximized;
+            Clientes.Dock = DockStyle.Fill;
+            Clientes.TabControl_Clientes.SelectedTab = Clientes.TabClientes_Lista;
+            Clientes.Show();
+        }
         private void rb_config_CheckedChanged(object sender, EventArgs e)
         {
             //TabControlPrincipal.SelectedTab = tabPage_config;
         }
         
+        
+
         private void Formulario_Principal_Load(object sender, EventArgs e)
         {
             menuStrip1.Visible = false;
@@ -110,5 +84,7 @@ namespace EMBLEMA
         {
 
         }
+
+        
     }
 }
