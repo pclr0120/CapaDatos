@@ -98,7 +98,7 @@ namespace CapaPresentacion.Mensaje
       
         public void EvaluarTecla(object sender, KeyEventArgs e)
         {
-            if (Key.S == e.Key)
+            if (Key.F1 == e.Key)
             {
 
                 aceptar();
@@ -106,10 +106,10 @@ namespace CapaPresentacion.Mensaje
 
 
             }
-            if (Key.N == e.Key)
+            if (Key.F2 == e.Key)
             {
 
-
+                valor = 0;
                 this.Close();
 
 

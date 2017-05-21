@@ -54,7 +54,7 @@ namespace CapaPresentacion
      
         public void EvaluarTecla(object sender, KeyEventArgs e)
         {
-            if (Key.P == e.Key)
+            if (Key.F6 == e.Key)
             {
                 ConsultaProducto cp = new ConsultaProducto();
                 cp.Show();
@@ -73,7 +73,7 @@ namespace CapaPresentacion
 
             }
 
-            if (Key.V == e.Key)
+            if (Key.F4 == e.Key)
             {
 
 
