@@ -37,6 +37,7 @@
             this.lbl_usuario = new System.Windows.Forms.Label();
             this.lbl_control_sesion = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rb_inventario = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -172,6 +173,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.rb_inventario);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox5);
@@ -188,9 +190,29 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 113);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(260, 521);
+            this.panel1.Size = new System.Drawing.Size(260, 624);
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // rb_inventario
+            // 
+            this.rb_inventario.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rb_inventario.AutoSize = true;
+            this.rb_inventario.BackColor = System.Drawing.Color.Transparent;
+            this.rb_inventario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rb_inventario.BackgroundImage")));
+            this.rb_inventario.FlatAppearance.BorderSize = 0;
+            this.rb_inventario.FlatAppearance.CheckedBackColor = System.Drawing.Color.Crimson;
+            this.rb_inventario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.rb_inventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.rb_inventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_inventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rb_inventario.Location = new System.Drawing.Point(0, 120);
+            this.rb_inventario.MinimumSize = new System.Drawing.Size(260, 60);
+            this.rb_inventario.Name = "rb_inventario";
+            this.rb_inventario.Size = new System.Drawing.Size(260, 60);
+            this.rb_inventario.TabIndex = 27;
+            this.rb_inventario.UseVisualStyleBackColor = false;
+            this.rb_inventario.CheckedChanged += new System.EventHandler(this.rb_inventario_CheckedChanged);
             // 
             // label2
             // 
@@ -198,7 +220,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(26, 443);
+            this.label2.Location = new System.Drawing.Point(26, 546);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(199, 13);
             this.label2.TabIndex = 11;
@@ -209,7 +231,7 @@
             this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(103, 471);
+            this.pictureBox6.Location = new System.Drawing.Point(103, 574);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(25, 25);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -221,7 +243,7 @@
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(141, 475);
+            this.pictureBox5.Location = new System.Drawing.Point(141, 578);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(20, 20);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -233,7 +255,7 @@
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(71, 475);
+            this.pictureBox4.Location = new System.Drawing.Point(71, 578);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(20, 20);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -252,7 +274,7 @@
             this.rb_config.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.rb_config.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rb_config.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rb_config.Location = new System.Drawing.Point(0, 300);
+            this.rb_config.Location = new System.Drawing.Point(0, 360);
             this.rb_config.MinimumSize = new System.Drawing.Size(260, 60);
             this.rb_config.Name = "rb_config";
             this.rb_config.Size = new System.Drawing.Size(260, 60);
@@ -265,7 +287,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(176, 411);
+            this.pictureBox3.Location = new System.Drawing.Point(176, 514);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(20, 20);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -284,20 +306,20 @@
             this.rb_empleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.rb_empleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rb_empleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rb_empleados.Location = new System.Drawing.Point(0, 240);
+            this.rb_empleados.Location = new System.Drawing.Point(0, 300);
             this.rb_empleados.MinimumSize = new System.Drawing.Size(260, 60);
             this.rb_empleados.Name = "rb_empleados";
             this.rb_empleados.Size = new System.Drawing.Size(260, 60);
             this.rb_empleados.TabIndex = 10;
             this.rb_empleados.UseVisualStyleBackColor = false;
-            this.rb_empleados.Click += new System.EventHandler(this.rb_empleados_CheckedChanged);
+            this.rb_empleados.CheckedChanged += new System.EventHandler(this.rb_empleados_CheckedChanged);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(97, 400);
+            this.pictureBox1.Location = new System.Drawing.Point(97, 503);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -309,7 +331,7 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(42, 411);
+            this.pictureBox2.Location = new System.Drawing.Point(42, 514);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(20, 20);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -328,12 +350,13 @@
             this.rb_equipo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.rb_equipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rb_equipo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rb_equipo.Location = new System.Drawing.Point(0, 180);
+            this.rb_equipo.Location = new System.Drawing.Point(0, 240);
             this.rb_equipo.MinimumSize = new System.Drawing.Size(260, 60);
             this.rb_equipo.Name = "rb_equipo";
             this.rb_equipo.Size = new System.Drawing.Size(260, 60);
             this.rb_equipo.TabIndex = 9;
             this.rb_equipo.UseVisualStyleBackColor = false;
+            this.rb_equipo.CheckedChanged += new System.EventHandler(this.rb_equipo_CheckedChanged);
             // 
             // rb_membre
             // 
@@ -347,13 +370,13 @@
             this.rb_membre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.rb_membre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rb_membre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rb_membre.Location = new System.Drawing.Point(0, 120);
+            this.rb_membre.Location = new System.Drawing.Point(0, 180);
             this.rb_membre.MinimumSize = new System.Drawing.Size(260, 60);
             this.rb_membre.Name = "rb_membre";
             this.rb_membre.Size = new System.Drawing.Size(260, 60);
             this.rb_membre.TabIndex = 8;
             this.rb_membre.UseVisualStyleBackColor = false;
-            this.rb_membre.Click += new System.EventHandler(this.rb_membre_Click);
+            this.rb_membre.CheckedChanged += new System.EventHandler(this.rb_membre_Click);
             // 
             // rb_punto_vta
             // 
@@ -470,7 +493,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 634);
+            this.ClientSize = new System.Drawing.Size(1034, 737);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.menuStrip1);
@@ -533,6 +556,7 @@
         private System.Windows.Forms.Label lbl_control_sesion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RadioButton rb_inventario;
     }
 }
 

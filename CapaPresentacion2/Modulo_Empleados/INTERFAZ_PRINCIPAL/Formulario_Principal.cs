@@ -23,8 +23,11 @@ namespace EMBLEMA
         {
             InitializeComponent();
         }
+
         Modulo_Empleados.Empleados Empleados = new Modulo_Empleados.Empleados();
         Modulo_Clientes.Clientes Clientes = new Modulo_Clientes.Clientes();
+        Modulo_Equipo.Modulo_Equipo Equipo = new Modulo_Equipo.Modulo_Equipo();
+        Modulo_Inventario.Inventario Inventario = new Modulo_Inventario.Inventario();
 
 
         private void btn_min_Click(object sender, EventArgs e)
@@ -85,6 +88,20 @@ namespace EMBLEMA
 
         }
 
-        
+        private void rb_equipo_CheckedChanged(object sender, EventArgs e)
+        {
+            Equipo.MdiParent = this;
+            Equipo.WindowState = FormWindowState.Maximized;
+            Equipo.Dock = DockStyle.Fill;
+            Equipo.Show();
+        }
+
+        private void rb_inventario_CheckedChanged(object sender, EventArgs e)
+        {
+            Inventario.MdiParent = this;
+            Inventario.WindowState = FormWindowState.Maximized;
+            Inventario.Dock = DockStyle.Fill;
+            Inventario.Show();
+        }
     }
 }
