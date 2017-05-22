@@ -54,44 +54,49 @@ namespace CapaPresentacion.VENTA
 
         VentaMaestra Vm = new VentaMaestra();
         Producto p = new Producto();
+        bool control = true;
 
         public void EvaluarTecla(object sender, KeyEventArgs e)
         {
-            if (Key.F6 == e.Key)
+
+            if (control)
             {
-                consultarProducot();
+                if (Key.F5 == e.Key)
+                {
+                    consultarProducot();
+                }
+                if (Key.A == e.Key)
+                {
+
+
+                    this.Close();
+
+
+                }
+                if (Key.F1 == e.Key)
+                {
+                    RealizarVenta();
+
+                }
+
+                if (Key.F2 == e.Key)
+                {
+
+                    AgregarProductoVenta();
+
+                }
+                if (Key.F4 == e.Key)
+                {
+                    EliminarProductoVenta();
+
+                }
+                if (Key.F5 == e.Key && dataGrid.Items.Count > 0)
+                {
+                    CancelarVenta();
+                }
+
             }
-            if (Key.A == e.Key)
-            {
-
-
-                this.Close();
-
-
-            }
-            if (Key.F == e.Key)
-            {
-                RealizarVenta();
-
-            }
-
-            if (Key.F4 == e.Key)
-            {
-
-                AgregarProductoVenta();
-
-            }
-            if (Key.F2 == e.Key)
-            {
-                EliminarProductoVenta();
-              
-            }
-            if (Key.F5 == e.Key && dataGrid.Items.Count > 0)
-            {
-                CancelarVenta();
-            }
-
-
+            control = true;
 
         }
 
@@ -116,8 +121,8 @@ namespace CapaPresentacion.VENTA
                 x = 2;
                 if (dataGrid.Items.Count > 0)
                 {
-
-                    Mensaje.MensajeCaptura M = new Mensaje.MensajeCaptura("Eliminar producto", "Capture el # registro del producto a eliminar:", "Eliminar F1", "Cancelar F2", true);
+                    control = false;
+                    Mensaje.MensajeCaptura M = new Mensaje.MensajeCaptura("Eliminar producto", "Capture el # registro del producto a eliminar:", "Eliminar F1", "Cancelar F2", true,"int");
                     M.ShowDialog();
 
                     if (M.valor != 0 && Vm.ListaProducto.Exists(c => c.Registro == M.valor))
@@ -128,7 +133,7 @@ namespace CapaPresentacion.VENTA
                     else if(M.valor!=0)
                     {
 
-                        Mensaje.MensajeCaptura M2 = new Mensaje.MensajeCaptura("Eliminar producto", "Capture el # registro del producto a eliminar:", "Eliminar F1", "Cancelar F2", true);
+                        Mensaje.MensajeCaptura M2 = new Mensaje.MensajeCaptura("Eliminar producto", "Capture el # registro del producto a eliminar:", "Eliminar F1", "Cancelar F2", true,"int");
                         M2.ShowDialog();
                     }
 
@@ -136,6 +141,7 @@ namespace CapaPresentacion.VENTA
 
 
                 }
+              
             }
         }
 
@@ -144,13 +150,14 @@ namespace CapaPresentacion.VENTA
             int c = 1;
             if (c == 1)
             {
+                control = false;
                 c = 2;
-                Mensaje.MensajeCaptura M = new Mensaje.MensajeCaptura("VENTA MANUAL", "#REGISTRO:", "AGREGAR F1", "CANCELAR F2", true);
+                Mensaje.MensajeCaptura M = new Mensaje.MensajeCaptura("VENTA MANUAL", "Codigo:", "AGREGAR F1", "CANCELAR F2", true,"int");
                 M.ShowDialog();
                 if (M.valor > 0)
                     AgregarProducto(M.valor.ToString());
             }
-            
+         
         }
         public void AgregarProducto(string codigo)
         {
@@ -200,34 +207,55 @@ namespace CapaPresentacion.VENTA
 
         #endregion
 
+        //cambio
+        void cambio()
+        {
+            control = false;
+            Mensaje.MensajeCaptura pagocambio = new Mensaje.MensajeCaptura("PAGO$", "PAGO CON $:", "ACEPTAR F1", "", true, "double");
+            pagocambio.Total = Vm.Total;
+            pagocambio.ShowDialog(); 
+                Vm.Pago = pagocambio.valor2;
 
+          
+
+        }
         #region FinalizarLAVenta
         public void RealizarVenta()
         {
             if (dataGrid.Items.Count > 0)
+            {
+                control = false;
+                Mensaje.Mesaje confirmar = new Mensaje.Mesaje("Confimacion"," 'Desea Realizar la venta?","SI F1","NO F2");
+                confirmar.ShowDialog();
+                if (confirmar.Si) { 
+                cambio();
 
                 if (Vm.GuardarVenta() == 1)
-                {
-
-                    Mensaje.MensajeOk m = new Mensaje.MensajeOk("Mensaje:", "La venta se realizo exitoxamente.");
-
-                    m.ShowDialog();
+                    {
 
 
-                    dataGrid.ItemsSource = Vm.LimpiarVenta(); //para limpiar la venta
-                    dataGrid.Items.Refresh();//para limpiar la venta
-                    calVenta();
-                }
-                else
-                {
+                    Mensaje.MensajeOk m = new Mensaje.MensajeOk("Mensaje:", "La venta se realizo exitoxamente. su cambio es: $" + Vm.Cambio.ToString());
 
-                    Mensaje.MensajeOk m = new Mensaje.MensajeOk("Mensaje:Error", "Error, Consulte con su administrador.");
-
-                    m.Show();
-                }
+                        m.ShowDialog();
 
 
+                        dataGrid.ItemsSource = Vm.LimpiarVenta(); //para limpiar la venta
+                        dataGrid.Items.Refresh();//para limpiar la venta
+                        calVenta();
+                    }
+                    else
+                    {
+
+                        Mensaje.MensajeOk m = new Mensaje.MensajeOk("Mensaje:Error", "Error, Consulte con su administrador.");
+
+                        m.Show();
+                    }
+
+            }
+
+                 }
             //para limpiar la venta
+        
         }
 
         public void CancelarVenta()
@@ -239,7 +267,7 @@ namespace CapaPresentacion.VENTA
                 c = 2;
                 if (dataGrid.Items.Count > 0)
                 {
-
+                    control = false;
                     Mensaje.Mesaje Mm = new CapaPresentacion.Mensaje.Mesaje("Cancelar Venta", "Desea Cancelar la venta?", "Si F1", "No F2");
                     Mm.ShowDialog();
                     if (Mm.Si)
@@ -249,6 +277,7 @@ namespace CapaPresentacion.VENTA
                     calVenta();
                 }
             }
+        
 
         }
 
@@ -279,6 +308,16 @@ namespace CapaPresentacion.VENTA
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             CancelarVenta();
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+           
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            RealizarVenta();
         }
     }
 }

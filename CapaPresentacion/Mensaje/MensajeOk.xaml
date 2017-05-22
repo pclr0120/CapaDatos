@@ -38,7 +38,7 @@
                 <ColumnDefinition Width="auto"/>
            
             </Grid.ColumnDefinitions>
-            <Button Name="BtSi" Content="S=Aceptar" Width="100" Height="30" Margin="40,5,5,5" Grid.Column="1" Grid.Row="2" Click="BtSi_Click"></Button>
+            <Button Name="BtSi" Content="OK F1" Width="100" Height="30" Margin="40,5,5,5" Grid.Column="1" Grid.Row="2" Click="BtSi_Click"></Button>
         </Grid>
     </Grid>
 </Window>

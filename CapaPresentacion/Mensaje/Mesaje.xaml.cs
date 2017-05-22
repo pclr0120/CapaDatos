@@ -45,7 +45,7 @@ namespace CapaPresentacion.Mensaje
 
         public void EvaluarTecla(object sender, KeyEventArgs e)
         {
-            if (Key.S == e.Key)
+            if (Key.F1 == e.Key)
             {
 
 
@@ -54,7 +54,7 @@ namespace CapaPresentacion.Mensaje
 
 
             }
-            if (Key.N == e.Key)
+            if (Key.F2 == e.Key)
             {
 
 
