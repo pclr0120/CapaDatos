@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using CapaLogica;
 
 namespace CapaPresentacion.Mensaje
 {
@@ -19,27 +20,59 @@ namespace CapaPresentacion.Mensaje
     /// </summary>
     public partial class MensajeCaptura : Window
     {
+        public double Total { get; set; }
         public int valor { get; set; }
+        public double valor2 { get; set; }
         public bool Opc { get; set; }
+        public string Opc2 { get; set; }
         public bool Solo { get; set; }
-        public MensajeCaptura(string titulo,string mesanje,string bt1,string btn2,bool solo)
+        public MensajeCaptura(string titulo,string mesanje,string bt1,string btn2,bool solo,string tipo)
         {
             InitializeComponent();
             lblMensajeM.Content = mesanje;
             lblMensajeT.Content = titulo;
             this.txt_valor.Focus();
+            
             BtSi.Content = bt1;
             BtNo.Content = btn2;
+            Opc2 = tipo;
             Solo = solo;
+            if (btn2 == "")
+            {
+                BtNo.IsEnabled = false;
+             
+            }
         }
+        
         void aceptar()
         {
             
             if (txt_valor.Text != "")
             {
                 Opc = true;
-                this.Close();
-                valor = Convert.ToInt16(txt_valor.Text);
+
+
+                if (Opc2 == "double" && Total < Convert.ToDouble(txt_valor.Text))
+                {
+                    this.Close();
+                    valor2 = Convert.ToDouble(txt_valor.Text);
+                }
+                else if (Opc2 == "double" && Total > Convert.ToDouble(txt_valor.Text))
+                {
+
+                    MessageBox.Show("El pago debe ser mayor al total a pagar");
+                    txt_valor.Focus();
+                }
+
+                if (Opc2 == "int")
+                {
+                    valor = Convert.ToInt16(txt_valor.Text);
+                    this.Close();
+                }
+             
+                
+               
+           
             }
             else
             {
@@ -110,6 +143,7 @@ namespace CapaPresentacion.Mensaje
             {
 
                 valor = 0;
+                valor2 = 0;
                 this.Close();
 
 

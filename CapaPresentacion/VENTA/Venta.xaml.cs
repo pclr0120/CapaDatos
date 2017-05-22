@@ -87,7 +87,7 @@ namespace CapaPresentacion
                 if (dataGrid.Items.Count > 0)
                 {
 
-                    Mensaje.MensajeCaptura M = new Mensaje.MensajeCaptura("Eliminar producto", "Capture el # registro del producto a eliminar:", "S=Eliminar", "N=Cancelar", true);
+                    Mensaje.MensajeCaptura M = new Mensaje.MensajeCaptura("Eliminar producto", "Capture el # registro del producto a eliminar:", "S=Eliminar", "N=Cancelar", true,"int");
                     M.ShowDialog();
                     if (M.Opc)
                     {
@@ -99,7 +99,7 @@ namespace CapaPresentacion
                         else
                         {
                             MessageBox.Show("No existe el # registro:" + M.valor.ToString(), "Mensaje");
-                            Mensaje.MensajeCaptura Mm = new CapaPresentacion.Mensaje.MensajeCaptura("Eliminar producto", "Capture el # registro del producto a eliminar:", "S=Elimnar", "N=Cancelar", true);
+                            Mensaje.MensajeCaptura Mm = new CapaPresentacion.Mensaje.MensajeCaptura("Eliminar producto", "Capture el # registro del producto a eliminar:", "S=Elimnar", "N=Cancelar", true,"int");
                             Mm.ShowDialog();
                         }
                     }
