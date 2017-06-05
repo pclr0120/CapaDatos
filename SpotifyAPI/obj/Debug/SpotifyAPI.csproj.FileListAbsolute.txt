@@ -1,0 +1,9 @@
+C:\Users\Frank Crow-Belloso\Desktop\SpotifyAPI-NET-master\SpotifyAPI\bin\Debug\SpotifyAPI.dll.config
+C:\Users\Frank Crow-Belloso\Desktop\SpotifyAPI-NET-master\SpotifyAPI\bin\Debug\SpotifyAPI.XML
+C:\Users\Frank Crow-Belloso\Desktop\SpotifyAPI-NET-master\SpotifyAPI\bin\Debug\SpotifyAPI.dll
+C:\Users\Frank Crow-Belloso\Desktop\SpotifyAPI-NET-master\SpotifyAPI\bin\Debug\SpotifyAPI.pdb
+C:\Users\Frank Crow-Belloso\Desktop\SpotifyAPI-NET-master\SpotifyAPI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Frank Crow-Belloso\Desktop\SpotifyAPI-NET-master\SpotifyAPI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Frank Crow-Belloso\Desktop\SpotifyAPI-NET-master\SpotifyAPI\obj\Debug\SpotifyAPI.csprojResolveAssemblyReference.cache
+C:\Users\Frank Crow-Belloso\Desktop\SpotifyAPI-NET-master\SpotifyAPI\obj\Debug\SpotifyAPI.dll
+C:\Users\Frank Crow-Belloso\Desktop\SpotifyAPI-NET-master\SpotifyAPI\obj\Debug\SpotifyAPI.pdb
