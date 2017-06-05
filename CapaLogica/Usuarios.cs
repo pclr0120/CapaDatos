@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CapaDatos;
+using System.Data;
 
 
 namespace CapaLogica
@@ -34,8 +35,14 @@ namespace CapaLogica
         public string Tel { get; set; }
         public string Pass { get; set; }
         public string Estado { get; set; }
+        Accesodatos Acceso = new Accesodatos();
 
-
+        public DataTable UsuarioBuscar()
+        {
+            string[] parametros = { "_Id" };
+            DataTable Tabla = Acceso.GetTabla("UsuarioBuscar", parametros, IdEmpleado);
+            return Tabla;
+        }
 
     }
 
