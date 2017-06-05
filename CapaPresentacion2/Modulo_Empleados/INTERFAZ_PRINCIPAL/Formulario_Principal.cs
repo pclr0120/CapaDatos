@@ -6,9 +6,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 using Modulo_Empleados;
 using CapaLogica;
+using SpotifyAPI;
+using SpotifyAPI.Local;
+using SpotifyAPI.Local.Enums;
+using SpotifyAPI.Local.Models;
+
 
 namespace EMBLEMA
 {
@@ -19,16 +25,103 @@ namespace EMBLEMA
         CapaLogica.Login L = new CapaLogica.Login();
         CapaLogica.Puesto P = new CapaLogica.Puesto();
         CapaLogica.Usuarios U = new CapaLogica.Usuarios();
-        
 
-        
+        private readonly SpotifyLocalAPI _spotify;
+
+        private Track _currentTrack;
+
 
         public Formulario_Principal()
         {
             InitializeComponent();
 
-            
+            _spotify = new SpotifyLocalAPI();
+            _spotify.OnTrackChange += _spotify_OnTrackChange;
+
+            lbl_artista.Click += (sender, args) => System.Diagnostics.Process.Start(lbl_artista.Tag.ToString());
+            lbl_album.Click += (sender, args) => System.Diagnostics.Process.Start(lbl_album.Tag.ToString());
+            lbl_cancion.Click += (sender, args) => System.Diagnostics.Process.Start(lbl_cancion.Tag.ToString());
+
         }
+
+        private void _spotify_OnTrackChange(object sender, TrackChangeEventArgs e)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => _spotify_OnTrackChange(sender, e)));
+                return;
+            }
+            UpdateTrack(e.NewTrack);
+        }
+
+        public void Connect()
+        {
+            if (!SpotifyLocalAPI.IsSpotifyRunning())
+            {
+                txt_message.Text = "Spotify no se está ejecutando!";
+                mensage_timer.Start();
+                return;
+            }
+            if (!SpotifyLocalAPI.IsSpotifyWebHelperRunning())
+            {
+                txt_message.Text = "El proceso SpotifyWebHelper no está corriendo!";
+                mensage_timer.Start();
+                return;
+            }
+
+            bool successful = _spotify.Connect();
+            if (successful)
+            {
+                
+                txt_message.Text = "Conexión con Spotify exitosa";
+                mensage_timer.Start();
+                pb_album.Enabled = false;
+                pb_album.Cursor = Cursors.Arrow;
+                UpdateInfos();
+                _spotify.ListenForEvents = true;
+            }
+            else
+            {
+                DialogResult res = MessageBox.Show(@"No se ha podido establecer conexion con el cliente de Spotify. Lo intentamos de nuevo?", @"Spotify", MessageBoxButtons.YesNo);
+                if (res == DialogResult.Yes)
+                    Connect();
+            }
+        }
+
+        public void UpdateInfos()
+        {
+            StatusResponse status = _spotify.GetStatus();
+            if (status == null)
+                return;
+
+            if (status.Track != null) //Update track infos
+                UpdateTrack(status.Track);
+        }
+
+        public async void UpdateTrack(Track track)
+        {
+            _currentTrack = track;
+
+            if (track.IsAd())
+                return; //Don't process further, maybe null values
+
+            lbl_cancion.Text = track.TrackResource.Name;
+            lbl_cancion.Tag = track.TrackResource.Uri;
+
+            lbl_artista.Text = track.ArtistResource.Name;
+            lbl_artista.Tag = track.ArtistResource.Uri;
+
+            lbl_album.Text = track.AlbumResource.Name;
+            lbl_album.Tag = track.AlbumResource.Uri;
+
+            SpotifyUri uri = track.TrackResource.ParseUri();
+            
+            Ventana_Inicio.panel2.BackgroundImage = await track.GetAlbumArtAsync(AlbumArtSize.Size640);
+            SpotifyOn();
+            pb_album.Image = await track.GetAlbumArtAsync(AlbumArtSize.Size160);
+            SpotifyFlag = true;
+        }
+
 
         Modulo_Empleados.Empleados Empleados = new Modulo_Empleados.Empleados();
         Modulo_Clientes.Clientes Clientes = new Modulo_Clientes.Clientes();
@@ -141,6 +234,44 @@ namespace EMBLEMA
                 SpotifyOn();
             }
             else SpotifyOff();
+        }
+        int second = 0;
+        private void mensage_timer_Tick(object sender, EventArgs e)
+        {
+            
+            txt_message.Visible = true;
+            second++;
+            if (second >= 30)
+            {
+                txt_message.Visible = false;
+                mensage_timer.Stop();
+                second = 0;
+            }
+        }
+
+        private void pb_album_Click(object sender, EventArgs e)
+        {
+            Connect();
+        }
+
+        private void btn_next_Click(object sender, EventArgs e)
+        {
+            _spotify.Skip();
+        }
+
+        private void btn_previous_Click(object sender, EventArgs e)
+        {
+            _spotify.Previous();
+        }
+
+        private async void btn_play_Click(object sender, EventArgs e)
+        {
+            StatusResponse status = _spotify.GetStatus();
+            if (status.Playing)
+            {
+                await _spotify.Pause();
+            }
+            else await _spotify.Play();
         }
     }
 }

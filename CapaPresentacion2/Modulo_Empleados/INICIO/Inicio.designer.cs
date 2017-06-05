@@ -46,6 +46,10 @@
             this.lbl_viento = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_next = new System.Windows.Forms.PictureBox();
+            this.btn_play = new System.Windows.Forms.PictureBox();
+            this.btn_previous = new System.Windows.Forms.PictureBox();
+            this.group = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -53,19 +57,15 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.lbl_tiempo = new System.Windows.Forms.Label();
             this.lbl_no = new System.Windows.Forms.Label();
-            this.group = new System.Windows.Forms.GroupBox();
-            this.btn_next = new System.Windows.Forms.PictureBox();
-            this.btn_play = new System.Windows.Forms.PictureBox();
-            this.btn_previous = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_clima)).BeginInit();
             this.panel2.SuspendLayout();
-            this.group.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_next)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_previous)).BeginInit();
+            this.group.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -278,6 +278,62 @@
             this.panel2.Size = new System.Drawing.Size(644, 477);
             this.panel2.TabIndex = 17;
             // 
+            // btn_next
+            // 
+            this.btn_next.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_next.BackColor = System.Drawing.Color.Transparent;
+            this.btn_next.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_next.Image = ((System.Drawing.Image)(resources.GetObject("btn_next.Image")));
+            this.btn_next.Location = new System.Drawing.Point(521, 400);
+            this.btn_next.Name = "btn_next";
+            this.btn_next.Size = new System.Drawing.Size(30, 30);
+            this.btn_next.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_next.TabIndex = 26;
+            this.btn_next.TabStop = false;
+            this.btn_next.Click += new System.EventHandler(this.btn_next_Click);
+            // 
+            // btn_play
+            // 
+            this.btn_play.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_play.BackColor = System.Drawing.Color.Transparent;
+            this.btn_play.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_play.Image = ((System.Drawing.Image)(resources.GetObject("btn_play.Image")));
+            this.btn_play.Location = new System.Drawing.Point(282, 371);
+            this.btn_play.Name = "btn_play";
+            this.btn_play.Size = new System.Drawing.Size(80, 80);
+            this.btn_play.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_play.TabIndex = 24;
+            this.btn_play.TabStop = false;
+            this.btn_play.Click += new System.EventHandler(this.btn_play_Click);
+            // 
+            // btn_previous
+            // 
+            this.btn_previous.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_previous.BackColor = System.Drawing.Color.Transparent;
+            this.btn_previous.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_previous.Image = ((System.Drawing.Image)(resources.GetObject("btn_previous.Image")));
+            this.btn_previous.Location = new System.Drawing.Point(94, 400);
+            this.btn_previous.Name = "btn_previous";
+            this.btn_previous.Size = new System.Drawing.Size(30, 30);
+            this.btn_previous.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_previous.TabIndex = 25;
+            this.btn_previous.TabStop = false;
+            this.btn_previous.Click += new System.EventHandler(this.btn_previous_Click);
+            // 
+            // group
+            // 
+            this.group.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.group.BackColor = System.Drawing.Color.Transparent;
+            this.group.Controls.Add(this.label11);
+            this.group.Controls.Add(this.label10);
+            this.group.Controls.Add(this.label9);
+            this.group.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.group.Location = new System.Drawing.Point(45, 119);
+            this.group.Name = "group";
+            this.group.Size = new System.Drawing.Size(554, 239);
+            this.group.TabIndex = 21;
+            this.group.TabStop = false;
+            // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -363,56 +419,6 @@
             this.lbl_no.Text = "No se encontró la ciudad especificada";
             this.lbl_no.Visible = false;
             // 
-            // group
-            // 
-            this.group.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.group.BackColor = System.Drawing.Color.Transparent;
-            this.group.Controls.Add(this.label11);
-            this.group.Controls.Add(this.label10);
-            this.group.Controls.Add(this.label9);
-            this.group.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.group.Location = new System.Drawing.Point(45, 119);
-            this.group.Name = "group";
-            this.group.Size = new System.Drawing.Size(554, 239);
-            this.group.TabIndex = 21;
-            this.group.TabStop = false;
-            // 
-            // btn_next
-            // 
-            this.btn_next.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_next.BackColor = System.Drawing.Color.Transparent;
-            this.btn_next.Image = ((System.Drawing.Image)(resources.GetObject("btn_next.Image")));
-            this.btn_next.Location = new System.Drawing.Point(521, 400);
-            this.btn_next.Name = "btn_next";
-            this.btn_next.Size = new System.Drawing.Size(30, 30);
-            this.btn_next.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_next.TabIndex = 26;
-            this.btn_next.TabStop = false;
-            // 
-            // btn_play
-            // 
-            this.btn_play.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_play.BackColor = System.Drawing.Color.Transparent;
-            this.btn_play.Image = ((System.Drawing.Image)(resources.GetObject("btn_play.Image")));
-            this.btn_play.Location = new System.Drawing.Point(282, 371);
-            this.btn_play.Name = "btn_play";
-            this.btn_play.Size = new System.Drawing.Size(80, 80);
-            this.btn_play.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_play.TabIndex = 24;
-            this.btn_play.TabStop = false;
-            // 
-            // btn_previous
-            // 
-            this.btn_previous.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_previous.BackColor = System.Drawing.Color.Transparent;
-            this.btn_previous.Image = ((System.Drawing.Image)(resources.GetObject("btn_previous.Image")));
-            this.btn_previous.Location = new System.Drawing.Point(94, 400);
-            this.btn_previous.Name = "btn_previous";
-            this.btn_previous.Size = new System.Drawing.Size(30, 30);
-            this.btn_previous.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_previous.TabIndex = 25;
-            this.btn_previous.TabStop = false;
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -446,11 +452,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_clima)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.group.ResumeLayout(false);
-            this.group.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_next)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_play)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_previous)).EndInit();
+            this.group.ResumeLayout(false);
+            this.group.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -473,7 +479,6 @@
         private System.Windows.Forms.Label lbl_hum;
         private System.Windows.Forms.Label lbl_viento;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
@@ -485,6 +490,7 @@
         public System.Windows.Forms.PictureBox btn_next;
         public System.Windows.Forms.PictureBox btn_play;
         public System.Windows.Forms.PictureBox btn_previous;
+        public System.Windows.Forms.Panel panel2;
     }
 }
 

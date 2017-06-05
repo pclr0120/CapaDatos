@@ -7,14 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SpotifyAPI;
+using SpotifyAPI.Local;
+using SpotifyAPI.Local.Enums;
+using SpotifyAPI.Local.Models;
 
 namespace Inicio
 {
     public partial class Inicio : Form
     {
+        private readonly SpotifyLocalAPI _spotify;
+
         public Inicio()
         {
             InitializeComponent();
+            _spotify = new SpotifyLocalAPI();
+            _spotify.OnTrackChange += _spotify_OnTrackChange;
         }
         int second;
         private void label4_Click(object sender, EventArgs e)
@@ -22,6 +30,26 @@ namespace Inicio
 
         }
 
+        private void _spotify_OnTrackChange(object sender, TrackChangeEventArgs e)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => _spotify_OnTrackChange(sender, e)));
+                return;
+            }
+            UpdateTrack(e.NewTrack);
+        }
+        private Track _currentTrack;
+        public async void UpdateTrack(Track track)
+        {
+            _currentTrack = track;
+
+            if (track.IsAd())
+                return; //Don't process further, maybe null values
+
+            SpotifyUri uri = track.TrackResource.ParseUri();
+
+        }
         private void Inicio_Load(object sender, EventArgs e)
         {
 
@@ -47,7 +75,7 @@ namespace Inicio
 
             catch (Exception ex)
             {
-                lbl_no.Visible = true;
+               // lbl_no.Visible = true;
             }
 
             second = second + 1;
@@ -83,6 +111,29 @@ namespace Inicio
         {
             txt_busqueda.SelectAll();
             lbl_no.Visible = false;
+        }
+
+  
+
+        private void btn_next_Click(object sender, EventArgs e)
+        {
+            _spotify.Skip();
+        }
+
+        private void btn_previous_Click(object sender, EventArgs e)
+        {
+            _spotify.Previous();
+        }
+
+        private async void btn_play_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("click");
+            StatusResponse status = _spotify.GetStatus();
+            if (status.Playing)
+            {
+                await _spotify.Pause();
+            }
+            else await _spotify.Play();
         }
     }
 }
