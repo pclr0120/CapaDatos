@@ -55,15 +55,20 @@ namespace CapaPresentacion.VENTA
         VentaMaestra Vm = new VentaMaestra();
         Producto p = new Producto();
         bool control = true;
+        int banderacontrol=0;
 
         public void EvaluarTecla(object sender, KeyEventArgs e)
         {
 
-            if (control)
+           
+            if ( banderacontrol==0)
             {
+               
+                control = false;
                 if (Key.F5 == e.Key)
                 {
                     consultarProducot();
+                  
                 }
                 if (Key.A == e.Key)
                 {
@@ -76,6 +81,7 @@ namespace CapaPresentacion.VENTA
                 if (Key.F1 == e.Key)
                 {
                     RealizarVenta();
+                
 
                 }
 
@@ -83,20 +89,28 @@ namespace CapaPresentacion.VENTA
                 {
 
                     AgregarProductoVenta();
+                  
 
                 }
                 if (Key.F4 == e.Key)
                 {
                     EliminarProductoVenta();
+                 
 
                 }
                 if (Key.F5 == e.Key && dataGrid.Items.Count > 0)
                 {
                     CancelarVenta();
+                  
                 }
-
+              
+              
             }
-            control = true;
+            banderacontrol += 1;
+            if (banderacontrol > 1)
+            {
+                banderacontrol = 0;
+            }
 
         }
 

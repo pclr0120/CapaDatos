@@ -39,12 +39,54 @@ namespace CapaLogica
             return Acceso.GetTabla("Venta_ConsultarProducto", parametros,codigo);
 
         }
-        public int obtenerStock(int codigo)
+        public DataTable OStock(int codigo)
         {
+           
+
             string[] parametros = { "id" };
-            return Math.Abs((Acceso.ExeProceVenta("Venta_ActulizarStock", parametros, codigo)));
+            return Acceso.GetTabla("Venta_ActulizarStock", parametros, codigo);
+          
 
         }
+
+        public List<Producto> Obtenerstock(int Codigo)
+        {
+            try
+            {
+
+                foreach (DataRow row in OStock(Codigo).Rows)
+                {
+
+
+                    ///=====
+
+               
+                 
+
+
+                    Stock = row.Field<int>("Stock");
+                   StockMin= row.Field<int>("StockMin");
+
+                  
+
+
+
+
+                    ///=====
+                }
+
+
+            }
+            catch (Exception e)
+            {
+
+                //MessageBox.Show("Error en la consulta Consule consulte Administrador:" + e, "Mensaje Error");
+            }
+            return ListaProducto2;
+
+        }
+
+
         public DataTable ConsultaProductoDetalle(string codigo)
         {
             string[] parametros = { "id" };

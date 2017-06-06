@@ -19,6 +19,8 @@ namespace CapaLogica
         public int IdUsuario { get; set; }
         public int IdVenta { get; set; }
         public int valor { get; set; }
+        public double Pago { get; set; }
+        public double Cambio { get; set; }
      
 
 
@@ -40,14 +42,15 @@ namespace CapaLogica
         {
             try
             {
-                p.Stock0 = false;
+               p.Stock0 = false;
                  Encontrado = false;
                 foreach (DataRow row in producto.ConsultaProducto(Codigo).Rows)
                 {
                     Encontrado = true;
-
+                   p.Obtenerstock(Convert.ToInt32(Codigo));
+                   
                     ///=====
-                    if (p.obtenerStock(Convert.ToInt32(Codigo)) > 0)
+                    if (p.Stock > 0)
                     {
                         Producto p = new Producto();
                         if (ListaProducto.Count == 0)
@@ -67,10 +70,12 @@ namespace CapaLogica
                         p.IVA = row.Field<double>("IVA");
                         ListaProducto.Add(p);
                         CalVenta();
+                        p.Stock = 0;
                     }
                     else
                     {
                         p.Stock0 = true;
+                        
                     }
                       
                        
@@ -143,14 +148,15 @@ namespace CapaLogica
             try
             {
 
-                string[] parametros = { "_IdUsuario", "_IdCliente", "_CantidadP", "_Total", "_Iva", "_Subtotal" };
-                IdVenta = Convert.ToInt32(Acceso.ExeProceVenta("Venta_FinalizarVenta", parametros, IdUsuario, IdCliente, CantidadProducto, Total, IVA, Subtotal));
+                string[] parametros = { "_IdUsuario", "_IdCliente", "_CantidadP", "_Total", "_Iva", "_Subtotal","_PAGOCON" };
+                IdVenta = Convert.ToInt32(Acceso.ExeProceVenta("Venta_FinalizarVenta", parametros, IdUsuario, IdCliente, CantidadProducto, Total, IVA, Subtotal,Pago));
 
                 string[] parametros2 = { "_IdVenta", "_Codigo", "_PrecioProducto" };
                 for (int i = 0; i < ListaProducto.Count; i++)
                 {
                     Acceso.ExeProcedimiento("Venta_InsertarDetalleVenta", parametros2, IdVenta, ListaProducto[i].Codigo, ListaProducto[i].Precio);
                 }
+                Cambio = Pago - Total;
                 return 1;
 
             }
@@ -161,6 +167,7 @@ namespace CapaLogica
         }
 
       //========CAncelar venta
+
 
         public List<Producto> LimpiarVenta()
         {
@@ -175,6 +182,7 @@ namespace CapaLogica
 
 
         }
+
 
     }
 }
