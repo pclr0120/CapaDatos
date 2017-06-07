@@ -179,30 +179,37 @@ namespace EMBLEMA
             lbl_usuario.Text = row["Nom"].ToString() + " " + row["App"].ToString() + " " + row["Apm"].ToString(); //Concateno solo las columnas del nombre en el lbl_usuario
             rb_inicio.Checked = true;
             SpotifyOff();
+            Ver_Inicio();
+            Ventana_Inicio.Show();
+            panel3.AutoScroll = true;
+            panel3.VerticalScroll.Visible = false;
+            //this.AutoScroll = true;
+            //this.VerticalScroll.Visible = false;
+            
+        }
+        void Ver_Inicio()
+        {
+            Ventana_Inicio.MdiParent = this;
+            Ventana_Inicio.WindowState = FormWindowState.Maximized;
+            Ventana_Inicio.Dock = DockStyle.Fill;
         }
         
         void SpotifyOn()
         {
-            Ventana_Inicio.MdiParent = this;
-            Ventana_Inicio.WindowState = FormWindowState.Maximized;
-            Ventana_Inicio.Dock = DockStyle.Fill;
             Ventana_Inicio.group.Visible = false;
             Ventana_Inicio.btn_play.Visible = true;
             Ventana_Inicio.btn_next.Visible = true;
             Ventana_Inicio.btn_previous.Visible = true;
-            Ventana_Inicio.Show();
         }
 
         void SpotifyOff()
         {
-            Ventana_Inicio.MdiParent = this;
-            Ventana_Inicio.WindowState = FormWindowState.Maximized;
-            Ventana_Inicio.Dock = DockStyle.Fill;
+            
             Ventana_Inicio.group.Visible = true;
             Ventana_Inicio.btn_play.Visible = false;
             Ventana_Inicio.btn_next.Visible = false;
             Ventana_Inicio.btn_previous.Visible = false;
-            Ventana_Inicio.Show();
+            
         }
 
         private void lbl_control_sesion_Click(object sender, EventArgs e)
@@ -229,11 +236,14 @@ namespace EMBLEMA
         bool SpotifyFlag = false;
         private void rb_inicio_CheckedChanged(object sender, EventArgs e)
         {
+            Ver_Inicio();
             if (SpotifyFlag)
             {
                 SpotifyOn();
             }
-            else SpotifyOff();
+            else { SpotifyOff(); }
+
+            
         }
         int second = 0;
         private void mensage_timer_Tick(object sender, EventArgs e)
@@ -251,7 +261,35 @@ namespace EMBLEMA
 
         private void pb_album_Click(object sender, EventArgs e)
         {
-            Connect();
+            try
+            {
+                //Abrir_Spotify();
+                //txt_message.Visible = true;
+                //txt_message.Text = "Espere...";
+                //conexion.Start();
+            }
+            catch (Exception exc)
+            {
+                btn_install.Visible = true;
+                txt_message.Text = exc.ToString();
+            }
+            
+            
+        }
+
+        void Abrir_Spotify()
+        {
+            Process p = new Process();
+            p.StartInfo.FileName = "cmd";
+            p.StartInfo.RedirectStandardInput = true;
+            p.StartInfo.RedirectStandardOutput = true;
+            p.StartInfo.CreateNoWindow = true;
+            p.StartInfo.UseShellExecute = false;
+            p.Start();
+            p.StandardInput.WriteLine(@"cd/ & cd Users/%Username% & start AppData/Roaming/Spotify/Spotify.exe");
+            p.StandardInput.Flush();
+            p.StandardInput.Close();
+            p.Close();
         }
 
         private void btn_next_Click(object sender, EventArgs e)
@@ -273,5 +311,29 @@ namespace EMBLEMA
             }
             else await _spotify.Play();
         }
+
+        private void txt_message_Click(object sender, EventArgs e)
+        {
+
+        }
+        int a;
+        private void conexion_Tick(object sender, EventArgs e)
+        {
+            if (a < 30) a++;
+            else
+            {
+                Connect();
+                conexion.Stop();
+                a = 0;
+            }
+        }
+
+        private void btn_install_Click(object sender, EventArgs e)
+        {
+            Process.Start(linkLabel1.Text);
+            btn_install.Visible = false;
+        }
+
+        
     }
 }

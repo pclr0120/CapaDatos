@@ -31,5 +31,11 @@ namespace Modulo_Config
         {
 
         }
+
+        private void btn_nuevo_Click(object sender, EventArgs e)
+        {
+            TabControl_Config.SelectedTab = TabConfig_Usuario;
+            txt_id.Focus();
+        }
     }
 }
