@@ -175,7 +175,7 @@
                 <Button Grid.Row="6" Width="180"  Content="F5 Consultar Producto" FontSize="15"   Margin="5,5,5,5" Height="40" Background="#FF2D2D30" Click="Button_Click_3">
 
                 </Button>
-                <Button Grid.Row="7" Width="180"  Content="F6 " FontSize="15"   Margin="5,5,5,5" Height="40" Background="#FF2D2D30" Click="Button_Click_5">
+                <Button Grid.Row="7" Width="180"  Content="F6 Devolucion" FontSize="15"   Margin="5,5,5,5" Height="40" Background="#FF2D2D30" Click="Button_Click_5">
 
                 </Button>
 

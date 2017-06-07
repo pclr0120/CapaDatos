@@ -300,37 +300,51 @@ namespace CapaPresentacion.VENTA
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            banderacontrol += 1;
             EliminarProductoVenta();
 
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            banderacontrol += 1;
             RealizarVenta();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            banderacontrol += 1;
             AgregarProductoVenta();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            banderacontrol += 1;
             consultarProducot();
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
+            banderacontrol += 1;
             CancelarVenta();
         }
 
+  
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-           
+            banderacontrol += 1;
+            Devoluciones dv = new Devoluciones();
+            try
+            {
+                dv.Show();
+            }
+            catch (Exception)
+            { }
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
+            banderacontrol += 1;
             RealizarVenta();
         }
     }

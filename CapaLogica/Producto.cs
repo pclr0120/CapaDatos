@@ -24,7 +24,7 @@ namespace CapaLogica
         public int IdPromocion { get; set; }
         public double PrecioMin { get; set; }
         public int IdUnidad { get; set; }
-        public int IdFamilia{ get; set; }
+        public int IdFamilia { get; set; }
         public string FechaCaducidad { get; set; }
         public string Estatus { get; set; }
         public string Nombre { get; set; }
@@ -36,16 +36,16 @@ namespace CapaLogica
         public DataTable ConsultaProducto(string codigo)
         {
             string[] parametros = { "_codigo" };
-            return Acceso.GetTabla("Venta_ConsultarProducto", parametros,codigo);
+            return Acceso.GetTabla("Venta_ConsultarProducto", parametros, codigo);
 
         }
         public DataTable OStock(int codigo)
         {
-           
+
 
             string[] parametros = { "id" };
             return Acceso.GetTabla("Venta_ActulizarStock", parametros, codigo);
-          
+
 
         }
 
@@ -60,14 +60,14 @@ namespace CapaLogica
 
                     ///=====
 
-               
-                 
+
+
 
 
                     Stock = row.Field<int>("Stock");
-                   StockMin= row.Field<int>("StockMin");
+                    StockMin = row.Field<int>("StockMin");
 
-                  
+
 
 
 
@@ -98,38 +98,38 @@ namespace CapaLogica
         {
             try
             {
-             
+
                 foreach (DataRow row in ConsultaProductoDetalle(Codigo).Rows)
                 {
-                  
+
 
                     ///=====
-                  
-                        Producto p = new Producto();
-                        if (ListaProducto2.Count == 0)
-                        {
-                            p.Registro = 1;
-                        }
-                        else
-                        {
-                            p.Registro = ListaProducto2.Count + 1;
-                        }
+
+                    Producto p = new Producto();
+                    if (ListaProducto2.Count == 0)
+                    {
+                        p.Registro = 1;
+                    }
+                    else
+                    {
+                        p.Registro = ListaProducto2.Count + 1;
+                    }
 
 
 
-                        p.Codigo = row["Codigo"].ToString();
-                        p.Nombre = row["Nombre"].ToString();
-                        p.Precio = row.Field<double>("Precio");
-                        p.Descripcion = row.Field<string>("Descripcion");
-                        p.FechaCaducidad = row.Field<string>("FechaCaducidad");
-                        ListaProducto2.Add(p);
-                      
-                  
+                    p.Codigo = row["Codigo"].ToString();
+                    p.Nombre = row["Nombre"].ToString();
+                    p.Precio = row.Field<double>("Precio");
+                    p.Descripcion = row.Field<string>("Descripcion");
+                    p.FechaCaducidad = row.Field<string>("FechaCaducidad");
+                    ListaProducto2.Add(p);
+
+
 
 
                     ///=====
                 }
-            
+
 
             }
             catch (Exception e)

@@ -87,6 +87,8 @@ namespace CapaPresentacion.Mensaje
 
         private void BtNo_Click(object sender, RoutedEventArgs e)
         {
+            valor = 0;
+            valor2 = 0;
             this.Close();
         }
         public void SoloNumeros(TextCompositionEventArgs e)
