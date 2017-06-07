@@ -1,0 +1,56 @@
+﻿<Window x:Class="CapaPresentacion.ClienteVenta"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CapaPresentacion"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Normal"
+        WindowStyle="None"
+        Title="Vincular cliente con la venta" Height="180" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="#Cliente o Nombre " Margin="10,10,10,10" ></Label>
+            <TextBox Name="txtBuscar" Margin="10,10,10,10" Grid.Row="0" Grid.Column="1" Width="300"  ></TextBox>
+            <Button Name="btnbuscar" Content="Guardar" Width="100" Height="30" Grid.Column="2" Click="btnbuscar_Click" ></Button>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <ProgressBar Grid.Column="1" Width="300" Maximum="100" Name="pbar" Height="20" Margin="10,10,10,10"  >
+            
+            </ProgressBar>
+            
+            <Label Content="0%" Name="lblporcentaje" Grid.Column="2"  Height="30"></Label>
+        </Grid>
+    </Grid>
+</Window>

@@ -103,8 +103,13 @@ namespace CapaPresentacion.VENTA
                     CancelarVenta();
                   
                 }
-              
-              
+                if (Key.F6 == e.Key )
+                {
+                    Devoluciones();
+
+                }
+
+
             }
             banderacontrol += 1;
             if (banderacontrol > 1)
@@ -247,7 +252,8 @@ namespace CapaPresentacion.VENTA
                 if (Vm.GuardarVenta() == 1)
                     {
 
-
+                        ClienteVenta c = new ClienteVenta(Vm.IdVenta);
+                        c.ShowDialog();
                     Mensaje.MensajeOk m = new Mensaje.MensajeOk("Mensaje:", "La venta se realizo exitoxamente. su cambio es: $" + Vm.Cambio.ToString());
 
                         m.ShowDialog();
@@ -298,6 +304,19 @@ namespace CapaPresentacion.VENTA
 
         #endregion
 
+
+        void Devoluciones() {
+
+            banderacontrol += 1;
+            Devoluciones dv = new Devoluciones();
+            try
+            {
+                dv.Show();
+            }
+            catch (Exception)
+            { }
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             banderacontrol += 1;
@@ -332,14 +351,7 @@ namespace CapaPresentacion.VENTA
   
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            banderacontrol += 1;
-            Devoluciones dv = new Devoluciones();
-            try
-            {
-                dv.Show();
-            }
-            catch (Exception)
-            { }
+            Devoluciones();
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
