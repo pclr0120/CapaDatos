@@ -35,5 +35,19 @@ namespace Modulo_Empleados
             respuesta = 0;
             this.Close();
         }
+
+        private void Datos_Usuario_KeyUp(object sender, KeyEventArgs e)
+        {
+            if ((Convert.ToInt32(e.KeyData) == Convert.ToInt32(Keys.F1))) //TabEmpleados_Lista
+            {
+                respuesta = 1;
+                this.Close();
+            }
+            else if ((Convert.ToInt32(e.KeyData) == Convert.ToInt32(Keys.Escape)))
+            {
+                respuesta = 0;
+                this.Close();
+            }
+        }
     }
 }

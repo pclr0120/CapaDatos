@@ -27,6 +27,9 @@ namespace Modulo_Empleados
         int ID;
         string Nom_puesto;
         public int Id_modificar;
+        string[] DatosE = new string[12];
+        string[] DatosP = new string[4];
+
 
         private void btn_cambiar_foto_Click(object sender, EventArgs e)
         {
@@ -562,11 +565,16 @@ namespace Modulo_Empleados
                                             {
                                                 try
                                                 {
-                                                    E.EmpleadoModificar(ID, lbl_curp.Text, txt_nom_e.Text.Trim(), txt_app_e.Text.Trim(), txt_apm_e.Text.Trim(), cb_puesto_e.Text, txt_esc_e.Text.Trim(), txt_calle_e.Text.Trim(), txt_col_e.Text.Trim(), txt_num_e.Text.Trim(), cb_ciudad_e.Text, cb_mun_e.Text, cb_ent_e.Text, txt_tel_e.Text.Trim());
-                                                    MessageBox.Show("Empleado modificado correctamente");
-                                                    TabControl_Empleados.SelectedTab = TabEmpleados_Lista;
-                                                    dgv_e.DataSource = E.EmpleadoBuscar();
-                                                    cb_filtro.Text = "TODOS";
+                                                    if (txt_nom_e.Text != DatosE[0] || txt_app_e.Text != DatosE[1] || txt_apm_e.Text != DatosE[2] || cb_puesto_e.Text != DatosE[3] || txt_esc_e.Text != DatosE[4] || txt_calle_e.Text != DatosE[5] || txt_num_e.Text != DatosE[6] || txt_col_e.Text != DatosE[7] || cb_ent_e.Text != DatosE[8] || cb_mun_e.Text != DatosE[9] || cb_ciudad_e.Text != DatosE[10] || txt_tel_e.Text != DatosE[11])
+                                                    {
+                                                        E.EmpleadoModificar(ID, lbl_curp.Text, txt_nom_e.Text.Trim(), txt_app_e.Text.Trim(), txt_apm_e.Text.Trim(), cb_puesto_e.Text, txt_esc_e.Text.Trim(), txt_calle_e.Text.Trim(), txt_col_e.Text.Trim(), txt_num_e.Text.Trim(), cb_ciudad_e.Text, cb_mun_e.Text, cb_ent_e.Text, txt_tel_e.Text.Trim());
+                                                        MessageBox.Show("Empleado modificado correctamente");
+                                                        TabControl_Empleados.SelectedTab = TabEmpleados_Lista;
+                                                        dgv_e.DataSource = E.EmpleadoBuscar();
+                                                        cb_filtro.Text = "TODOS";
+                                                    }
+                                                    else
+                                                        MessageBox.Show("Debe MODIFICAR ALGUN CAMPO para continuar con la operación.");
                                                 }
                                                 catch (Exception)
                                                 {
@@ -604,6 +612,7 @@ namespace Modulo_Empleados
             //Abro el formulario Autentificar_Nuevo_Empleado para validar la Curp del empleado a registrar
             Autentificar_Nuevo_Empleado Nuevo = new Autentificar_Nuevo_Empleado();
             Nuevo.ShowDialog();
+            Nuevo.txt_curp.Focus();
             if (Nuevo.valor == 1)//La variable valor me dice si se puede registrar al empleado o no.
             {
                 //Rellenos los campos por defecto: lbl_curp, Datos del cb_puesto_e, datos del cb_ciudad_e, datos del cb_mun_e y datos del cb_ent_e
@@ -619,7 +628,7 @@ namespace Modulo_Empleados
 
                 //Limpio los campos, por si se ejecuto una modificacion antes del registro
                 lbl_accion.Text = "REGISTRO DE NUEVO EMPLEADO";
-                btn_registrar_e.Text = "REGISTRAR NUEVO EMPLEADO";
+                btn_registrar_e.Text = "REGISTRAR NUEVO EMPLEADO (F1)";
                 txt_nom_e.Clear();
                 txt_app_e.Clear();
                 txt_apm_e.Clear();
@@ -641,7 +650,7 @@ namespace Modulo_Empleados
 
                 //Relleno todos los datos del formulario con los datos de la tabla obtenida
                 lbl_accion.Text = "MODIFICAR EMPLEADO";
-                btn_registrar_e.Text = "MODIFICAR EMPLEADO";
+                btn_registrar_e.Text = "MODIFICAR EMPLEADO (F1)";
                 ID = Convert.ToInt32(row["IdEmpleado"].ToString());
                 cb_puesto_e.DisplayMember = "Tipo";
                 cb_puesto_e.DataSource = E.EmpleadoBuscarPuesto();
@@ -664,6 +673,18 @@ namespace Modulo_Empleados
                 cb_mun_e.Text = row["NomMun"].ToString();
                 cb_ciudad_e.Text = row["NomCiudad"].ToString();
                 txt_tel_e.Text = row["Telefono"].ToString();
+                DatosE[0] = txt_nom_e.Text;
+                DatosE[1] = txt_app_e.Text;
+                DatosE[2] = txt_apm_e.Text;
+                DatosE[3] = cb_puesto_e.Text;
+                DatosE[4] = txt_esc_e.Text;
+                DatosE[5] = txt_calle_e.Text;
+                DatosE[6] = txt_num_e.Text;
+                DatosE[7] = txt_col_e.Text;
+                DatosE[8] = cb_ent_e.Text;
+                DatosE[9] = cb_mun_e.Text;
+                DatosE[10] = cb_ciudad_e.Text;
+                DatosE[11] = txt_tel_e.Text;
 
                 TabControl_Empleados.SelectedTab = TabEmpleados_Registro; //Cambio de Tab
             }
@@ -685,10 +706,18 @@ namespace Modulo_Empleados
                     DU.ShowDialog();
                     if (DU.respuesta == 1)
                     {
-                        E.EmpleadoBaja(Convert.ToInt32(dgv_e.CurrentRow.Cells[0].Value));
-                        dgv_e.DataSource = E.EmpleadoBuscar();
-                        cb_filtro.Text = "TODOS";
-                        MessageBox.Show("Empleado dado de BAJA exitosamente.");
+                        DataRow row = E.EmpleadoBaja(Convert.ToInt32(dgv_e.CurrentRow.Cells[0].Value)).Rows[0];
+                        string res = row["Resultado"].ToString();
+                        if (res == "1")
+                        {
+                            MessageBox.Show("El empleado que intenta dar de baja se encuentra enlazado a un usuario. Modifique los datos de los usuarios registrados bajo este empleado para darlo de baja.");
+                        }
+                        else
+                        {
+                            dgv_e.DataSource = E.EmpleadoBuscar();
+                            cb_filtro.Text = "TODOS";
+                            MessageBox.Show("Empleado dado de BAJA exitosamente.");
+                        }
                     }
                     else
                         MessageBox.Show("Accion CANCELADA.");
@@ -748,36 +777,41 @@ namespace Modulo_Empleados
 
         public void PuestoModificar()
         {
-            if (txt_nombre.Text != "")
+            if (txt_nombre.Text != DatosP[0] || txt_numero_vacantes.Text != DatosP[1] || txt_sueld.Text != DatosP[2] || txt_descripcion.Text != DatosP[3])
             {
-                if (Convert.ToString(txt_numero_vacantes.Value) != "")
+                if (txt_nombre.Text != "")
                 {
-                    if (txt_sueld.Text != "")
+                    if (Convert.ToString(txt_numero_vacantes.Value) != "")
                     {
-                        if (txt_descripcion.Text != "")
+                        if (txt_sueld.Text != "")
                         {
-                            if (lbl_msg_p.Text == "Nombre de puesto disponible")
+                            if (txt_descripcion.Text != "")
                             {
-                                P.PuestoModificar(Id_modificar, txt_nombre.Text.Trim(), Convert.ToInt32(txt_numero_vacantes.Value), Convert.ToDouble(txt_sueld.Text.Trim()), txt_descripcion.Text.Trim());
-                                MessageBox.Show("Puesto MODIFICADO exitosamente.");
-                                TabControl_Empleados.SelectedTab = TabPuesto_Lista;
-                                dgv_puestos.DataSource = P.PuestoBuscar();
-                                cb_filtro.Text = "TODOS";
+                                if (lbl_msg_p.Text == "Nombre de puesto disponible")
+                                {
+                                    P.PuestoModificar(Id_modificar, txt_nombre.Text.Trim(), Convert.ToInt32(txt_numero_vacantes.Value), Convert.ToDouble(txt_sueld.Text.Trim()), txt_descripcion.Text.Trim());
+                                    MessageBox.Show("Puesto MODIFICADO exitosamente.");
+                                    TabControl_Empleados.SelectedTab = TabPuesto_Lista;
+                                    dgv_puestos.DataSource = P.PuestoBuscar();
+                                    cb_filtro.Text = "TODOS";
+                                }
+                                else
+                                    MessageBox.Show("Debe ingresar un NOMBRE DISPONIBLE para el puesto.");
                             }
                             else
-                                MessageBox.Show("Debe ingresar un NOMBRE DISPONIBLE para el puesto.");
+                                MessageBox.Show("Debe escribir la DESCRIPCION del puesto para modificar el registro.");
                         }
                         else
-                            MessageBox.Show("Debe escribir la DESCRIPCION del puesto para modificar el registro.");
+                            MessageBox.Show("Debe escribir el SUELDO del puesto para modificar el registro.");
                     }
                     else
-                        MessageBox.Show("Debe escribir el SUELDO del puesto para modificar el registro.");
+                        MessageBox.Show("Debe seleccionar el NUMERO MAXIMO DE VACANTES del puesto para modificar el registro.");
                 }
                 else
-                    MessageBox.Show("Debe seleccionar el NUMERO MAXIMO DE VACANTES del puesto para modificar el registro.");
+                    MessageBox.Show("Debe escribir el NOMBRE del puesto para modificar el registro.");
             }
             else
-                MessageBox.Show("Debe escribir el NOMBRE del puesto para modificar el registro.");
+                MessageBox.Show("Debe MODIFICAR ALGUN CAMPO para continuar con la operación.");
         }
 
         public void PuestoRegistrar()
@@ -826,6 +860,10 @@ namespace Modulo_Empleados
                 txt_sueld.Text = row["Sueldo"].ToString();
                 txt_descripcion.Text = row["Descripcion"].ToString();
                 TabControl_Empleados.SelectedTab = TabPuesto_Mod; //Cambio de Tab
+                DatosP[0] = txt_nombre.Text;
+                DatosP[1] = txt_numero_vacantes.Text;
+                DatosP[2] = txt_sueld.Text;
+                DatosP[3] = txt_descripcion.Text;
             }
             else
                 MessageBox.Show("Debe seleccionar al menos un puesto para modificarlo.");
@@ -850,9 +888,17 @@ namespace Modulo_Empleados
                     DialogResult result = MessageBox.Show("Está seguro que desea dar de BAJA el puesto seleccionado?", "GYMCENTER", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                     if (result == DialogResult.Yes)
                     {
-                        P.PuestoBaja(Convert.ToInt32(dgv_puestos.CurrentRow.Cells[0].Value));
-                        dgv_puestos.DataSource = P.PuestoBuscar();
-                        cb_filtro.Text = "TODOS";
+                        DataRow row = P.PuestoBaja(Convert.ToInt32(dgv_puestos.CurrentRow.Cells[0].Value)).Rows[0];
+                        string res = row["Resultado"].ToString();
+                        if (res == "1")
+                        {
+                            MessageBox.Show("El puesto que intenta dar de baja se encuentra enlazado a un empleado. Modifique los datos de los empleados registrados bajo este puesto para darlo de baja.");
+                        }
+                        else
+                        {
+                            dgv_puestos.DataSource = P.PuestoBuscar();
+                            cb_filtro.Text = "TODOS";
+                        }
                     }
                     else if (result == DialogResult.No) { }
                 }

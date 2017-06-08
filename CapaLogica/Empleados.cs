@@ -102,10 +102,11 @@ namespace CapaLogica
             Acceso.ExeProcedimiento("EmpleadoAlta", parametros, Id);
         }
 
-        public void EmpleadoBaja(int Id)
+        public DataTable EmpleadoBaja(int Id)
         {
             string[] parametros = { "_Id" };
-            Acceso.ExeProcedimiento("EmpleadoBaja", parametros, Id);
+            DataTable Tabla = Acceso.GetTabla("EmpleadoBaja", parametros, Id);
+            return Tabla;
         }
 
         public void EmpleadoRegistrar(string Curp, string Nombre, string App, string Apm, string IdTipoEmpleado, string Escolaridad, string Calle, string Colonia, string Num_ext, string IdCiudad, string IdMunicipio, string IdEntidadF, string Telefono)

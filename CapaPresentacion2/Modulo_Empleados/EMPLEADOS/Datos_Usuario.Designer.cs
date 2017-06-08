@@ -79,7 +79,7 @@
             this.btn_cancel.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(185, 42);
-            this.btn_cancel.TabIndex = 14;
+            this.btn_cancel.TabIndex = 1;
             this.btn_cancel.Text = "CANCELAR (ESC)";
             this.btn_cancel.UseVisualStyleBackColor = false;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
@@ -191,7 +191,7 @@
             this.btn_ok.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ok.Name = "btn_ok";
             this.btn_ok.Size = new System.Drawing.Size(185, 42);
-            this.btn_ok.TabIndex = 6;
+            this.btn_ok.TabIndex = 2;
             this.btn_ok.Text = "CONFIRMAR (F1)";
             this.btn_ok.UseVisualStyleBackColor = false;
             this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
@@ -236,10 +236,12 @@
             this.ClientSize = new System.Drawing.Size(517, 603);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Datos_Usuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Datos_Usuario";
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Datos_Usuario_KeyUp);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_foto)).EndInit();

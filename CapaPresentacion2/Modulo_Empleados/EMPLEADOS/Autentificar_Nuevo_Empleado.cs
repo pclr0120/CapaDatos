@@ -16,6 +16,7 @@ namespace Modulo_Empleados
         public Autentificar_Nuevo_Empleado()
         {
             InitializeComponent();
+            txt_curp.Focus();
         }
 
         int ex, ey;
@@ -32,7 +33,6 @@ namespace Modulo_Empleados
         private void Autentificar_Nuevo_Empleado_Load(object sender, EventArgs e)
         {
             txt_curp.Focus();
-            (panel2 as Control).KeyPress += new KeyPressEventHandler(MyKeyPressEventHandler);
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
@@ -61,14 +61,6 @@ namespace Modulo_Empleados
             ComprobarCurp();
         }
 
-        private void btn_nuevo_empleado_KeyUp(object sender, KeyEventArgs e)
-        {
-            if ((Convert.ToInt32(e.KeyData) == Convert.ToInt32(Keys.F1))) //TabEmpleados_Lista
-            {
-                ComprobarCurp();
-            }
-        }
-
         public void ComprobarCurp()
         {
             //Validacion de la Curp por Expresion Regular
@@ -89,13 +81,32 @@ namespace Modulo_Empleados
                 MessageBox.Show("Curp escrita incorrectamente."); 
         }
 
-        public void MyKeyPressEventHandler(Object sender, KeyPressEventArgs e)
+        private void Autentificar_Nuevo_Empleado_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyChar == 112) //TabEmpleados_Lista
+            if ((Convert.ToInt32(e.KeyData) == Convert.ToInt32(Keys.F1))) //TabEmpleados_Lista
             {
-                MessageBox.Show("Hola a todos");
-                //ComprobarCurp();
+                ComprobarCurp();
             }
+        }
+
+        private void Autentificar_Nuevo_Empleado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void Autentificar_Nuevo_Empleado_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void TC_NE_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void btn_nuevo_empleado_Click_1(object sender, EventArgs e)
+        {
+            ComprobarCurp();
         }
     }
 }

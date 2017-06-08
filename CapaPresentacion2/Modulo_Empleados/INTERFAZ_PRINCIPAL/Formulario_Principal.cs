@@ -25,6 +25,7 @@ namespace EMBLEMA
         CapaLogica.Login L = new CapaLogica.Login();
         CapaLogica.Puesto P = new CapaLogica.Puesto();
         CapaLogica.Usuarios U = new CapaLogica.Usuarios();
+        CapaLogica.Equipo Eq = new CapaLogica.Equipo();
 
         private readonly SpotifyLocalAPI _spotify;
 
@@ -224,6 +225,10 @@ namespace EMBLEMA
             Equipo.WindowState = FormWindowState.Maximized;
             Equipo.Dock = DockStyle.Fill;
             Equipo.Show();
+            Equipo.cb_clasificacion.DisplayMember = "Nombre";
+            Equipo.cb_clasificacion.DataSource = Eq.EquipoBuscarClasificaciones();
+            Equipo.dgv_e.DataSource = Eq.EquipoBuscar();
+            Equipo.IdUsuario = ID;
         }
 
         private void rb_inventario_CheckedChanged(object sender, EventArgs e)

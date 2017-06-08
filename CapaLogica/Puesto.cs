@@ -66,10 +66,11 @@ namespace CapaLogica
             Acceso.ExeProcedimiento("PuestoAlta",parametros,Id);
         }
 
-        public void PuestoBaja(int Id)
+        public DataTable PuestoBaja(int Id)
         {
             string[] parametros = { "_Id" };
-            Acceso.ExeProcedimiento("PuestoBaja", parametros, Id);
+            DataTable Tabla = Acceso.GetTabla("PuestoBaja", parametros, Id);
+            return Tabla;
         }
 
         public void PuestoRegistrar(string Tipo, int NumVacantes, double Sueldo, string Descripcion)
