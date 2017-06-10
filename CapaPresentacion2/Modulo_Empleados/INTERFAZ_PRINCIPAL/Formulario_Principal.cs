@@ -26,6 +26,7 @@ namespace EMBLEMA
         CapaLogica.Puesto P = new CapaLogica.Puesto();
         CapaLogica.Usuarios U = new CapaLogica.Usuarios();
         CapaLogica.Equipo Eq = new CapaLogica.Equipo();
+        CapaLogica.Cliente C = new CapaLogica.Cliente();
 
         private readonly SpotifyLocalAPI _spotify;
 
@@ -151,6 +152,7 @@ namespace EMBLEMA
             Clientes.WindowState = FormWindowState.Maximized;
             Clientes.Dock = DockStyle.Fill;
             Clientes.TabControl_Clientes.SelectedTab = Clientes.TabClientes_Lista;
+            Clientes.dgv_c.DataSource = C.ClienteBuscar();
             Clientes.Show();
         }
         
