@@ -286,6 +286,7 @@
             this.rb_punto_vta.Size = new System.Drawing.Size(260, 60);
             this.rb_punto_vta.TabIndex = 7;
             this.rb_punto_vta.UseVisualStyleBackColor = false;
+            this.rb_punto_vta.Click += new System.EventHandler(this.rb_punto_vta_CheckedChanged);
             // 
             // rb_membre
             // 

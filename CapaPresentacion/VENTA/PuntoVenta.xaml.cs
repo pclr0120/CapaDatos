@@ -359,5 +359,16 @@ namespace CapaPresentacion.VENTA
             banderacontrol += 1;
             RealizarVenta();
         }
+
+        private void Cerrar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void Min_Click_(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+        }
     }
 }

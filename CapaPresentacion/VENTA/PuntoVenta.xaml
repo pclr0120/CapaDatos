@@ -9,14 +9,14 @@
            WindowStyle="None"
         ResizeMode="NoResize"
         WindowState="Maximized"
-        Title="PuntoVenta" Height="auto" Width="1594.692">
-    <Grid>
+        Title="PuntoVenta" Height="766" Width="1366">
+    <Grid Margin="-5,-5,-73,0" Height="771" VerticalAlignment="Top" >
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" Height="120" VerticalAlignment="Bottom" >
+        <Grid Grid.Row="0" Height="103" VerticalAlignment="Top"  Background="#FF232323" Margin="0,1,0,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
@@ -27,127 +27,124 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>-->
-            <Border BorderBrush="Black"  BorderThickness="2" Margin="20,10,10,10" Height="100" VerticalAlignment="Top">
+            <Border BorderBrush="Black"  BorderThickness="2" Margin="20,10,10,0" Height="80" VerticalAlignment="Top">
 
-                <Image Name="image1" Stretch="UniformToFill" Source="/CapaPresentacion;component/REcuroso/foto.png" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" />
+                <Image Name="image1" Stretch="UniformToFill" Source="/CapaPresentacion;component/REcuroso/foto.png" Height="80" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="-2,-2,0,-2" />
 
             </Border>
 
-           
+
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
-                <Label Grid.Column="2" Grid.Row="0"  Content="Lo Atiende:"></Label>
-                <Label Grid.Column="2" Grid.Row="1" Name="lblEmpladoN" Content="pablo cesar lyeva remiaz"></Label>
-                <Label Grid.Column="2" Grid.Row="2" Name="lblEmpladoC" Content="XXXAP"></Label>
+                <Label Grid.Row="0"  Content="Lo Atiende:" HorizontalAlignment="Left" Margin="0,6,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
+                <Label Name="lblEmpladoN" Content="Pablo César Leyva Ramírez" HorizontalAlignment="Left" Margin="1,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold" Grid.RowSpan="2"/>
+                <Label Grid.Row="2" Name="lblEmpladoC" Content="XXXAP" HorizontalAlignment="Left" Margin="1,1,0,-9" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold" RenderTransformOrigin="4.389,-1.016"/>
 
             </Grid>
-            <Grid Grid.Column="3"  Margin="840,10,10,10">
-                <Label Name="LblReloj"  Content="13:30:23 PM" FontSize="30" Margin="10,10,10,10"></Label>
+            <Grid Grid.Column="2"  Margin="633,20,217,0">
+                <Label Name="LblReloj"  Content="13:30:23 PM" FontSize="30" Margin="10,10,11,10" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Right" HorizontalAlignment="Right"/>
             </Grid>
         </Grid>
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-               
-            </Grid.ColumnDefinitions>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                </Grid.RowDefinitions>
-                <Grid Grid.Row="0" Margin="10,10,10,10">
-                    <DataGrid x:Name="dataGrid"     HorizontalAlignment="Left" Margin="10,0,0,0"
-                  VerticalAlignment="Top" Height="390" Width="1100" Grid.Row="3"  
+        <Button x:Name="btn_min" Content="___" HorizontalAlignment="Left" Margin="1268,0,0,0" VerticalAlignment="Top" Width="50" Height="31" FontFamily="Open Sans" FontSize="18" BorderBrush="{x:Null}" Foreground="#FF939393" Background="#FF232323" Click="Min_Click_"/>
+        <Button x:Name="btn_cerrar" Content="X" HorizontalAlignment="Left" Margin="1318,0,0,0" VerticalAlignment="Top" Width="50" Height="31" FontFamily="Old Antic Bold" FontSize="18" BorderBrush="{x:Null}" Foreground="#FF939393" Background="#FF232323" Click="Cerrar_Click" ForceCursor="True"/>
+        <DataGrid x:Name="dataGrid"     HorizontalAlignment="Left" Margin="25,10,0,-17"
+                  VerticalAlignment="Top" Height="551" Width="1131"  
                   IsReadOnly="True" AutoGenerateColumns="False"  CanUserAddRows="False"  
                    CanUserDeleteRows="False"
                  FontSize="18"
                   
                 ItemsSource="{Binding listaProducto}"
-                  FontStyle="Oblique" FontFamily="18"
+                  FontStyle="Oblique" FontFamily="18" Grid.Row="1"
                   >
-                        <DataGrid.Effect>
-                            <DropShadowEffect/>
-                        </DataGrid.Effect>
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="Registro" Binding="{Binding Registro}" Width="auto" ></DataGridTextColumn>
-                            <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="auto" ></DataGridTextColumn>
-                            <DataGridTextColumn Header="IVA" Binding="{Binding IVA}" Width="auto" ></DataGridTextColumn>
-                            <DataGridTextColumn Header="Precio$" Binding="{Binding Precio}" Width="auto" ></DataGridTextColumn>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Registro" Binding="{Binding Registro}" Width="auto" />
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="auto" />
+                <DataGridTextColumn Header="IVA" Binding="{Binding IVA}" Width="auto" />
+                <DataGridTextColumn Header="Precio$" Binding="{Binding Precio}" Width="auto" />
 
 
 
-                        </DataGrid.Columns>
-                    </DataGrid>
-                </Grid>
-                <Grid Grid.Row="1" Margin="20,10,10,10" Height="100" Background="Crimson">
-                    <Grid.Effect>
-                        <DropShadowEffect/>
-                    </Grid.Effect>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="auto"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Background="#FF252526" Width="auto" Margin="0,0,74,-123" HorizontalAlignment="Right" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="259"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
 
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="0" Margin="10,10,10,10">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Width="180" FontSize="20"  Grid.Row="0" Margin="5,6,5,160" Background="#FF2D2D30" Click="Button_Click_6" BorderBrush="{x:Null}">
+                <DockPanel Height="86" LastChildFill="False" Width="115">
+                    <Image RenderTransformOrigin="0.508,0.539" Height="47" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/money.png"/>
+                    <TextBlock Margin="0,21,0,0" TextWrapping="Wrap" Text="F1 - CERRAR VENTA" Width="117" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="16" VerticalAlignment="Top" Foreground="#FFCDC3C3" FontSize="15" DockPanel.Dock="Top"/>
+                </DockPanel>
+            </Button>
+            <Button Width="180" FontSize="16"   Margin="5,303,5,-131" Background="#FF2D2D30" Click="Button_Click" BorderBrush="{x:Null}">
+                <DockPanel Height="88" LastChildFill="False" Width="170">
+                    <Image RenderTransformOrigin="0.508,0.539" Height="38" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/bag.png"/>
+                    <TextBlock Margin="10,21,10,0" TextWrapping="Wrap" Text="F4 - ELIMINAR PRODUCTO" Width="150" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="16" VerticalAlignment="Top" Foreground="#FFCDC3C3" FontSize="15" DockPanel.Dock="Top"/>
+                </DockPanel>
+            </Button>
+            <Button Width="180" FontSize="19"   Margin="5,206,5,-38" Background="#FF2D2D30" Click="Button_Click_1" BorderBrush="{x:Null}">
+                <DockPanel Height="86" LastChildFill="False" Width="115">
+                    <Image RenderTransformOrigin="0.508,0.539" Height="37" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/save (1).png"/>
+                    <TextBlock Margin="0,21,0,0" TextWrapping="Wrap" Text="F3 - GUARDAR VENTA" Width="117" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="16" VerticalAlignment="Top" Foreground="#FFCDC3C3" FontSize="15" DockPanel.Dock="Top"/>
+                </DockPanel>
+            </Button>
+            <Button Width="180" FontSize="19"   Margin="5,105,5,59" Background="#FF2D2D30" Click="Button_Click_2" BorderBrush="{x:Null}">
+                <DockPanel Height="86" LastChildFill="False" Width="115">
+                    <Image RenderTransformOrigin="0.508,0.539" Height="45" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/barcode-scanner.png"/>
+                    <TextBlock Margin="0,21,0,0" TextWrapping="Wrap" Text="F2 - VENTA MANUAL" Width="117" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="16" VerticalAlignment="Top" Foreground="#FFCDC3C3" FontSize="15" DockPanel.Dock="Top"/>
+                </DockPanel>
+            </Button>
+            <Button Width="180" FontSize="19"   Margin="5,396,5,-227" Background="#FF2D2D30" Click="Button_Click_4" BorderBrush="{x:Null}">
+                <DockPanel Height="86" LastChildFill="False" Width="115">
+                    <Image RenderTransformOrigin="0.508,0.539" Height="37" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/cart (1).png"/>
+                    <TextBlock Margin="0,21,0,0" TextWrapping="Wrap" Text="F5 - CANCELAR VENTA" Width="117" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="16" VerticalAlignment="Top" Foreground="#FFCDC3C3" FontSize="15" DockPanel.Dock="Top"/>
+                </DockPanel>
+            </Button>
+            <Button Width="180" FontSize="15"   Margin="5,492,5,-314" Background="#FF2D2D30" Click="Button_Click_3" BorderBrush="{x:Null}">
+                <DockPanel Height="84" LastChildFill="False" Width="170">
+                    <Image RenderTransformOrigin="0.508,0.539" Height="34" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/archive.png"/>
+                    <TextBlock Margin="10,21,10,0" TextWrapping="Wrap" Text="F6 - CONSULTAR PROD." Width="150" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="16" VerticalAlignment="Top" Foreground="#FFCDC3C3" DockPanel.Dock="Top"/>
+                </DockPanel>
+            </Button>
+            <Button FontSize="15"   Margin="5,579,5,-400" Background="#FF2D2D30" Click="Button_Click_5" BorderBrush="{x:Null}">
+                <DockPanel Height="72" LastChildFill="False" Width="132">
+                    <Image RenderTransformOrigin="0.508,0.539" Height="35" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/return-of-investment (1).png"/>
+                    <TextBlock Margin="1,21,1,-2" TextWrapping="Wrap" Text="F7 - DEVOLUCIONES" Width="130" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="20" VerticalAlignment="Center" Foreground="#FFCDC3C3" DockPanel.Dock="Top"/>
+                </DockPanel>
+            </Button>
 
-                        </Grid.ColumnDefinitions>
-                        <Label Content="Subtotal:" FontSize="24"></Label>
-                        <Label Grid.Row="1" Content="IVA:" FontSize="24"></Label>
-                        <Label Name="LblSubtotal" Grid.Column="1" Content="$000000.0" FontSize="24" Height="auto" VerticalAlignment="Top"></Label>
-                        <Label  Name="LblIVA" Grid.Column="1"  Grid.Row="1" Content="$00000.0" FontSize="24"></Label>
+        </Grid>
+        <Grid Margin="4,566,264,-123" Height="100" Grid.Row="1">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF726D6D"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.Effect>
+                <DropShadowEffect/>
+            </Grid.Effect>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" MinHeight="100"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
 
-
-                    </Grid>
-                    <Grid Grid.Column="1" Margin="447,28,-218,4">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                    
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="auto"/>
-
-                        </Grid.ColumnDefinitions>
-                        <Label Name="LblTotal" Grid.Column="1"  Grid.Row="2" Content="$000000.0" FontSize="30" ></Label>
-                        <Label Grid.Row="2" Content="Total a Pagar:" FontSize="30" ></Label>
-
-                    </Grid>
-                  
-
-                </Grid>
-              
-            </Grid>
-            <Grid Grid.Column="1" Background="Black" Width="auto" Margin="30,10,10,10">
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Margin="10,10,10,10">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
@@ -157,29 +154,16 @@
                     <ColumnDefinition Width="auto"/>
 
                 </Grid.ColumnDefinitions>
-                <Button Width="180" Content="F1 Finalizar Venta" FontSize="20"  Grid.Row="0" Margin="5,5,5,5" Height="40" Background="#FF2D2D30" Click="Button_Click_6">
 
-                </Button>
-                <Button Grid.Row="3" Width="180" Content="F4 Eliminar producto" FontSize="16"   Margin="5,5,5,5" Height="40" Background="#FF2D2D30" Click="Button_Click">
-
-                </Button>
-                <Button Grid.Row="2" Width="180"  Content="F3 Guardar Venta" FontSize="19"   Margin="5,5,5,5" Height="40" Background="#FF2D2D30" Click="Button_Click_1">
-
-                </Button>
-                <Button Grid.Row="1" Width="180"  Content="F2 Venta Manual" FontSize="19"   Margin="5,5,5,5" Height="40" Background="#FF2D2D30" Click="Button_Click_2">
-
-                </Button>
-                <Button Grid.Row="5" Width="180"  Content="F5 Cancelar Venta" FontSize="19"   Margin="5,5,5,5" Height="40" Background="#FF2D2D30" Click="Button_Click_4">
-
-                </Button>
-                <Button Grid.Row="6" Width="180"  Content="F5 Consultar Producto" FontSize="15"   Margin="5,5,5,5" Height="40" Background="#FF2D2D30" Click="Button_Click_3">
-
-                </Button>
-                <Button Grid.Row="7" Width="180"  Content="F6 Devolucion" FontSize="15"   Margin="5,5,5,5" Height="40" Background="#FF2D2D30" Click="Button_Click_5">
-
-                </Button>
 
             </Grid>
+            <Label Content="Subtotal:" Height="32" VerticalAlignment="Top" FontFamily="NewsGoth Cn BT" FontSize="20" Grid.Column="1" Margin="10,10,433,0"/>
+            <Label Content="IVA:" Height="32" VerticalAlignment="Top" FontFamily="NewsGoth Cn BT" FontSize="20" Grid.Column="1" Margin="10,55,433,0"/>
+            <Label x:Name="LblSubtotal" Grid.Column="1" Content="$000000.0" Height="36" VerticalAlignment="Top" FontFamily="NewsGoth Cn BT" FontSize="24" FontWeight="Bold" Foreground="#FF0D02FD" Margin="120,6,323,0"/>
+            <Label  x:Name="LblIVA" Grid.Column="1" Content="$00000.0" FontSize="24" Height="38" VerticalAlignment="Top" FontFamily="NewsGoth Cn BT" FontWeight="Bold" Margin="120,49,337,0" Foreground="#FF0D02FD"/>
+            <Label x:Name="LblTotal" Content="$000000.0" FontSize="30" FontFamily="NewsGoth BT" FontWeight="Bold" Margin="908,33,-526,50" Grid.Column="1" Foreground="#FF0D02FD"/>
+            <Label Content="Total a Pagar:" FontSize="30" FontFamily="NewsGoth Cn BT" Margin="736,33,-336,50" Grid.Column="1" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" />
+
 
         </Grid>
 

@@ -14,6 +14,7 @@ using SpotifyAPI;
 using SpotifyAPI.Local;
 using SpotifyAPI.Local.Enums;
 using SpotifyAPI.Local.Models;
+using CapaPresentacion;
 
 
 namespace EMBLEMA
@@ -27,6 +28,7 @@ namespace EMBLEMA
         CapaLogica.Usuarios U = new CapaLogica.Usuarios();
         CapaLogica.Equipo Eq = new CapaLogica.Equipo();
         CapaLogica.Cliente C = new CapaLogica.Cliente();
+        
 
         private readonly SpotifyLocalAPI _spotify;
 
@@ -131,7 +133,8 @@ namespace EMBLEMA
         Modulo_Inventario.Inventario Inventario = new Modulo_Inventario.Inventario();
         public Modulo_Config.Configuraciones Configuraciones = new Modulo_Config.Configuraciones();
         Inicio.Inicio Ventana_Inicio = new Inicio.Inicio();
-  
+        CapaPresentacion.VENTA.PuntoVenta Punto = new CapaPresentacion.VENTA.PuntoVenta();
+
         private void btn_min_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -341,6 +344,9 @@ namespace EMBLEMA
             btn_install.Visible = false;
         }
 
-        
+        private void rb_punto_vta_CheckedChanged(object sender, EventArgs e)
+        {
+            Punto.Show();
+        }
     }
 }

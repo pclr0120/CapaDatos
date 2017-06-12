@@ -7,15 +7,13 @@
         mc:Ignorable="d"
         KeyUp="EvaluarTecla"
         Title="MensajeOk" Height="200" Width="500" WindowStyle="None" WindowStartupLocation="CenterScreen">
-    <Grid>
+    <Grid Background="#FF686868">
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="123"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Row="1">
+        <Grid Margin="0,0,0,84">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
@@ -26,19 +24,29 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <Label Name="lblMensajeT" Content="MENSAJE:" Margin="200,5,5,5" Grid.Column="2" Grid.Row="1" Width="100" Height="auto"></Label>
-            <Label Name="lblMensajeM"   Margin="5,5,5,5"  Content=" Hola mundo" Grid.Column="2" Grid.Row="2" Width="auto" Height="auto"></Label>
+            <Label Name="lblMensajeT" Content="MENSAJE" Margin="198,1,10,9" Grid.Column="2" Width="100" Height="auto" Grid.Row="2" HorizontalContentAlignment="Center" FontFamily="Segoe UI Semibold" Foreground="White"/>
+            <Label Name="lblMensajeM"   Margin="134,47,-156,-66"  Content=" Hola mundo" Grid.Column="2" Grid.Row="2" Width="auto" Height="auto" Foreground="White"></Label>
         </Grid>
-        <Grid Grid.Row="2">
+        <Grid Margin="0,79,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="120"/>
                 <ColumnDefinition Width="auto"/>
-           
+
             </Grid.ColumnDefinitions>
-            <Button Name="BtSi" Content="OK F1" Width="100" Height="30" Margin="40,5,5,5" Grid.Column="1" Grid.Row="2" Click="BtSi_Click"></Button>
+            <Button Name="BtSi" Content="F1 - OK" Width="100" Height="30" Margin="82,74,-35,-62" Grid.Column="1" Click="BtSi_Click" FontFamily="Segoe UI Semibold"/>
         </Grid>
+        <Image HorizontalAlignment="Left" Height="95" Margin="17,33,0,-4" VerticalAlignment="Top" Width="90" Source="/CapaPresentacion;component/REcuroso/warning.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.162"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
     </Grid>
 </Window>
