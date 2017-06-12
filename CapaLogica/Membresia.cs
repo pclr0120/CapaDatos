@@ -35,7 +35,7 @@ namespace CapaLogica
         public void MembresiaAlta(int IdMembresia)
         {
             string[] parametros = { "_IdMembresia"};
-            Acceso.ExeProcedimiento("MembresiaRegistrar", parametros, IdMembresia);
+            Acceso.ExeProcedimiento("MembresiaAlta", parametros, IdMembresia);
         }
 
         public void MembresiaBaja(int IdMembresia)
