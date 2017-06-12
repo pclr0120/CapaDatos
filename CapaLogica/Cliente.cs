@@ -103,5 +103,19 @@ namespace CapaLogica
             return Tabla;
         }
 
+        public DataTable AsistenciasBuscar()
+        {
+            string[] parametros = { };
+            DataTable Tabla = Acceso.GetTabla("AsistenciasBuscar", parametros);
+            return Tabla;
+        }
+
+        public DataTable AsistenciasBuscarNombre(string Nombre)
+        {
+            string[] parametros = { "_Nombre" };
+            DataTable Tabla = Acceso.GetTabla("AsistenciasBuscarNombre", parametros, Nombre);
+            return Tabla;
+        }
+
     }
 }

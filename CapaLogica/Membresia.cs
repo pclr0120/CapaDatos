@@ -84,5 +84,18 @@ namespace CapaLogica
             DataTable Tabla = Acceso.GetTabla("MembresiaBuscarDatos",parametros,Id);
             return Tabla;
         }
+
+        public int MembresiaBuscarCoincidenciaNombre(string Nombre)
+        {
+            string[] parametros = { "_Nombre" };
+            if (Acceso.GetTabla("MembresiaBuscarCoincidenciaNombre", parametros, Nombre).Rows.Count > 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 }
