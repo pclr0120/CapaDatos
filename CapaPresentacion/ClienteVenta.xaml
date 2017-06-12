@@ -8,10 +8,12 @@
         WindowStartupLocation="CenterScreen"
         WindowState="Normal"
         WindowStyle="None"
-        Title="Vincular cliente con la venta" Height="180" Width="600">
+        KeyDown="EvaluarTecla"
+        Title="Vincular cliente con la venta" Height="200" Width="600">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
@@ -36,21 +38,21 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <Label Content="#Cliente o Nombre " Margin="10,10,10,10" ></Label>
-            <TextBox Name="txtBuscar" Margin="10,10,10,10" Grid.Row="0" Grid.Column="1" Width="300"  ></TextBox>
-            <Button Name="btnbuscar" Content="Guardar" Width="100" Height="30" Grid.Column="2" Click="btnbuscar_Click" ></Button>
+            <Label Content="#Cliente:" Margin="10,10,10,10" ></Label>
+            <TextBox Name="txtBuscar" Margin="10,10,10,10" MaxLength="5"  Grid.Row="0" Grid.Column="1" Width="300" PreviewTextInput="txtBuscar_PreviewTextInput"  ></TextBox>
+            <Button Name="btnbuscar" Content="Guardar F1" Width="100" Height="30" Grid.Column="2" Click="btnbuscar_Click" ></Button>
         </Grid>
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2" Margin="-54,0,54,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="130"/>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <ProgressBar Grid.Column="1" Width="300" Maximum="100" Name="pbar" Height="20" Margin="10,10,10,10"  >
-            
-            </ProgressBar>
-            
-            <Label Content="0%" Name="lblporcentaje" Grid.Column="2"  Height="30"></Label>
+            <ProgressBar Width="290" Maximum="100" Name="pbar" Height="20" Margin="10,10,10,10"  Grid.Column="1" />
+            <Button x:Name="btnbuscar_Copy" Content="Cancelar F2" Width="100" Height="30" Grid.Column="2"  Margin="10,10,10,10" Click="btnbuscar_Copy_Click" />
+
+
         </Grid>
+
     </Grid>
 </Window>

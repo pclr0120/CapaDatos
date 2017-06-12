@@ -33,7 +33,7 @@
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
             <Label Name="lblMensajeM"   Margin="5,5,5,5"  Content=" Hola munddddddddddddo" Grid.Column="1" Grid.Row="2" Width="auto" Height="auto"></Label>
-            <TextBox Name="txt_valor" Width="200" Height="25" Grid.Row="2" Grid.Column="2" MaxLength="2" PreviewTextInput="txt_valor_PreviewTextInput" />
+            <TextBox Name="txt_valor" Width="200" Height="25" Grid.Row="2" Grid.Column="2" MaxLength="20" PreviewTextInput="txt_valor_PreviewTextInput" KeyDown="txt_valor_KeyDown" />
         </Grid>
         
         

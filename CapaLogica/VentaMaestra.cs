@@ -47,7 +47,7 @@ namespace CapaLogica
                 foreach (DataRow row in producto.ConsultaProducto(Codigo).Rows)
                 {
                     Encontrado = true;
-                   p.Obtenerstock(Convert.ToInt32(Codigo));
+                   p.Obtenerstock(Codigo);
                    
                     ///=====
                     if (p.Stock > 0)

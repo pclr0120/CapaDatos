@@ -22,6 +22,7 @@ namespace CapaPresentacion.Mensaje
     {
         public double Total { get; set; }
         public int valor { get; set; }
+        public string valor3 { get; set; }
         public double valor2 { get; set; }
         public bool Opc { get; set; }
         public string Opc2 { get; set; }
@@ -66,13 +67,18 @@ namespace CapaPresentacion.Mensaje
 
                 if (Opc2 == "int")
                 {
-                    valor = Convert.ToInt16(txt_valor.Text);
+                    valor = Convert.ToInt32(txt_valor.Text);
                     this.Close();
                 }
-             
-                
-               
-           
+                if (Opc2 == "string")
+                {
+                    valor3 = txt_valor.Text;
+                    this.Close();
+                }
+
+
+
+
             }
             else
             {
@@ -114,6 +120,8 @@ namespace CapaPresentacion.Mensaje
 
         private void txt_valor_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
+
+
             if (Solo)
                 SoloNumeros(e);
             else
@@ -146,6 +154,7 @@ namespace CapaPresentacion.Mensaje
 
                 valor = 0;
                 valor2 = 0;
+                valor3 = "0";
                 this.Close();
 
 
@@ -157,5 +166,15 @@ namespace CapaPresentacion.Mensaje
         }
 
         #endregion
+
+        private void txt_valor_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                aceptar();
+               
+
+            }
+        }
     }
 }

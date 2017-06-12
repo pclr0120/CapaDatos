@@ -7,7 +7,7 @@
         mc:Ignorable="d"
           KeyDown="EvaluarTecla"
         Title="Mesaje" Height="200" Width="500" WindowStyle="None" WindowStartupLocation="CenterScreen">
-    <Grid Background="#FF686868">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="auto"/>
@@ -15,31 +15,31 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
         </Grid.ColumnDefinitions>
-        <Grid Margin="0,47,0,35" Grid.RowSpan="3">
+        <Grid Grid.Row="1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+            <Label Name="lblMensajeT" Content="MENSAJE:" Margin="200,5,5,5" Grid.Column="2" Grid.Row="1" Width="100" Height="auto"></Label>
+            <Label Name="lblMensajeM"   Margin="5,5,5,5"  Content=" Hola mundo" Grid.Column="2" Grid.Row="2" Width="auto" Height="auto"></Label>
+    </Grid>
+    <Grid Grid.Row="2">
             <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="auto"/>
-            </Grid.ColumnDefinitions>
-            <Label Name="lblMensajeT" Content="MENSAJE" Margin="200,5,5,5" Grid.Column="2" Grid.Row="1" Width="100" Height="auto" FontFamily="Segoe UI Semibold" FontSize="14" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FFF9F5F5"></Label>
-            <Label Name="lblMensajeM"   Margin="5,5,5,5"  Content=" Hola mundo" Grid.Column="2" Grid.Row="2" Width="auto" Height="auto" Foreground="#FFF3EFEF"></Label>
-        </Grid>
-        <Grid Grid.Row="2" Margin="0,25,0,-25">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>           
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="120"/>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <Button Name="BtSi" Content="Si" Width="100" Height="30" Margin="5,5,5,5" Grid.Column="1" Grid.Row="2" Click="BtSi_Click" FontFamily="Segoe UI Semibold"></Button>
-            <Button Name="BtNo" Content="No" Width="100" Height="30" Margin="5,5,5,5" Grid.Column="2" Grid.Row="2" Click="BtNo_Click" FontFamily="Segoe UI Semibold"></Button>
+            <Button Name="BtSi" Content="Si" Width="100" Height="30" Margin="5,5,5,5" Grid.Column="1" Grid.Row="2" Click="BtSi_Click"></Button>
+            <Button Name="BtNo" Content="No" Width="100" Height="30" Margin="5,5,5,5" Grid.Column="2" Grid.Row="2" Click="BtNo_Click"></Button>
         </Grid>
     </Grid>
 </Window>

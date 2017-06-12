@@ -27,6 +27,9 @@ namespace CapaPresentacion.VENTA
         {
             InitializeComponent();
             reloj();
+        
+            txtCodigo.Focus();
+            
         }
         #region reloj
         public void reloj()
@@ -56,7 +59,15 @@ namespace CapaPresentacion.VENTA
         Producto p = new Producto();
         bool control = true;
         int banderacontrol=0;
-
+        public void SoloNumeros(TextCompositionEventArgs e)
+        {
+            //se convierte a Ascci del la tecla presionada 
+            int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
+            //verificamos que se encuentre en ese rango que son entre el 0 y el 9 
+            if (ascci >= 48 && ascci <= 57)
+                e.Handled = false;
+            else e.Handled = true;
+        }
         public void EvaluarTecla(object sender, KeyEventArgs e)
         {
 
@@ -75,6 +86,13 @@ namespace CapaPresentacion.VENTA
 
 
                     this.Close();
+
+
+                }
+                if (Key.F3 == e.Key)
+                {
+
+                    Asistencia();
 
 
                 }
@@ -257,6 +275,8 @@ namespace CapaPresentacion.VENTA
                     Mensaje.MensajeOk m = new Mensaje.MensajeOk("Mensaje:", "La venta se realizo exitoxamente. su cambio es: $" + Vm.Cambio.ToString());
 
                         m.ShowDialog();
+                        VENTA.simularTicket stk = new VENTA.simularTicket();
+                        stk.Show();
 
 
                         dataGrid.ItemsSource = Vm.LimpiarVenta(); //para limpiar la venta
@@ -327,13 +347,27 @@ namespace CapaPresentacion.VENTA
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             banderacontrol += 1;
-            RealizarVenta();
+            Asistencia();
         }
+        void AgregarProductoVenta(string codigo)
+        {
+            int c = 1;
+            if (c == 1)
+            {
+                control = false;
+                c = 2;
 
+                if (codigo.Length > 0)
+                    AgregarProducto(codigo.ToString());
+            }
+
+        }
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             banderacontrol += 1;
-            AgregarProductoVenta();
+            Mensaje.MensajeCaptura M = new Mensaje.MensajeCaptura("VENTA MANUAL", "Codigo:", "AGREGAR F1", "CANCELAR F2", true, "int");
+            M.ShowDialog();
+            AgregarProductoVenta(M.valor.ToString());
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
@@ -369,6 +403,57 @@ namespace CapaPresentacion.VENTA
         {
             this.WindowState = WindowState.Minimized;
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+        }
+
+
+        private void txtCodigo_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+           
+         
+                if (e.Key == Key.Enter)
+            {
+
+                AgregarProductoVenta(txtCodigo.Text);
+                txtCodigo.Clear();
+
+            }
+        }
+
+        private void txtCodigo_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+        void Asistencia() {
+
+            Mensaje.MensajeCaptura c = new Mensaje.MensajeCaptura("Asistencia", "Capture el codigo personal del cliente", "Registrar F1", "SALIR F2", true, "string");
+            c.ShowDialog();
+
+
+            if (c.valor3 != "0")
+            {
+                CapaLogica.ClienteVenta cc = new CapaLogica.ClienteVenta();
+
+                if (cc.buscarCliente(c.valor3.ToString(), "none", "co").Rows.GetEnumerator().MoveNext())
+                {
+
+                    Asistencia a = new Asistencia(c.valor3.ToString());
+                    a.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Cliente no encontrado");
+                }
+
+            }
+            else {
+
+                MessageBox.Show("Capture el codigo");
+            }
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

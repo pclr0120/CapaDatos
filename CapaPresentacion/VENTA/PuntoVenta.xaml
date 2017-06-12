@@ -43,14 +43,17 @@
                 <Label Grid.Row="0"  Content="Lo Atiende:" HorizontalAlignment="Left" Margin="0,6,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
                 <Label Name="lblEmpladoN" Content="Pablo César Leyva Ramírez" HorizontalAlignment="Left" Margin="1,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold" Grid.RowSpan="2"/>
                 <Label Grid.Row="2" Name="lblEmpladoC" Content="XXXAP" HorizontalAlignment="Left" Margin="1,1,0,-9" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold" RenderTransformOrigin="4.389,-1.016"/>
-
             </Grid>
             <Grid Grid.Column="2"  Margin="633,20,217,0">
                 <Label Name="LblReloj"  Content="13:30:23 PM" FontSize="30" Margin="10,10,11,10" VerticalContentAlignment="Center" Foreground="White" HorizontalContentAlignment="Right" HorizontalAlignment="Right"/>
             </Grid>
+
         </Grid>
         <Button x:Name="btn_min" Content="___" HorizontalAlignment="Left" Margin="1268,0,0,0" VerticalAlignment="Top" Width="50" Height="31" FontFamily="Open Sans" FontSize="18" BorderBrush="{x:Null}" Foreground="#FF939393" Background="#FF232323" Click="Min_Click_"/>
+
         <Button x:Name="btn_cerrar" Content="X" HorizontalAlignment="Left" Margin="1318,0,0,0" VerticalAlignment="Top" Width="50" Height="31" FontFamily="Old Antic Bold" FontSize="18" BorderBrush="{x:Null}" Foreground="#FF939393" Background="#FF232323" Click="Cerrar_Click" ForceCursor="True"/>
+        <TextBox Name="txtCodigo" Width="100" Height="5" MaxLength="20" Grid.Row="3" Margin="10,10,10,10" PreviewKeyDown="txtCodigo_PreviewKeyDown" PreviewTextInput="txtCodigo_PreviewTextInput"  ></TextBox>
+
         <DataGrid x:Name="dataGrid"     HorizontalAlignment="Left" Margin="25,10,0,-17"
                   VerticalAlignment="Top" Height="551" Width="1131"  
                   IsReadOnly="True" AutoGenerateColumns="False"  CanUserAddRows="False"  
@@ -79,46 +82,52 @@
                 <ColumnDefinition Width="auto"/>
 
             </Grid.ColumnDefinitions>
-            <Button Width="180" FontSize="20"  Grid.Row="0" Margin="5,6,5,160" Background="#FF2D2D30" Click="Button_Click_6" BorderBrush="{x:Null}">
-                <DockPanel Height="86" LastChildFill="False" Width="115">
-                    <Image RenderTransformOrigin="0.508,0.539" Height="47" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/money.png"/>
-                    <TextBlock Margin="0,21,0,0" TextWrapping="Wrap" Text="F1 - CERRAR VENTA" Width="117" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="16" VerticalAlignment="Top" Foreground="#FFCDC3C3" FontSize="15" DockPanel.Dock="Top"/>
+            <Button Width="180" FontSize="20" Height="60" Grid.Row="0" Margin="5,8,5,172" Background="#FF2D2D30" Click="Button_Click_6" BorderBrush="{x:Null}">
+                <DockPanel Height="50" LastChildFill="False" Width="115">
+                    <Image RenderTransformOrigin="0.508,0.539" Height="30" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/money.png"/>
+                    <TextBlock Margin="0,0,0,0" TextWrapping="Wrap" Text="F1 - CERRAR VENTA" Width="117" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="16" VerticalAlignment="Top" Foreground="#FFCDC3C3" FontSize="15" DockPanel.Dock="Top"/>
                 </DockPanel>
             </Button>
-            <Button Width="180" FontSize="16"   Margin="5,303,5,-131" Background="#FF2D2D30" Click="Button_Click" BorderBrush="{x:Null}">
+            <Button Width="180" FontSize="16"  Height="60"  Margin="5,214,5,-14" Background="#FF2D2D30" Click="Button_Click" BorderBrush="{x:Null}">
                 <DockPanel Height="88" LastChildFill="False" Width="170">
-                    <Image RenderTransformOrigin="0.508,0.539" Height="38" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/bag.png"/>
-                    <TextBlock Margin="10,21,10,0" TextWrapping="Wrap" Text="F4 - ELIMINAR PRODUCTO" Width="150" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="16" VerticalAlignment="Top" Foreground="#FFCDC3C3" FontSize="15" DockPanel.Dock="Top"/>
+                    <Image RenderTransformOrigin="0.508,0.539" Height="30" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/bag.png"/>
+                    <TextBlock Margin="10,0,10,0" TextWrapping="Wrap" Text="F4 - ELIMINAR PRODUCTO" Width="150" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="16" VerticalAlignment="Top" Foreground="#FFCDC3C3" FontSize="15" DockPanel.Dock="Top"/>
                 </DockPanel>
             </Button>
-            <Button Width="180" FontSize="19"   Margin="5,206,5,-38" Background="#FF2D2D30" Click="Button_Click_1" BorderBrush="{x:Null}">
+            <Button Width="180" FontSize="19" Height="60"   Margin="5,148,5,52" Background="#FF2D2D30" Click="Button_Click_1" BorderBrush="{x:Null}">
                 <DockPanel Height="86" LastChildFill="False" Width="115">
-                    <Image RenderTransformOrigin="0.508,0.539" Height="37" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/save (1).png"/>
-                    <TextBlock Margin="0,21,0,0" TextWrapping="Wrap" Text="F3 - GUARDAR VENTA" Width="117" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="16" VerticalAlignment="Top" Foreground="#FFCDC3C3" FontSize="15" DockPanel.Dock="Top"/>
+                    <Image RenderTransformOrigin="0.508,0.539" Height="30" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/save (1).png"/>
+                    <TextBlock  Margin="-1,0,0,0" TextWrapping="Wrap" Text="F3 -  Asistencia" Width="117" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="33" VerticalAlignment="Top" Foreground="#FFCDC3C3" FontSize="15" DockPanel.Dock="Top"/>
                 </DockPanel>
             </Button>
-            <Button Width="180" FontSize="19"   Margin="5,105,5,59" Background="#FF2D2D30" Click="Button_Click_2" BorderBrush="{x:Null}">
+            <Button Width="180" FontSize="19" Height="60"   Margin="5,83,5,117" Background="#FF2D2D30" Click="Button_Click_2" BorderBrush="{x:Null}">
                 <DockPanel Height="86" LastChildFill="False" Width="115">
-                    <Image RenderTransformOrigin="0.508,0.539" Height="45" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/barcode-scanner.png"/>
-                    <TextBlock Margin="0,21,0,0" TextWrapping="Wrap" Text="F2 - VENTA MANUAL" Width="117" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="16" VerticalAlignment="Top" Foreground="#FFCDC3C3" FontSize="15" DockPanel.Dock="Top"/>
+                    <Image RenderTransformOrigin="0.508,0.539" Height="30" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/barcode-scanner.png"/>
+                    <TextBlock Margin="0,0,0,0" TextWrapping="Wrap" Text="F2 - VENTA MANUAL" Width="117" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="16" VerticalAlignment="Top" Foreground="#FFCDC3C3" FontSize="15" DockPanel.Dock="Top"/>
                 </DockPanel>
             </Button>
-            <Button Width="180" FontSize="19"   Margin="5,396,5,-227" Background="#FF2D2D30" Click="Button_Click_4" BorderBrush="{x:Null}">
+            <Button Width="180" FontSize="19"  Height="60"  Margin="5,279,5,-79" Background="#FF2D2D30" Click="Button_Click_4" BorderBrush="{x:Null}">
                 <DockPanel Height="86" LastChildFill="False" Width="115">
-                    <Image RenderTransformOrigin="0.508,0.539" Height="37" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/cart (1).png"/>
-                    <TextBlock Margin="0,21,0,0" TextWrapping="Wrap" Text="F5 - CANCELAR VENTA" Width="117" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="16" VerticalAlignment="Top" Foreground="#FFCDC3C3" FontSize="15" DockPanel.Dock="Top"/>
+                    <Image RenderTransformOrigin="0.508,0.539" Height="30" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/cart (1).png"/>
+                    <TextBlock Margin="0,0,0,0" TextWrapping="Wrap" Text="F5 - CANCELAR VENTA" Width="117" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="16" VerticalAlignment="Top" Foreground="#FFCDC3C3" FontSize="15" DockPanel.Dock="Top"/>
                 </DockPanel>
             </Button>
-            <Button Width="180" FontSize="15"   Margin="5,492,5,-314" Background="#FF2D2D30" Click="Button_Click_3" BorderBrush="{x:Null}">
+            <Button Width="180" FontSize="15"   Height="60" Margin="5,344,5,-144" Background="#FF2D2D30" Click="Button_Click_3" BorderBrush="{x:Null}">
                 <DockPanel Height="84" LastChildFill="False" Width="170">
-                    <Image RenderTransformOrigin="0.508,0.539" Height="34" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/archive.png"/>
-                    <TextBlock Margin="10,21,10,0" TextWrapping="Wrap" Text="F6 - CONSULTAR PROD." Width="150" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="16" VerticalAlignment="Top" Foreground="#FFCDC3C3" DockPanel.Dock="Top"/>
+                    <Image RenderTransformOrigin="0.508,0.539" Height="30" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/archive.png"/>
+                    <TextBlock Margin="10,0,10,0" TextWrapping="Wrap" Text="F6 - CONSULTAR PROD." Width="150" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="16" VerticalAlignment="Top" Foreground="#FFCDC3C3" DockPanel.Dock="Top"/>
                 </DockPanel>
             </Button>
-            <Button FontSize="15"   Margin="5,579,5,-400" Background="#FF2D2D30" Click="Button_Click_5" BorderBrush="{x:Null}">
+            <Button FontSize="15"  Height="60"   Margin="5,409,5,-209" Background="#FF2D2D30" Click="Button_Click_5" BorderBrush="{x:Null}">
                 <DockPanel Height="72" LastChildFill="False" Width="132">
-                    <Image RenderTransformOrigin="0.508,0.539" Height="35" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/return-of-investment (1).png"/>
-                    <TextBlock Margin="1,21,1,-2" TextWrapping="Wrap" Text="F7 - DEVOLUCIONES" Width="130" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="20" VerticalAlignment="Center" Foreground="#FFCDC3C3" DockPanel.Dock="Top"/>
+                    <Image RenderTransformOrigin="0.508,0.539" Height="30" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/return-of-investment (1).png"/>
+                    <TextBlock Margin="1,0,1,-2" TextWrapping="Wrap" Text="F7 DEVOLUCIONES" Width="130" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="20" VerticalAlignment="Center" Foreground="#FFCDC3C3" DockPanel.Dock="Top"/>
+                </DockPanel>
+            </Button>
+            <Button FontSize="15"  Height="60"   Margin="10,474,0,-274" Background="#FF2D2D30"  BorderBrush="{x:Null}" Click="Button_Click_7">
+                <DockPanel Height="72" LastChildFill="False" Width="132">
+                    <Image RenderTransformOrigin="0.508,0.539" Height="30" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/return-of-investment (1).png"/>
+                    <TextBlock Margin="1,0,1,-2" TextWrapping="Wrap" Text="F8 MEMBRECIA" Width="130" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="20" VerticalAlignment="Center" Foreground="#FFCDC3C3" DockPanel.Dock="Top"/>
                 </DockPanel>
             </Button>
 

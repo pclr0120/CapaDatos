@@ -10,7 +10,7 @@
            WindowStyle="None"
         ResizeMode="NoResize"
         Title="Consulta de Producto" WindowStartupLocation="CenterScreen" Height="300" Width="600">
-    <Grid Background="#FF686868">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition Height="auto"/>
@@ -27,19 +27,19 @@
                 <ColumnDefinition Width="auto"/>
 
             </Grid.ColumnDefinitions>
-            <Label Content="Codigo:" Margin="10,10,10,10" FontFamily="Segoe UI Historic" FontSize="14" Foreground="#FFF3F3F3" ></Label>
-            <TextBox Grid.Column="1" Name="txtProducto" Width="100" Height="20" TextChanged="txtProducto_TextChanged"></TextBox>
-            <Button Grid.Column="2"  Margin="95,0,-224,5" Content="F1 - SALIR" FontFamily="Segoe UI Semibold"></Button>
+            <Label Content="Codigo:" Margin="10,10,10,10" ></Label>
+            <TextBox Grid.Column="1" Name="txtProducto" Width="100" Height="20" MaxLength="20" TextChanged="txtProducto_TextChanged" KeyDown="txtProducto_KeyDown" PreviewTextInput="txtProducto_PreviewTextInput"></TextBox>
+            <Button Grid.Column="2" Width="100" Margin="5,5,5,5" Content="Salir F1" Click="Button_Click"></Button>
                 
             </Grid>
         <Grid Grid.Row="2">
-            <DataGrid Background="#FF686868" ></DataGrid>
+            <DataGrid ></DataGrid>
             
             
         </Grid>
         <Grid Grid.Row="2">
             <DataGrid x:Name="dataGrid"     HorizontalAlignment="Left" Margin="10,10,10,10"
-                  VerticalAlignment="Top" Height="200" Width="500" Grid.Row="3"  
+                  VerticalAlignment="Top" Height="200" Width="590" Grid.Row="3"  
                   IsReadOnly="True" AutoGenerateColumns="False"  CanUserAddRows="False"  
                    CanUserDeleteRows="False"
                  FontSize="18"
@@ -47,6 +47,9 @@
                 ItemsSource="{Binding tablap}"
                   FontStyle="Oblique" FontFamily="18"
                   >
+                <DataGrid.Effect>
+                    <DropShadowEffect/>
+                </DataGrid.Effect>
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Codigo" Binding="{Binding Codigo}" Width="auto" ></DataGridTextColumn>
                     <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" Width="auto" ></DataGridTextColumn>
