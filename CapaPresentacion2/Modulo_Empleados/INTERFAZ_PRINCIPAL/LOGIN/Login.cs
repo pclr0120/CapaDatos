@@ -102,6 +102,7 @@ namespace LOGIN
                     else
                     {
                         lbl_resul.Text = "Usuario y/o contraseña inconrrectos";
+                        link_lbl_pass.Visible = true;
                         lbl_resul.Visible = true;
                     }
                 }
@@ -146,6 +147,12 @@ namespace LOGIN
             {
                 ingresar();
             }
+        }
+
+        private void link_lbl_pass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Modulo_Empleados.INTERFAZ_PRINCIPAL.LOGIN.EnviarEmail DM = new Modulo_Empleados.INTERFAZ_PRINCIPAL.LOGIN.EnviarEmail(); //Creo el formulario
+            DM.ShowDialog();
         }
 
         private void btn_min_Click(object sender, EventArgs e)
