@@ -370,7 +370,7 @@ namespace CapaPresentacion.VENTA
                 control = false;
                 c = 2;
 
-                if (codigo.Length > 0)
+                if (codigo !=null)
                     AgregarProducto(codigo.ToString());
             }
 
