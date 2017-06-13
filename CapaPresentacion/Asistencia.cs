@@ -30,7 +30,7 @@ namespace CapaPresentacion
 
                 //mejorar verificas si existe primero
                dt= a.consultarCliente(cod);
-                if (dt != null)
+                if (dt != null && dt.Rows.GetEnumerator().MoveNext())
                 {
 
 
