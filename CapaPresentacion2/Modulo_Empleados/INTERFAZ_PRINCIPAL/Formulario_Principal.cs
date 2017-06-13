@@ -135,6 +135,7 @@ namespace EMBLEMA
         Inicio.Inicio Ventana_Inicio = new Inicio.Inicio();
         CapaPresentacion.VENTA.PuntoVenta Punto = new CapaPresentacion.VENTA.PuntoVenta();
         Modulo_Empleados.INTERFAZ_PRINCIPAL.Reportes Reportes = new Modulo_Empleados.INTERFAZ_PRINCIPAL.Reportes();
+        
 
 
         private void btn_min_Click(object sender, EventArgs e)
