@@ -36,7 +36,7 @@ namespace CapaDatos
                 }
                 catch (Exception e)
                 {
-                    throw;
+                    return dt;
                 }
                 finally {
                     Bd cone = new Bd();
