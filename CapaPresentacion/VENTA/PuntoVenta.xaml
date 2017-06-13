@@ -124,10 +124,16 @@
                     <TextBlock Margin="1,0,1,-2" TextWrapping="Wrap" Text="F7 DEVOLUCIONES" Width="130" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="20" VerticalAlignment="Center" Foreground="#FFCDC3C3" DockPanel.Dock="Top"/>
                 </DockPanel>
             </Button>
-            <Button FontSize="15"  Height="60"   Margin="10,474,0,-274" Background="#FF2D2D30"  BorderBrush="{x:Null}" Click="Button_Click_7">
+            <Button FontSize="15"  Height="60"   Margin="10,474,0,-274" Background="#FF2D2D30"  BorderBrush="{x:Null}" Click="Button_Click_8">
                 <DockPanel Height="72" LastChildFill="False" Width="132">
                     <Image RenderTransformOrigin="0.508,0.539" Height="30" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/return-of-investment (1).png"/>
                     <TextBlock Margin="1,0,1,-2" TextWrapping="Wrap" Text="F8 MEMBRECIA" Width="130" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="20" VerticalAlignment="Center" Foreground="#FFCDC3C3" DockPanel.Dock="Top"/>
+                </DockPanel>
+            </Button>
+            <Button FontSize="15"  Height="60"   Margin="10,539,0,-339" Background="#FF2D2D30"  BorderBrush="{x:Null}" Click="Button_Click_9" >
+                <DockPanel Height="72" LastChildFill="False" Width="132">
+                    <Image RenderTransformOrigin="0.508,0.539" Height="30" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/return-of-investment (1).png"/>
+                    <TextBlock Margin="1,0,1,-2" TextWrapping="Wrap" Text="ESC SALIR" Width="130" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="20" VerticalAlignment="Center" Foreground="#FFCDC3C3" DockPanel.Dock="Top"/>
                 </DockPanel>
             </Button>
 

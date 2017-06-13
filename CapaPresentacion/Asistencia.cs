@@ -74,7 +74,21 @@ namespace CapaPresentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
+            cancelar();
+        }
+        void cancelar() {
             this.Close();
+            MessageBox.Show("No se registro la Asistencia");
+        }
+
+        private void Asistencia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void Asistencia_KeyUp(object sender, KeyEventArgs e)
+        {
+          
         }
     }
 }

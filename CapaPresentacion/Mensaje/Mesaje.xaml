@@ -8,6 +8,12 @@
           KeyDown="EvaluarTecla"
         Title="Mesaje" Height="200" Width="500" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFA42D2D" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="auto"/>
@@ -26,8 +32,8 @@
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
-            <Label Name="lblMensajeT" Content="MENSAJE:" Margin="200,5,5,5" Grid.Column="2" Grid.Row="1" Width="100" Height="auto"></Label>
-            <Label Name="lblMensajeM"   Margin="5,5,5,5"  Content=" Hola mundo" Grid.Column="2" Grid.Row="2" Width="auto" Height="auto"></Label>
+            <Label Name="lblMensajeT" Content="MENSAJE:" Margin="200,5,5,5" Grid.Column="2" Grid.Row="1" Width="100" Height="auto" Foreground="#FFDAD2D2"></Label>
+            <Label Name="lblMensajeM"   Margin="5,5,5,5"  Content=" Hola mundo" Grid.Column="2" Grid.Row="2" Width="auto" Height="auto" Foreground="#FFFBFBFB"></Label>
     </Grid>
     <Grid Grid.Row="2">
             <Grid.RowDefinitions>

@@ -71,14 +71,14 @@ namespace CapaPresentacion.VENTA
         public void EvaluarTecla(object sender, KeyEventArgs e)
         {
 
-           
+            txtCodigo.Focus();
             if ( banderacontrol==0)
             {
                
                 control = false;
-                if (Key.F5 == e.Key)
+                if (Key.Escape == e.Key)
                 {
-                    consultarProducot();
+                    salir();
                   
                 }
                 if (Key.A == e.Key)
@@ -86,6 +86,14 @@ namespace CapaPresentacion.VENTA
 
 
                     this.Close();
+
+
+                }
+                if (Key.F8 == e.Key)
+                {
+
+
+                    vincularmembresia();
 
 
                 }
@@ -121,9 +129,14 @@ namespace CapaPresentacion.VENTA
                     CancelarVenta();
                   
                 }
-                if (Key.F6 == e.Key )
+                if (Key.F7 == e.Key )
                 {
                     Devoluciones();
+
+                }
+                if (Key.F6 == e.Key)
+                {
+                    consultarProducot();
 
                 }
 
@@ -365,9 +378,9 @@ namespace CapaPresentacion.VENTA
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             banderacontrol += 1;
-            Mensaje.MensajeCaptura M = new Mensaje.MensajeCaptura("VENTA MANUAL", "Codigo:", "AGREGAR F1", "CANCELAR F2", true, "int");
+            Mensaje.MensajeCaptura M = new Mensaje.MensajeCaptura("VENTA MANUAL", "Codigo:", "AGREGAR F1", "CANCELAR F2", true, "string");
             M.ShowDialog();
-            AgregarProductoVenta(M.valor.ToString());
+            AgregarProductoVenta(M.valor3);
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
@@ -451,9 +464,63 @@ namespace CapaPresentacion.VENTA
             }
         }
 
-        private void Button_Click_7(object sender, RoutedEventArgs e)
-        {
+       
 
+        void vincularmembresia() {
+            MessageBox.Show("Para vender la membresia el cliente debe estar registrado.","NOTIFICACION");
+            bander = false;
+            try
+            {
+              
+                VincularMembreciaxaml vc = new VincularMembreciaxaml();
+                vc.ShowDialog();
+               
+                if (vc.codigo!=null)
+                {
+                    AgregarProducto(vc.codigo);
+                }
+            }
+            catch (Exception e) {
+
+                MessageBox.Show("Error "+e.ToString());
+            }
+
+        }
+        void salir()
+        {
+            if (dataGrid.Items.Count < 1)
+            {
+                Mensaje.Mesaje confir = new Mensaje.Mesaje("CERRANDO", "Desea salir?", "SI F1", "NO F2");
+                confir.ShowDialog();
+                if (confir.Si)
+                {
+                    this.Close();
+                }
+            }
+            else {
+                MessageBox.Show("LA App no se puede cerrar hasta que finalize o cancela la venta en proceso");
+            }
+        }
+
+        private void Button_Click_9(object sender, RoutedEventArgs e)
+        {
+            salir();
+        }
+
+
+        bool bander =true;
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {
+           
+
+            if (bander)
+            {
+
+                vincularmembresia();
+            }
+            else {
+                bander = true;
+            }
         }
     }
 }

@@ -8,6 +8,12 @@
         KeyUp="EvaluarTecla"
         Title="MensajeOk" Height="200" Width="500" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFB91F1F" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="auto"/>
@@ -26,8 +32,8 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <Label Name="lblMensajeT" Content="MENSAJE:" Margin="200,5,5,5" Grid.Column="2" Grid.Row="1" Width="100" Height="auto"></Label>
-            <Label Name="lblMensajeM"   Margin="5,5,5,5"  Content=" Hola mundo" Grid.Column="2" Grid.Row="2" Width="auto" Height="auto"></Label>
+            <Label Name="lblMensajeT" Content="MENSAJE:" Margin="200,5,5,5" Grid.Column="2" Grid.Row="1" Width="100" Height="auto" Foreground="LightGray"></Label>
+            <Label Name="lblMensajeM"   Margin="5,5,5,5"  Content=" Hola mundo" Grid.Column="2" Grid.Row="2" Width="auto" Height="auto" Foreground="#FFE0E0E0"></Label>
         </Grid>
         <Grid Grid.Row="2">
             <Grid.RowDefinitions>
@@ -36,9 +42,9 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="120"/>
                 <ColumnDefinition Width="auto"/>
-           
+
             </Grid.ColumnDefinitions>
-            <Button Name="BtSi" Content="OK F1" Width="100" Height="30" Margin="40,5,5,5" Grid.Column="1" Grid.Row="2" Click="BtSi_Click"></Button>
+            <Button Name="BtSi" Content="OK F1" Width="100" Height="30" Margin="79,1,-33,10" Grid.Column="1" Click="BtSi_Click"/>
         </Grid>
     </Grid>
 </Window>

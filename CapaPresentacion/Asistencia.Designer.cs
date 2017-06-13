@@ -145,9 +145,12 @@
             this.Controls.Add(this.txt_nombre);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Asistencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ASISTENCIA";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Asistencia_KeyPress);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Asistencia_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -25,6 +25,7 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             c.IdVenta = id;
+            txtBuscar.Focus();
            
         }
         bool control = true;
@@ -32,7 +33,7 @@ namespace CapaPresentacion
         public void EvaluarTecla(object sender, KeyEventArgs e)
         {
 
-
+            txtBuscar.Focus();
             if (banderacontrol == 0)
             {
 
@@ -69,34 +70,46 @@ namespace CapaPresentacion
         void VincularXcodigo()
         {
             pbar.Value = 15;
-          
-            if (siExisteClientexCo().Rows.GetEnumerator().MoveNext())
+            DataTable dt = new DataTable();
+            dt = siExisteClientexCo();
+            
+
+            if (dt.Rows.GetEnumerator().MoveNext())
             {
-                try
+                string cliente = dt.Rows[0][0].ToString() + " " + dt.Rows[0][1].ToString() + " " + dt.Rows[0][2].ToString();
+                Mensaje.Mesaje conf = new Mensaje.Mesaje("CONFIRMACION","Cliente:"+cliente+".Es correcto ?","SI F1","NO F2");
+                conf.ShowDialog();
+                if (conf.Si)
                 {
-
-                    if (txtBuscar.Text != "")
+                    try
                     {
-                        pbar.Value = 30;
-                    
-                        pbar.Value = 50;
-                    
-                        c.VincularClientexCodigo(c.IdVenta, txtBuscar.Text.ToString());
-                        pbar.Value = 100;
-                 
-                        MessageBox.Show("Venta vinculada al cliente Exitosamente","Mensaje");
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Ingrese un codigo correcto", "Error");
-                        txtBuscar.Focus();
-                    }
 
+                        if (txtBuscar.Text != "")
+                        {
+                            pbar.Value = 30;
+
+                            pbar.Value = 50;
+
+                            c.VincularClientexCodigo(c.IdVenta, txtBuscar.Text.ToString());
+                            pbar.Value = 100;
+
+                            MessageBox.Show("Venta vinculada al cliente Exitosamente", "Mensaje");
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ingrese un codigo correcto", "Error");
+                            txtBuscar.Focus();
+                        }
+
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("Error Contacte a su Administrador error:" + e.ToString());
+                    }
                 }
-                catch (Exception e)
-                {
-                    MessageBox.Show("Error Contacte a su Administrador error:" + e.ToString());
+                else {
+
                 }
 
             }
@@ -138,6 +151,16 @@ namespace CapaPresentacion
         private void txtBuscar_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             SoloNumeros(e);
+        }
+
+        private void txtBuscar_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+
+                VincularXcodigo();
+
+            }
         }
     }
 }

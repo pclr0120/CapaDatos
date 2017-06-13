@@ -8,6 +8,12 @@
          KeyDown="EvaluarTecla"
         Title="MensajeCaptura" Height="200" Width="500" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFC32A2A" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="auto"/>
@@ -18,7 +24,7 @@
         </Grid.ColumnDefinitions>
         <Grid Grid.Row="1">
 
-            <Label Name="lblMensajeT" Content="MENSAJE:" Margin="150,5,5,5" Grid.Column="2" Grid.Row="1" Width="auto" Height="auto"></Label>
+            <Label Name="lblMensajeT" Content="MENSAJE:" Margin="150,5,5,5" Grid.Column="2" Grid.Row="1" Width="auto" Height="auto" Foreground="#FFD6C0C0"></Label>
 
         </Grid>
         <Grid Grid.Row="2">
@@ -32,7 +38,7 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <Label Name="lblMensajeM"   Margin="5,5,5,5"  Content=" Hola munddddddddddddo" Grid.Column="1" Grid.Row="2" Width="auto" Height="auto"></Label>
+            <Label Name="lblMensajeM"   Margin="5,5,5,5"  Content=" Hola munddddddddddddo" Grid.Column="1" Grid.Row="2" Width="auto" Height="auto" Foreground="#FFBDB1B1"></Label>
             <TextBox Name="txt_valor" Width="200" Height="25" Grid.Row="2" Grid.Column="2" MaxLength="20" PreviewTextInput="txt_valor_PreviewTextInput" KeyDown="txt_valor_KeyDown" />
         </Grid>
         

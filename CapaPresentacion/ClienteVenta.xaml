@@ -11,6 +11,12 @@
         KeyDown="EvaluarTecla"
         Title="Vincular cliente con la venta" Height="200" Width="600">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFA02727" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition Height="auto"/>
@@ -38,8 +44,8 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <Label Content="#Cliente:" Margin="10,10,10,10" ></Label>
-            <TextBox Name="txtBuscar" Margin="10,10,10,10" MaxLength="5"  Grid.Row="0" Grid.Column="1" Width="300" PreviewTextInput="txtBuscar_PreviewTextInput"  ></TextBox>
+            <Label Content="#Cliente:" Margin="10,10,10,10" Foreground="#FFFFFCFC" ></Label>
+            <TextBox Name="txtBuscar" Margin="10,10,10,10" MaxLength="5"  Grid.Row="0" Grid.Column="1" Width="300" PreviewTextInput="txtBuscar_PreviewTextInput" PreviewKeyDown="txtBuscar_PreviewKeyDown"  ></TextBox>
             <Button Name="btnbuscar" Content="Guardar F1" Width="100" Height="30" Grid.Column="2" Click="btnbuscar_Click" ></Button>
         </Grid>
         <Grid Grid.Row="2" Margin="-54,0,54,0">
