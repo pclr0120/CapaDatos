@@ -211,17 +211,29 @@ namespace CapaPresentacion.VENTA
         }
         public void AgregarProducto(string codigo)
         {
-            dataGrid.ItemsSource = Vm.CProducto(codigo); //agrega al datagrid los productos
-            dataGrid.Items.Refresh();
-            calVenta();  //acutliza los totaltes
-            if (Vm.Encontrado != true)
+            List<Producto> lt = new List<Producto>();
+            lt= Vm.CProducto(codigo);
+            if (Vm.Sinproducto != true)
             {
-                MessageBox.Show("Producto no encontrado");
+                if (Vm.Encontrado != true)
+                {
+                    MessageBox.Show("Producto no encontrado");
 
+                }
+                else
+                {
+
+                    dataGrid.ItemsSource = lt;  //agrega al datagrid los productos
+                    dataGrid.Items.Refresh();
+                    calVenta();  //acutliza los totaltes
+                }
+                if (Vm.p.Stock0)
+                {
+                    MessageBox.Show("No se encuentra en stock");
+                }
             }
-            if (Vm.p.Stock0)
-            {
-                MessageBox.Show("No se encuentra en stock");
+            else {
+                MessageBox.Show("No hay en Existencia");
             }
 
         }

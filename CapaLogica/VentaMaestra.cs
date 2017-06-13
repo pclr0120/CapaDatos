@@ -21,7 +21,10 @@ namespace CapaLogica
         public int valor { get; set; }
         public double Pago { get; set; }
         public double Cambio { get; set; }
-     
+        public int StockEntimporeal { get; set; }
+        public int PreVenta { get; set; }
+
+
 
 
         Accesodatos Acceso = new Accesodatos();
@@ -36,20 +39,38 @@ namespace CapaLogica
         Producto producto = new Producto();
        public  List<Producto> ListaProducto = new List<Producto>();
        public  bool Encontrado;
+        public bool Sinproducto ;
         public Producto p = new Producto();
    
         public List<Producto> CProducto(string Codigo)
         {
             try
             {
+                Sinproducto = false;
                p.Stock0 = false;
                  Encontrado = false;
                 foreach (DataRow row in producto.ConsultaProducto(Codigo).Rows)
                 {
                     Encontrado = true;
                    p.Obtenerstock(Codigo);
-                   
+
                     ///=====
+                   StockEntimporeal= p.Stock;
+                    int contadorpreventa = 0;
+                    for (int i = 0; i < ListaProducto.Count ; i++)
+                    {
+                        if (ListaProducto[i].Codigo.ToString()==Codigo) {
+                            contadorpreventa = contadorpreventa + 1;
+                        }
+
+
+                    }
+                    if (StockEntimporeal==contadorpreventa) {
+
+                        Sinproducto = true;
+                        return ListaProducto;
+
+                    }
                     if (p.Stock > 0)
                     {
                         Producto p = new Producto();
