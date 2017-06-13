@@ -117,6 +117,7 @@ namespace Modulo_Clientes
                 cb_mun_c.Text = row["NomMun"].ToString();
                 cb_city_c.Text = row["NomCiudad"].ToString();
                 txt_telefono_c.Text = row["Telefono"].ToString();
+                txt_email_c.Text = row["email"].ToString();
                 txt_codigoinvitado_c.Visible = false;
                 label17.Visible = false;
                 TabControl_Clientes.SelectedTab = TabClientes_Registro; //Cambio de Tab
@@ -160,7 +161,7 @@ namespace Modulo_Clientes
 
         public void ClienteRegMod()
         {
-            Regex Val = new Regex(@"^([a-z]*[A-Z])+(\.[a-z0-9]+)*@([a-z0-9])+(\.[a-z0-9-]+)*(\.[a-z{0-9}])$");
+            Regex Val = new Regex(@"^([a-z])+([a-z0-9])*@+([a-z0-9])+([\.]+[a-z0-9]+)$");
             if (txt_nombre_c.Text != "")
             {
                 if (txt_app_c.Text != "")
