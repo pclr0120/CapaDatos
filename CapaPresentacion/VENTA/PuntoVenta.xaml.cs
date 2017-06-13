@@ -442,7 +442,7 @@ namespace CapaPresentacion.VENTA
             c.ShowDialog();
 
 
-            if (c.valor3 != "0")
+            if (c.valor3 != null)
             {
                 CapaLogica.ClienteVenta cc = new CapaLogica.ClienteVenta();
 

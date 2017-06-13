@@ -59,8 +59,20 @@ namespace CapaPresentacion
                     {
                      
                             dt3 = v.buscarTipoMembrecia(dt2.Rows[0][0].ToString());
-                            mem = Convert.ToInt32(dt3.Rows[0][0]);
-                            b = true;
+                        if (dt2!=null) {
+                            if (dt2.Rows.Count > 0) {
+                                try
+                                {
+                                    mem = Convert.ToInt32(dt3.Rows[0][0]);
+                                    b = true;
+                                }
+                                catch (Exception e) {
+                  
+                                }
+                                
+                             
+                            }
+                        }
                         
                     }
                 }
@@ -84,7 +96,7 @@ namespace CapaPresentacion
                             if (v.Vincular(Convert.ToInt32(dt.Rows[0][0]), mem) == 1)
                             {
 
-                                MessageBox.Show("Vinculado con exito");
+                                MessageBox.Show("LA vinculacion se realizara cuando se realize la venta");
                                 codigo = txtCodigo_Copy.Text;
                                 this.Close();
                             }
