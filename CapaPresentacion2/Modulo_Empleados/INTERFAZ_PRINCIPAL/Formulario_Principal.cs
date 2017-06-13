@@ -134,6 +134,8 @@ namespace EMBLEMA
         public Modulo_Config.Configuraciones Configuraciones = new Modulo_Config.Configuraciones();
         Inicio.Inicio Ventana_Inicio = new Inicio.Inicio();
         CapaPresentacion.VENTA.PuntoVenta Punto = new CapaPresentacion.VENTA.PuntoVenta();
+        Modulo_Empleados.INTERFAZ_PRINCIPAL.Reportes Reportes = new Modulo_Empleados.INTERFAZ_PRINCIPAL.Reportes();
+
 
         private void btn_min_Click(object sender, EventArgs e)
         {
@@ -187,11 +189,13 @@ namespace EMBLEMA
             SpotifyOff();
             Ver_Inicio();
             Ventana_Inicio.Show();
-            panel3.AutoScroll = true;
+            panel3.HorizontalScroll.Maximum = 0;
+            panel3.AutoScroll = false;
             panel3.VerticalScroll.Visible = false;
+            panel3.AutoScroll = true;
             //this.AutoScroll = true;
             //this.VerticalScroll.Visible = false;
-            
+
         }
         void Ver_Inicio()
         {
@@ -347,6 +351,11 @@ namespace EMBLEMA
         private void rb_punto_vta_CheckedChanged(object sender, EventArgs e)
         {
             Punto.Show();
+        }
+
+        private void rb_reportes_CheckedChanged(object sender, EventArgs e)
+        {
+            Reportes.Show();
         }
     }
 }

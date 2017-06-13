@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formulario_Principal));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_min = new System.Windows.Forms.Button();
-            this.class_Ovalo1 = new EMBLEMA.Class_Ovalo();
             this.lbl_emblema = new System.Windows.Forms.Label();
             this.lbl_usuario = new System.Windows.Forms.Label();
             this.lbl_control_sesion = new System.Windows.Forms.Label();
@@ -41,22 +39,10 @@
             this.txt_message = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.rb_inicio = new System.Windows.Forms.RadioButton();
-            this.rb_punto_vta = new System.Windows.Forms.RadioButton();
-            this.rb_membre = new System.Windows.Forms.RadioButton();
-            this.rb_equipo = new System.Windows.Forms.RadioButton();
-            this.rb_empleados = new System.Windows.Forms.RadioButton();
-            this.rb_inventario = new System.Windows.Forms.RadioButton();
-            this.rb_config = new System.Windows.Forms.RadioButton();
             this.lbl_album = new System.Windows.Forms.Label();
             this.lbl_artista = new System.Windows.Forms.Label();
             this.lbl_cancion = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.pb_album = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.btn_next = new System.Windows.Forms.PictureBox();
-            this.btn_play = new System.Windows.Forms.PictureBox();
-            this.btn_previous = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,17 +57,32 @@
             this.conexion = new System.Windows.Forms.Timer(this.components);
             this.btn_install = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.rb_reportes = new System.Windows.Forms.RadioButton();
+            this.rb_equipo = new System.Windows.Forms.RadioButton();
+            this.rb_inicio = new System.Windows.Forms.RadioButton();
+            this.rb_punto_vta = new System.Windows.Forms.RadioButton();
+            this.rb_membre = new System.Windows.Forms.RadioButton();
+            this.rb_empleados = new System.Windows.Forms.RadioButton();
+            this.rb_inventario = new System.Windows.Forms.RadioButton();
+            this.rb_config = new System.Windows.Forms.RadioButton();
+            this.pb_album = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.btn_next = new System.Windows.Forms.PictureBox();
+            this.btn_play = new System.Windows.Forms.PictureBox();
+            this.btn_previous = new System.Windows.Forms.PictureBox();
+            this.btn_min = new System.Windows.Forms.Button();
+            this.class_Ovalo1 = new EMBLEMA.Class_Ovalo();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.class_Ovalo1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_album)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_next)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_previous)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.class_Ovalo1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -111,35 +112,6 @@
             this.label3.Size = new System.Drawing.Size(126, 19);
             this.label3.TabIndex = 16;
             this.label3.Text = "Sistema EMBLEMA ®";
-            // 
-            // btn_min
-            // 
-            this.btn_min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_min.BackColor = System.Drawing.Color.Transparent;
-            this.btn_min.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_min.BackgroundImage")));
-            this.btn_min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_min.FlatAppearance.BorderSize = 0;
-            this.btn_min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btn_min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_min.Location = new System.Drawing.Point(1326, 0);
-            this.btn_min.Name = "btn_min";
-            this.btn_min.Size = new System.Drawing.Size(40, 25);
-            this.btn_min.TabIndex = 1;
-            this.btn_min.UseVisualStyleBackColor = false;
-            this.btn_min.Click += new System.EventHandler(this.btn_min_Click);
-            // 
-            // class_Ovalo1
-            // 
-            this.class_Ovalo1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.class_Ovalo1.BackColor = System.Drawing.Color.DarkGray;
-            this.class_Ovalo1.Image = ((System.Drawing.Image)(resources.GetObject("class_Ovalo1.Image")));
-            this.class_Ovalo1.Location = new System.Drawing.Point(20, 13);
-            this.class_Ovalo1.Name = "class_Ovalo1";
-            this.class_Ovalo1.Size = new System.Drawing.Size(69, 65);
-            this.class_Ovalo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.class_Ovalo1.TabIndex = 12;
-            this.class_Ovalo1.TabStop = false;
             // 
             // lbl_emblema
             // 
@@ -210,7 +182,7 @@
             this.txt_message.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txt_message.Font = new System.Drawing.Font("Open Sans", 9.75F);
             this.txt_message.ForeColor = System.Drawing.Color.White;
-            this.txt_message.Location = new System.Drawing.Point(0, 388);
+            this.txt_message.Location = new System.Drawing.Point(0, 393);
             this.txt_message.Name = "txt_message";
             this.txt_message.Size = new System.Drawing.Size(260, 56);
             this.txt_message.TabIndex = 11;
@@ -226,7 +198,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label1.Location = new System.Drawing.Point(-3, 432);
+            this.label1.Location = new System.Drawing.Point(-3, 438);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(301, 13);
             this.label1.TabIndex = 12;
@@ -234,159 +206,20 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel3.Controls.Add(this.rb_reportes);
+            this.panel3.Controls.Add(this.rb_equipo);
             this.panel3.Controls.Add(this.rb_inicio);
             this.panel3.Controls.Add(this.rb_punto_vta);
             this.panel3.Controls.Add(this.rb_membre);
-            this.panel3.Controls.Add(this.rb_equipo);
             this.panel3.Controls.Add(this.rb_empleados);
             this.panel3.Controls.Add(this.rb_inventario);
             this.panel3.Controls.Add(this.rb_config);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(260, 447);
+            this.panel3.Size = new System.Drawing.Size(260, 440);
             this.panel3.TabIndex = 11;
-            // 
-            // rb_inicio
-            // 
-            this.rb_inicio.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rb_inicio.AutoSize = true;
-            this.rb_inicio.BackColor = System.Drawing.Color.Transparent;
-            this.rb_inicio.BackgroundImage = global::Modulo_Empleados.Properties.Resources.Inicio1;
-            this.rb_inicio.Checked = true;
-            this.rb_inicio.FlatAppearance.BorderSize = 0;
-            this.rb_inicio.FlatAppearance.CheckedBackColor = System.Drawing.Color.Crimson;
-            this.rb_inicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.rb_inicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.rb_inicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rb_inicio.Location = new System.Drawing.Point(0, 0);
-            this.rb_inicio.MinimumSize = new System.Drawing.Size(260, 60);
-            this.rb_inicio.Name = "rb_inicio";
-            this.rb_inicio.Size = new System.Drawing.Size(260, 60);
-            this.rb_inicio.TabIndex = 6;
-            this.rb_inicio.TabStop = true;
-            this.rb_inicio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rb_inicio.UseVisualStyleBackColor = false;
-            this.rb_inicio.CheckedChanged += new System.EventHandler(this.rb_inicio_CheckedChanged);
-            // 
-            // rb_punto_vta
-            // 
-            this.rb_punto_vta.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rb_punto_vta.AutoSize = true;
-            this.rb_punto_vta.BackColor = System.Drawing.Color.Transparent;
-            this.rb_punto_vta.BackgroundImage = global::Modulo_Empleados.Properties.Resources.Punto1;
-            this.rb_punto_vta.FlatAppearance.BorderSize = 0;
-            this.rb_punto_vta.FlatAppearance.CheckedBackColor = System.Drawing.Color.Crimson;
-            this.rb_punto_vta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.rb_punto_vta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.rb_punto_vta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rb_punto_vta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rb_punto_vta.Location = new System.Drawing.Point(0, 60);
-            this.rb_punto_vta.MinimumSize = new System.Drawing.Size(260, 60);
-            this.rb_punto_vta.Name = "rb_punto_vta";
-            this.rb_punto_vta.Size = new System.Drawing.Size(260, 60);
-            this.rb_punto_vta.TabIndex = 7;
-            this.rb_punto_vta.UseVisualStyleBackColor = false;
-            this.rb_punto_vta.Click += new System.EventHandler(this.rb_punto_vta_CheckedChanged);
-            // 
-            // rb_membre
-            // 
-            this.rb_membre.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rb_membre.AutoSize = true;
-            this.rb_membre.BackColor = System.Drawing.Color.Transparent;
-            this.rb_membre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rb_membre.BackgroundImage")));
-            this.rb_membre.FlatAppearance.BorderSize = 0;
-            this.rb_membre.FlatAppearance.CheckedBackColor = System.Drawing.Color.Crimson;
-            this.rb_membre.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.rb_membre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.rb_membre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rb_membre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rb_membre.Location = new System.Drawing.Point(0, 180);
-            this.rb_membre.MinimumSize = new System.Drawing.Size(260, 60);
-            this.rb_membre.Name = "rb_membre";
-            this.rb_membre.Size = new System.Drawing.Size(260, 60);
-            this.rb_membre.TabIndex = 8;
-            this.rb_membre.UseVisualStyleBackColor = false;
-            this.rb_membre.CheckedChanged += new System.EventHandler(this.rb_membre_Click);
-            // 
-            // rb_equipo
-            // 
-            this.rb_equipo.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rb_equipo.AutoSize = true;
-            this.rb_equipo.BackColor = System.Drawing.Color.Transparent;
-            this.rb_equipo.BackgroundImage = global::Modulo_Empleados.Properties.Resources.Equipo1;
-            this.rb_equipo.FlatAppearance.BorderSize = 0;
-            this.rb_equipo.FlatAppearance.CheckedBackColor = System.Drawing.Color.Crimson;
-            this.rb_equipo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.rb_equipo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.rb_equipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rb_equipo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rb_equipo.Location = new System.Drawing.Point(0, 240);
-            this.rb_equipo.MinimumSize = new System.Drawing.Size(260, 60);
-            this.rb_equipo.Name = "rb_equipo";
-            this.rb_equipo.Size = new System.Drawing.Size(260, 60);
-            this.rb_equipo.TabIndex = 9;
-            this.rb_equipo.UseVisualStyleBackColor = false;
-            this.rb_equipo.CheckedChanged += new System.EventHandler(this.rb_equipo_CheckedChanged);
-            // 
-            // rb_empleados
-            // 
-            this.rb_empleados.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rb_empleados.AutoSize = true;
-            this.rb_empleados.BackColor = System.Drawing.Color.Transparent;
-            this.rb_empleados.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rb_empleados.BackgroundImage")));
-            this.rb_empleados.FlatAppearance.BorderSize = 0;
-            this.rb_empleados.FlatAppearance.CheckedBackColor = System.Drawing.Color.Crimson;
-            this.rb_empleados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.rb_empleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.rb_empleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rb_empleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rb_empleados.Location = new System.Drawing.Point(0, 300);
-            this.rb_empleados.MinimumSize = new System.Drawing.Size(260, 60);
-            this.rb_empleados.Name = "rb_empleados";
-            this.rb_empleados.Size = new System.Drawing.Size(260, 60);
-            this.rb_empleados.TabIndex = 10;
-            this.rb_empleados.UseVisualStyleBackColor = false;
-            this.rb_empleados.CheckedChanged += new System.EventHandler(this.rb_empleados_CheckedChanged);
-            // 
-            // rb_inventario
-            // 
-            this.rb_inventario.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rb_inventario.AutoSize = true;
-            this.rb_inventario.BackColor = System.Drawing.Color.Transparent;
-            this.rb_inventario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rb_inventario.BackgroundImage")));
-            this.rb_inventario.FlatAppearance.BorderSize = 0;
-            this.rb_inventario.FlatAppearance.CheckedBackColor = System.Drawing.Color.Crimson;
-            this.rb_inventario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.rb_inventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.rb_inventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rb_inventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rb_inventario.Location = new System.Drawing.Point(0, 120);
-            this.rb_inventario.MinimumSize = new System.Drawing.Size(260, 60);
-            this.rb_inventario.Name = "rb_inventario";
-            this.rb_inventario.Size = new System.Drawing.Size(260, 60);
-            this.rb_inventario.TabIndex = 27;
-            this.rb_inventario.UseVisualStyleBackColor = false;
-            this.rb_inventario.CheckedChanged += new System.EventHandler(this.rb_inventario_CheckedChanged);
-            // 
-            // rb_config
-            // 
-            this.rb_config.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rb_config.AutoSize = true;
-            this.rb_config.BackColor = System.Drawing.Color.Transparent;
-            this.rb_config.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rb_config.BackgroundImage")));
-            this.rb_config.FlatAppearance.BorderSize = 0;
-            this.rb_config.FlatAppearance.CheckedBackColor = System.Drawing.Color.Crimson;
-            this.rb_config.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.rb_config.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.rb_config.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rb_config.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rb_config.Location = new System.Drawing.Point(0, 360);
-            this.rb_config.MinimumSize = new System.Drawing.Size(260, 60);
-            this.rb_config.Name = "rb_config";
-            this.rb_config.Size = new System.Drawing.Size(260, 60);
-            this.rb_config.TabIndex = 11;
-            this.rb_config.UseVisualStyleBackColor = false;
-            this.rb_config.Click += new System.EventHandler(this.rb_config_CheckedChanged);
             // 
             // lbl_album
             // 
@@ -433,74 +266,6 @@
             this.trackBar1.Size = new System.Drawing.Size(104, 45);
             this.trackBar1.TabIndex = 29;
             this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
-            // 
-            // pb_album
-            // 
-            this.pb_album.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pb_album.BackColor = System.Drawing.Color.Transparent;
-            this.pb_album.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pb_album.Image = ((System.Drawing.Image)(resources.GetObject("pb_album.Image")));
-            this.pb_album.Location = new System.Drawing.Point(12, 471);
-            this.pb_album.Name = "pb_album";
-            this.pb_album.Size = new System.Drawing.Size(75, 75);
-            this.pb_album.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_album.TabIndex = 28;
-            this.pb_album.TabStop = false;
-            this.pb_album.Click += new System.EventHandler(this.pb_album_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(49, 621);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 26;
-            this.pictureBox6.TabStop = false;
-            // 
-            // btn_next
-            // 
-            this.btn_next.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_next.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_next.Image = ((System.Drawing.Image)(resources.GetObject("btn_next.Image")));
-            this.btn_next.Location = new System.Drawing.Point(187, 578);
-            this.btn_next.Name = "btn_next";
-            this.btn_next.Size = new System.Drawing.Size(15, 15);
-            this.btn_next.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_next.TabIndex = 23;
-            this.btn_next.TabStop = false;
-            this.btn_next.Click += new System.EventHandler(this.btn_next_Click);
-            // 
-            // btn_play
-            // 
-            this.btn_play.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_play.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_play.Image = ((System.Drawing.Image)(resources.GetObject("btn_play.Image")));
-            this.btn_play.Location = new System.Drawing.Point(108, 567);
-            this.btn_play.Name = "btn_play";
-            this.btn_play.Size = new System.Drawing.Size(40, 40);
-            this.btn_play.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_play.TabIndex = 21;
-            this.btn_play.TabStop = false;
-            this.btn_play.Click += new System.EventHandler(this.btn_play_Click);
-            // 
-            // btn_previous
-            // 
-            this.btn_previous.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_previous.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_previous.Image = ((System.Drawing.Image)(resources.GetObject("btn_previous.Image")));
-            this.btn_previous.Location = new System.Drawing.Point(53, 578);
-            this.btn_previous.Name = "btn_previous";
-            this.btn_previous.Size = new System.Drawing.Size(15, 15);
-            this.btn_previous.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_previous.TabIndex = 22;
-            this.btn_previous.TabStop = false;
-            this.btn_previous.Click += new System.EventHandler(this.btn_previous_Click);
             // 
             // openFileDialog1
             // 
@@ -610,6 +375,265 @@
             this.linkLabel1.Text = "https://www.spotify.com/mx/download/windows/";
             this.linkLabel1.Visible = false;
             // 
+            // rb_reportes
+            // 
+            this.rb_reportes.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rb_reportes.AutoSize = true;
+            this.rb_reportes.BackColor = System.Drawing.Color.Transparent;
+            this.rb_reportes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rb_reportes.BackgroundImage")));
+            this.rb_reportes.FlatAppearance.BorderSize = 0;
+            this.rb_reportes.FlatAppearance.CheckedBackColor = System.Drawing.Color.Crimson;
+            this.rb_reportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.rb_reportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.rb_reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rb_reportes.Location = new System.Drawing.Point(0, 420);
+            this.rb_reportes.MinimumSize = new System.Drawing.Size(260, 60);
+            this.rb_reportes.Name = "rb_reportes";
+            this.rb_reportes.Size = new System.Drawing.Size(260, 60);
+            this.rb_reportes.TabIndex = 28;
+            this.rb_reportes.UseVisualStyleBackColor = false;
+            this.rb_reportes.CheckedChanged += new System.EventHandler(this.rb_reportes_CheckedChanged);
+            // 
+            // rb_equipo
+            // 
+            this.rb_equipo.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rb_equipo.AutoSize = true;
+            this.rb_equipo.BackColor = System.Drawing.Color.Transparent;
+            this.rb_equipo.BackgroundImage = global::Modulo_Empleados.Properties.Resources.Equipo1;
+            this.rb_equipo.FlatAppearance.BorderSize = 0;
+            this.rb_equipo.FlatAppearance.CheckedBackColor = System.Drawing.Color.Crimson;
+            this.rb_equipo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.rb_equipo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.rb_equipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_equipo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rb_equipo.Location = new System.Drawing.Point(0, 240);
+            this.rb_equipo.MinimumSize = new System.Drawing.Size(260, 60);
+            this.rb_equipo.Name = "rb_equipo";
+            this.rb_equipo.Size = new System.Drawing.Size(260, 60);
+            this.rb_equipo.TabIndex = 9;
+            this.rb_equipo.UseVisualStyleBackColor = false;
+            this.rb_equipo.CheckedChanged += new System.EventHandler(this.rb_equipo_CheckedChanged);
+            // 
+            // rb_inicio
+            // 
+            this.rb_inicio.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rb_inicio.AutoSize = true;
+            this.rb_inicio.BackColor = System.Drawing.Color.Transparent;
+            this.rb_inicio.BackgroundImage = global::Modulo_Empleados.Properties.Resources.Inicio1;
+            this.rb_inicio.Checked = true;
+            this.rb_inicio.FlatAppearance.BorderSize = 0;
+            this.rb_inicio.FlatAppearance.CheckedBackColor = System.Drawing.Color.Crimson;
+            this.rb_inicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.rb_inicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.rb_inicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_inicio.Location = new System.Drawing.Point(0, 0);
+            this.rb_inicio.MinimumSize = new System.Drawing.Size(260, 60);
+            this.rb_inicio.Name = "rb_inicio";
+            this.rb_inicio.Size = new System.Drawing.Size(260, 60);
+            this.rb_inicio.TabIndex = 6;
+            this.rb_inicio.TabStop = true;
+            this.rb_inicio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rb_inicio.UseVisualStyleBackColor = false;
+            this.rb_inicio.CheckedChanged += new System.EventHandler(this.rb_inicio_CheckedChanged);
+            // 
+            // rb_punto_vta
+            // 
+            this.rb_punto_vta.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rb_punto_vta.AutoSize = true;
+            this.rb_punto_vta.BackColor = System.Drawing.Color.Transparent;
+            this.rb_punto_vta.BackgroundImage = global::Modulo_Empleados.Properties.Resources.Punto1;
+            this.rb_punto_vta.FlatAppearance.BorderSize = 0;
+            this.rb_punto_vta.FlatAppearance.CheckedBackColor = System.Drawing.Color.Crimson;
+            this.rb_punto_vta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.rb_punto_vta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.rb_punto_vta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_punto_vta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rb_punto_vta.Location = new System.Drawing.Point(0, 60);
+            this.rb_punto_vta.MinimumSize = new System.Drawing.Size(260, 60);
+            this.rb_punto_vta.Name = "rb_punto_vta";
+            this.rb_punto_vta.Size = new System.Drawing.Size(260, 60);
+            this.rb_punto_vta.TabIndex = 7;
+            this.rb_punto_vta.UseVisualStyleBackColor = false;
+            this.rb_punto_vta.Click += new System.EventHandler(this.rb_punto_vta_CheckedChanged);
+            // 
+            // rb_membre
+            // 
+            this.rb_membre.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rb_membre.AutoSize = true;
+            this.rb_membre.BackColor = System.Drawing.Color.Transparent;
+            this.rb_membre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rb_membre.BackgroundImage")));
+            this.rb_membre.FlatAppearance.BorderSize = 0;
+            this.rb_membre.FlatAppearance.CheckedBackColor = System.Drawing.Color.Crimson;
+            this.rb_membre.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.rb_membre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.rb_membre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_membre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rb_membre.Location = new System.Drawing.Point(0, 180);
+            this.rb_membre.MinimumSize = new System.Drawing.Size(260, 60);
+            this.rb_membre.Name = "rb_membre";
+            this.rb_membre.Size = new System.Drawing.Size(260, 60);
+            this.rb_membre.TabIndex = 8;
+            this.rb_membre.UseVisualStyleBackColor = false;
+            this.rb_membre.CheckedChanged += new System.EventHandler(this.rb_membre_Click);
+            // 
+            // rb_empleados
+            // 
+            this.rb_empleados.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rb_empleados.AutoSize = true;
+            this.rb_empleados.BackColor = System.Drawing.Color.Transparent;
+            this.rb_empleados.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rb_empleados.BackgroundImage")));
+            this.rb_empleados.FlatAppearance.BorderSize = 0;
+            this.rb_empleados.FlatAppearance.CheckedBackColor = System.Drawing.Color.Crimson;
+            this.rb_empleados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.rb_empleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.rb_empleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_empleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rb_empleados.Location = new System.Drawing.Point(0, 300);
+            this.rb_empleados.MinimumSize = new System.Drawing.Size(260, 60);
+            this.rb_empleados.Name = "rb_empleados";
+            this.rb_empleados.Size = new System.Drawing.Size(260, 60);
+            this.rb_empleados.TabIndex = 10;
+            this.rb_empleados.UseVisualStyleBackColor = false;
+            this.rb_empleados.CheckedChanged += new System.EventHandler(this.rb_empleados_CheckedChanged);
+            // 
+            // rb_inventario
+            // 
+            this.rb_inventario.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rb_inventario.AutoSize = true;
+            this.rb_inventario.BackColor = System.Drawing.Color.Transparent;
+            this.rb_inventario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rb_inventario.BackgroundImage")));
+            this.rb_inventario.FlatAppearance.BorderSize = 0;
+            this.rb_inventario.FlatAppearance.CheckedBackColor = System.Drawing.Color.Crimson;
+            this.rb_inventario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.rb_inventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.rb_inventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_inventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rb_inventario.Location = new System.Drawing.Point(0, 120);
+            this.rb_inventario.MinimumSize = new System.Drawing.Size(260, 60);
+            this.rb_inventario.Name = "rb_inventario";
+            this.rb_inventario.Size = new System.Drawing.Size(260, 60);
+            this.rb_inventario.TabIndex = 27;
+            this.rb_inventario.UseVisualStyleBackColor = false;
+            this.rb_inventario.CheckedChanged += new System.EventHandler(this.rb_inventario_CheckedChanged);
+            // 
+            // rb_config
+            // 
+            this.rb_config.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rb_config.AutoSize = true;
+            this.rb_config.BackColor = System.Drawing.Color.Transparent;
+            this.rb_config.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rb_config.BackgroundImage")));
+            this.rb_config.FlatAppearance.BorderSize = 0;
+            this.rb_config.FlatAppearance.CheckedBackColor = System.Drawing.Color.Crimson;
+            this.rb_config.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.rb_config.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.rb_config.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_config.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.rb_config.Location = new System.Drawing.Point(0, 360);
+            this.rb_config.MinimumSize = new System.Drawing.Size(260, 60);
+            this.rb_config.Name = "rb_config";
+            this.rb_config.Size = new System.Drawing.Size(260, 60);
+            this.rb_config.TabIndex = 11;
+            this.rb_config.UseVisualStyleBackColor = false;
+            this.rb_config.Click += new System.EventHandler(this.rb_config_CheckedChanged);
+            // 
+            // pb_album
+            // 
+            this.pb_album.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pb_album.BackColor = System.Drawing.Color.Transparent;
+            this.pb_album.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pb_album.Image = ((System.Drawing.Image)(resources.GetObject("pb_album.Image")));
+            this.pb_album.Location = new System.Drawing.Point(12, 471);
+            this.pb_album.Name = "pb_album";
+            this.pb_album.Size = new System.Drawing.Size(75, 75);
+            this.pb_album.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_album.TabIndex = 28;
+            this.pb_album.TabStop = false;
+            this.pb_album.Click += new System.EventHandler(this.pb_album_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(49, 621);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 26;
+            this.pictureBox6.TabStop = false;
+            // 
+            // btn_next
+            // 
+            this.btn_next.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_next.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_next.Image = ((System.Drawing.Image)(resources.GetObject("btn_next.Image")));
+            this.btn_next.Location = new System.Drawing.Point(187, 578);
+            this.btn_next.Name = "btn_next";
+            this.btn_next.Size = new System.Drawing.Size(15, 15);
+            this.btn_next.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_next.TabIndex = 23;
+            this.btn_next.TabStop = false;
+            this.btn_next.Click += new System.EventHandler(this.btn_next_Click);
+            // 
+            // btn_play
+            // 
+            this.btn_play.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_play.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_play.Image = ((System.Drawing.Image)(resources.GetObject("btn_play.Image")));
+            this.btn_play.Location = new System.Drawing.Point(108, 567);
+            this.btn_play.Name = "btn_play";
+            this.btn_play.Size = new System.Drawing.Size(40, 40);
+            this.btn_play.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_play.TabIndex = 21;
+            this.btn_play.TabStop = false;
+            this.btn_play.Click += new System.EventHandler(this.btn_play_Click);
+            // 
+            // btn_previous
+            // 
+            this.btn_previous.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_previous.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_previous.Image = ((System.Drawing.Image)(resources.GetObject("btn_previous.Image")));
+            this.btn_previous.Location = new System.Drawing.Point(53, 578);
+            this.btn_previous.Name = "btn_previous";
+            this.btn_previous.Size = new System.Drawing.Size(15, 15);
+            this.btn_previous.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btn_previous.TabIndex = 22;
+            this.btn_previous.TabStop = false;
+            this.btn_previous.Click += new System.EventHandler(this.btn_previous_Click);
+            // 
+            // btn_min
+            // 
+            this.btn_min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_min.BackColor = System.Drawing.Color.Transparent;
+            this.btn_min.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_min.BackgroundImage")));
+            this.btn_min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_min.FlatAppearance.BorderSize = 0;
+            this.btn_min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btn_min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_min.Location = new System.Drawing.Point(1326, 0);
+            this.btn_min.Name = "btn_min";
+            this.btn_min.Size = new System.Drawing.Size(40, 25);
+            this.btn_min.TabIndex = 1;
+            this.btn_min.UseVisualStyleBackColor = false;
+            this.btn_min.Click += new System.EventHandler(this.btn_min_Click);
+            // 
+            // class_Ovalo1
+            // 
+            this.class_Ovalo1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.class_Ovalo1.BackColor = System.Drawing.Color.DarkGray;
+            this.class_Ovalo1.Image = ((System.Drawing.Image)(resources.GetObject("class_Ovalo1.Image")));
+            this.class_Ovalo1.Location = new System.Drawing.Point(20, 13);
+            this.class_Ovalo1.Name = "class_Ovalo1";
+            this.class_Ovalo1.Size = new System.Drawing.Size(69, 65);
+            this.class_Ovalo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.class_Ovalo1.TabIndex = 12;
+            this.class_Ovalo1.TabStop = false;
+            // 
             // Formulario_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -630,19 +654,19 @@
             this.Load += new System.EventHandler(this.Formulario_Principal_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.class_Ovalo1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_album)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_next)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_play)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_previous)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.class_Ovalo1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -691,6 +715,7 @@
         private System.Windows.Forms.Timer conexion;
         private System.Windows.Forms.Button btn_install;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.RadioButton rb_reportes;
     }
 }
 
