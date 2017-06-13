@@ -48,13 +48,22 @@
             this.tab_clientes = new System.Windows.Forms.TabPage();
             this.tab_equipo = new System.Windows.Forms.TabPage();
             this.tab_empleados = new System.Windows.Forms.TabPage();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.crv_venta = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.crv_inventario = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.crv_cliente = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.crv_equipo = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.crv_empleado = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.ClientesActivos1 = new Modulo_Empleados.INTERFAZ_PRINCIPAL.ClientesActivos();
             this.EquiposActivos1 = new Modulo_Empleados.INTERFAZ_PRINCIPAL.EquiposActivos();
+            this.EmpleadosActivos1 = new Modulo_Empleados.INTERFAZ_PRINCIPAL.EmpleadosActivos();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.VentaGananciasDiarias1 = new Modulo_Empleados.INTERFAZ_PRINCIPAL.VentaGananciasDiarias();
+            this.InventarioMostrarStock1 = new Modulo_Empleados.INTERFAZ_PRINCIPAL.InventarioMostrarStock();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.crystalReportViewer2 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.crystalReportViewer3 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.crystalReportViewer4 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.crystalReportViewer5 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.VentaGananciasDiarias2 = new Modulo_Empleados.INTERFAZ_PRINCIPAL.VentaGananciasDiarias();
+            this.InventarioMostrarStock2 = new Modulo_Empleados.INTERFAZ_PRINCIPAL.InventarioMostrarStock();
+            this.ClientesActivos2 = new Modulo_Empleados.INTERFAZ_PRINCIPAL.ClientesActivos();
+            this.EquiposActivos2 = new Modulo_Empleados.INTERFAZ_PRINCIPAL.EquiposActivos();
+            this.EmpleadosActivos2 = new Modulo_Empleados.INTERFAZ_PRINCIPAL.EmpleadosActivos();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -73,7 +82,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 110);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(347, 588);
             this.panel1.TabIndex = 9;
@@ -88,7 +97,7 @@
             this.panel3.Controls.Add(this.rb_empleados);
             this.panel3.Controls.Add(this.rb_inventario);
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(347, 540);
             this.panel3.TabIndex = 11;
@@ -106,7 +115,7 @@
             this.rb_equipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rb_equipo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.rb_equipo.Location = new System.Drawing.Point(0, 225);
-            this.rb_equipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rb_equipo.Margin = new System.Windows.Forms.Padding(4);
             this.rb_equipo.MinimumSize = new System.Drawing.Size(347, 74);
             this.rb_equipo.Name = "rb_equipo";
             this.rb_equipo.Size = new System.Drawing.Size(347, 74);
@@ -127,7 +136,7 @@
             this.rb_punto_vta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rb_punto_vta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.rb_punto_vta.Location = new System.Drawing.Point(0, 4);
-            this.rb_punto_vta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rb_punto_vta.Margin = new System.Windows.Forms.Padding(4);
             this.rb_punto_vta.MinimumSize = new System.Drawing.Size(347, 74);
             this.rb_punto_vta.Name = "rb_punto_vta";
             this.rb_punto_vta.Size = new System.Drawing.Size(347, 74);
@@ -148,7 +157,7 @@
             this.rb_membre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rb_membre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.rb_membre.Location = new System.Drawing.Point(0, 151);
-            this.rb_membre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rb_membre.Margin = new System.Windows.Forms.Padding(4);
             this.rb_membre.MinimumSize = new System.Drawing.Size(347, 74);
             this.rb_membre.Name = "rb_membre";
             this.rb_membre.Size = new System.Drawing.Size(347, 74);
@@ -169,7 +178,7 @@
             this.rb_empleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rb_empleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.rb_empleados.Location = new System.Drawing.Point(0, 299);
-            this.rb_empleados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rb_empleados.Margin = new System.Windows.Forms.Padding(4);
             this.rb_empleados.MinimumSize = new System.Drawing.Size(347, 74);
             this.rb_empleados.Name = "rb_empleados";
             this.rb_empleados.Size = new System.Drawing.Size(347, 74);
@@ -190,7 +199,7 @@
             this.rb_inventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rb_inventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.rb_inventario.Location = new System.Drawing.Point(0, 78);
-            this.rb_inventario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rb_inventario.Margin = new System.Windows.Forms.Padding(4);
             this.rb_inventario.MinimumSize = new System.Drawing.Size(347, 74);
             this.rb_inventario.Name = "rb_inventario";
             this.rb_inventario.Size = new System.Drawing.Size(347, 74);
@@ -208,7 +217,7 @@
             this.panel2.Controls.Add(this.lbl_usuario);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1215, 110);
             this.panel2.TabIndex = 10;
@@ -224,7 +233,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(1161, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(53, 31);
             this.button1.TabIndex = 14;
@@ -242,7 +251,7 @@
             this.btn_min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
             this.btn_min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_min.Location = new System.Drawing.Point(1113, 0);
-            this.btn_min.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_min.Margin = new System.Windows.Forms.Padding(4);
             this.btn_min.Name = "btn_min";
             this.btn_min.Size = new System.Drawing.Size(53, 31);
             this.btn_min.TabIndex = 1;
@@ -255,7 +264,7 @@
             this.class_Ovalo1.BackColor = System.Drawing.Color.Transparent;
             this.class_Ovalo1.Image = ((System.Drawing.Image)(resources.GetObject("class_Ovalo1.Image")));
             this.class_Ovalo1.Location = new System.Drawing.Point(27, 16);
-            this.class_Ovalo1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.class_Ovalo1.Margin = new System.Windows.Forms.Padding(4);
             this.class_Ovalo1.Name = "class_Ovalo1";
             this.class_Ovalo1.Size = new System.Drawing.Size(92, 80);
             this.class_Ovalo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -297,7 +306,7 @@
             this.tabControl_Reportes.Controls.Add(this.tab_equipo);
             this.tabControl_Reportes.Controls.Add(this.tab_empleados);
             this.tabControl_Reportes.Location = new System.Drawing.Point(368, 151);
-            this.tabControl_Reportes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl_Reportes.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl_Reportes.Name = "tabControl_Reportes";
             this.tabControl_Reportes.SelectedIndex = 0;
             this.tabControl_Reportes.Size = new System.Drawing.Size(799, 522);
@@ -305,11 +314,11 @@
             // 
             // tab_punto
             // 
-            this.tab_punto.Controls.Add(this.crv_venta);
+            this.tab_punto.Controls.Add(this.crystalReportViewer1);
             this.tab_punto.Location = new System.Drawing.Point(4, 25);
-            this.tab_punto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tab_punto.Margin = new System.Windows.Forms.Padding(4);
             this.tab_punto.Name = "tab_punto";
-            this.tab_punto.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tab_punto.Padding = new System.Windows.Forms.Padding(4);
             this.tab_punto.Size = new System.Drawing.Size(791, 493);
             this.tab_punto.TabIndex = 0;
             this.tab_punto.Text = "Punto de Venta";
@@ -317,11 +326,11 @@
             // 
             // tab_inv
             // 
-            this.tab_inv.Controls.Add(this.crv_inventario);
+            this.tab_inv.Controls.Add(this.crystalReportViewer2);
             this.tab_inv.Location = new System.Drawing.Point(4, 25);
-            this.tab_inv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tab_inv.Margin = new System.Windows.Forms.Padding(4);
             this.tab_inv.Name = "tab_inv";
-            this.tab_inv.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tab_inv.Padding = new System.Windows.Forms.Padding(4);
             this.tab_inv.Size = new System.Drawing.Size(791, 493);
             this.tab_inv.TabIndex = 1;
             this.tab_inv.Text = "Inventario";
@@ -329,11 +338,11 @@
             // 
             // tab_clientes
             // 
-            this.tab_clientes.Controls.Add(this.crv_cliente);
+            this.tab_clientes.Controls.Add(this.crystalReportViewer3);
             this.tab_clientes.Location = new System.Drawing.Point(4, 25);
-            this.tab_clientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tab_clientes.Margin = new System.Windows.Forms.Padding(4);
             this.tab_clientes.Name = "tab_clientes";
-            this.tab_clientes.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tab_clientes.Padding = new System.Windows.Forms.Padding(4);
             this.tab_clientes.Size = new System.Drawing.Size(791, 493);
             this.tab_clientes.TabIndex = 2;
             this.tab_clientes.Text = "Clientes";
@@ -341,11 +350,11 @@
             // 
             // tab_equipo
             // 
-            this.tab_equipo.Controls.Add(this.crv_equipo);
+            this.tab_equipo.Controls.Add(this.crystalReportViewer4);
             this.tab_equipo.Location = new System.Drawing.Point(4, 25);
-            this.tab_equipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tab_equipo.Margin = new System.Windows.Forms.Padding(4);
             this.tab_equipo.Name = "tab_equipo";
-            this.tab_equipo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tab_equipo.Padding = new System.Windows.Forms.Padding(4);
             this.tab_equipo.Size = new System.Drawing.Size(791, 493);
             this.tab_equipo.TabIndex = 3;
             this.tab_equipo.Text = "Equipo";
@@ -353,11 +362,11 @@
             // 
             // tab_empleados
             // 
-            this.tab_empleados.Controls.Add(this.crv_empleado);
+            this.tab_empleados.Controls.Add(this.crystalReportViewer5);
             this.tab_empleados.Location = new System.Drawing.Point(4, 25);
-            this.tab_empleados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tab_empleados.Margin = new System.Windows.Forms.Padding(4);
             this.tab_empleados.Name = "tab_empleados";
-            this.tab_empleados.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tab_empleados.Padding = new System.Windows.Forms.Padding(4);
             this.tab_empleados.Size = new System.Drawing.Size(791, 493);
             this.tab_empleados.TabIndex = 4;
             this.tab_empleados.Text = "Empleados";
@@ -369,66 +378,70 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.DimGray;
             this.panel4.Location = new System.Drawing.Point(347, 110);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(867, 31);
             this.panel4.TabIndex = 15;
             // 
-            // crv_venta
+            // crystalReportViewer1
             // 
-            this.crv_venta.ActiveViewIndex = -1;
-            this.crv_venta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crv_venta.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crv_venta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crv_venta.Location = new System.Drawing.Point(4, 4);
-            this.crv_venta.Name = "crv_venta";
-            this.crv_venta.Size = new System.Drawing.Size(783, 485);
-            this.crv_venta.TabIndex = 0;
+            this.crystalReportViewer1.ActiveViewIndex = 0;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(4, 4);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.VentaGananciasDiarias2;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(783, 485);
+            this.crystalReportViewer1.TabIndex = 0;
             // 
-            // crv_inventario
+            // crystalReportViewer2
             // 
-            this.crv_inventario.ActiveViewIndex = -1;
-            this.crv_inventario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crv_inventario.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crv_inventario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crv_inventario.Location = new System.Drawing.Point(4, 4);
-            this.crv_inventario.Name = "crv_inventario";
-            this.crv_inventario.Size = new System.Drawing.Size(783, 485);
-            this.crv_inventario.TabIndex = 0;
+            this.crystalReportViewer2.ActiveViewIndex = 0;
+            this.crystalReportViewer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer2.Location = new System.Drawing.Point(4, 4);
+            this.crystalReportViewer2.Name = "crystalReportViewer2";
+            this.crystalReportViewer2.ReportSource = this.InventarioMostrarStock2;
+            this.crystalReportViewer2.Size = new System.Drawing.Size(783, 485);
+            this.crystalReportViewer2.TabIndex = 0;
             // 
-            // crv_cliente
+            // crystalReportViewer3
             // 
-            this.crv_cliente.ActiveViewIndex = -1;
-            this.crv_cliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crv_cliente.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crv_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crv_cliente.Location = new System.Drawing.Point(4, 4);
-            this.crv_cliente.Name = "crv_cliente";
-            this.crv_cliente.Size = new System.Drawing.Size(783, 485);
-            this.crv_cliente.TabIndex = 0;
+            this.crystalReportViewer3.ActiveViewIndex = 0;
+            this.crystalReportViewer3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer3.Location = new System.Drawing.Point(4, 4);
+            this.crystalReportViewer3.Name = "crystalReportViewer3";
+            this.crystalReportViewer3.ReportSource = this.ClientesActivos2;
+            this.crystalReportViewer3.Size = new System.Drawing.Size(783, 485);
+            this.crystalReportViewer3.TabIndex = 0;
             // 
-            // crv_equipo
+            // crystalReportViewer4
             // 
-            this.crv_equipo.ActiveViewIndex = 0;
-            this.crv_equipo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crv_equipo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crv_equipo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crv_equipo.Location = new System.Drawing.Point(4, 4);
-            this.crv_equipo.Name = "crv_equipo";
-            this.crv_equipo.ReportSource = this.EquiposActivos1;
-            this.crv_equipo.Size = new System.Drawing.Size(783, 485);
-            this.crv_equipo.TabIndex = 0;
+            this.crystalReportViewer4.ActiveViewIndex = 0;
+            this.crystalReportViewer4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer4.Location = new System.Drawing.Point(4, 4);
+            this.crystalReportViewer4.Name = "crystalReportViewer4";
+            this.crystalReportViewer4.ReportSource = this.EquiposActivos2;
+            this.crystalReportViewer4.Size = new System.Drawing.Size(783, 485);
+            this.crystalReportViewer4.TabIndex = 0;
             // 
-            // crv_empleado
+            // crystalReportViewer5
             // 
-            this.crv_empleado.ActiveViewIndex = -1;
-            this.crv_empleado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crv_empleado.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crv_empleado.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crv_empleado.Location = new System.Drawing.Point(4, 4);
-            this.crv_empleado.Name = "crv_empleado";
-            this.crv_empleado.Size = new System.Drawing.Size(783, 485);
-            this.crv_empleado.TabIndex = 0;
+            this.crystalReportViewer5.ActiveViewIndex = 0;
+            this.crystalReportViewer5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer5.Location = new System.Drawing.Point(4, 4);
+            this.crystalReportViewer5.Name = "crystalReportViewer5";
+            this.crystalReportViewer5.ReportSource = this.EmpleadosActivos2;
+            this.crystalReportViewer5.Size = new System.Drawing.Size(783, 485);
+            this.crystalReportViewer5.TabIndex = 0;
             // 
             // Reportes
             // 
@@ -440,7 +453,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Reportes";
             this.Text = "Reportes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -483,12 +496,27 @@
         private System.Windows.Forms.TabPage tab_clientes;
         private System.Windows.Forms.TabPage tab_equipo;
         private System.Windows.Forms.TabPage tab_empleados;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crv_venta;
+        /*private CrystalDecisions.Windows.Forms.CrystalReportViewer crv_venta;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crv_inventario;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crv_cliente;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crv_equipo;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crv_empleado;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crv_empleado;*/
         private EquiposActivos EquiposActivos1;
+        private EmpleadosActivos EmpleadosActivos1;
+        private ClientesActivos ClientesActivos1;
+        private VentaGananciasDiarias VentaGananciasDiarias1;
+        private InventarioMostrarStock InventarioMostrarStock1;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private VentaGananciasDiarias VentaGananciasDiarias2;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer2;
+        private InventarioMostrarStock InventarioMostrarStock2;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer3;
+        private ClientesActivos ClientesActivos2;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer4;
+        private EquiposActivos EquiposActivos2;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer5;
+        private EmpleadosActivos EmpleadosActivos2;
+        //private ClientesVisitas ClientesVisitas1;
         /*private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
 private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer2;
 private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer3;
