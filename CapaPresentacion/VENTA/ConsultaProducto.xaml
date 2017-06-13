@@ -11,6 +11,12 @@
         ResizeMode="NoResize"
         Title="Consulta de Producto" WindowStartupLocation="CenterScreen" Height="300" Width="600">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FF7A0E0E" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition Height="auto"/>
@@ -18,24 +24,30 @@
 
 
         </Grid.RowDefinitions>
-      
-       
-            <Grid Grid.Row="1">
+
+
+        <Grid Grid.Row="1">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FFA62E2E" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
 
             </Grid.ColumnDefinitions>
-            <Label Content="Codigo:" Margin="10,10,10,10" ></Label>
+            <Label Content="Codigo:" Margin="10,10,10,10" Foreground="#FFE6E3E3" ></Label>
             <TextBox Grid.Column="1" Name="txtProducto" Width="100" Height="20" MaxLength="20" TextChanged="txtProducto_TextChanged" KeyDown="txtProducto_KeyDown" PreviewTextInput="txtProducto_PreviewTextInput"></TextBox>
             <Button Grid.Column="2" Width="100" Margin="5,5,5,5" Content="Salir F1" Click="Button_Click"></Button>
-                
-            </Grid>
+
+        </Grid>
         <Grid Grid.Row="2">
             <DataGrid ></DataGrid>
-            
-            
+
+
         </Grid>
         <Grid Grid.Row="2">
             <DataGrid x:Name="dataGrid"     HorizontalAlignment="Left" Margin="10,10,10,10"
@@ -63,5 +75,5 @@
             </DataGrid>
         </Grid>
 
-        </Grid>
+    </Grid>
 </Window>
