@@ -15,6 +15,8 @@ using CapaLogica;
 using System.Data;
 using CapaPresentacion.VENTA;
 using System.Windows.Threading;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
 
 namespace CapaPresentacion.VENTA
 {
@@ -324,6 +326,35 @@ namespace CapaPresentacion.VENTA
 
         }
         #region FinalizarLAVenta
+
+        void Ticket(string parametro) {
+
+            CapaPresentacion.Venta_Ticket VT = new CapaPresentacion.Venta_Ticket();
+            //Llamas el reporte
+            ReportDocument crystalrpt = new ReportDocument();
+            crystalrpt.Load(@"C:\Users\pclr\Desktop\CapaPresentacion\CapaPresentacion\Ticket.rpt");
+
+            //declaras los metodos
+            ParameterFieldDefinitions crParameterFieldDefinitions;
+            ParameterFieldDefinition crParameterFieldDefinition;
+            ParameterValues crParameterValue = new ParameterValues();
+            ParameterDiscreteValue crParameterDiscreteValue = new ParameterDiscreteValue();
+
+            //parametro 1
+            crParameterDiscreteValue.Value = parametro;//Envio el IdVenta
+            crParameterFieldDefinitions = crystalrpt.DataDefinition.ParameterFields;
+            crParameterFieldDefinition = crParameterFieldDefinitions["IdVenta"];
+            crParameterValue = crParameterFieldDefinition.CurrentValues;
+
+            crParameterValue.Clear();
+            crParameterValue.Add(crParameterDiscreteValue);
+            crParameterFieldDefinition.ApplyCurrentValues(crParameterValue);
+
+            //Ejecuta el reporte
+            VT.crystalReportViewer1.ReportSource = crystalrpt;
+            VT.crystalReportViewer1.Refresh();
+            VT.ShowDialog();
+        }
         public void RealizarVenta()
         {
             if (dataGrid.Items.Count > 0)
@@ -334,7 +365,7 @@ namespace CapaPresentacion.VENTA
                 if (confirmar.Si) { 
                 cambio();
 
-                if (Vm.GuardarVenta() == 1)
+                if (Vm.GuardarVenta(dataGrid.Items.Count) == 1)
                     {
 
                         ClienteVenta c = new ClienteVenta(Vm.IdVenta);
@@ -342,10 +373,11 @@ namespace CapaPresentacion.VENTA
                     Mensaje.MensajeOk m = new Mensaje.MensajeOk("Mensaje:", "La venta se realizo exitoxamente. su cambio es: $" + Vm.Cambio.ToString());
 
                         m.ShowDialog();
-                        VENTA.simularTicket stk = new VENTA.simularTicket();
-                        stk.ShowDialog();
+                        //VENTA.simularTicket stk = new VENTA.simularTicket();
+                        //stk.ShowDialog();
+                        Ticket(Vm.IdVenta.ToString());
 
-
+                    
                         dataGrid.ItemsSource = Vm.LimpiarVenta(); //para limpiar la venta
                         dataGrid.Items.Refresh();//para limpiar la venta
                         calVenta();

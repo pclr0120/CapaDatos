@@ -38,10 +38,17 @@
     <Reference Include="CapaLogica">
       <HintPath>..\CapaLogica\bin\Debug\CapaLogica.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -60,9 +67,105 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Asistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asistencia.Designer.cs">
+      <DependentUpon>Asistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CantidadProducto.xaml.cs">
+      <DependentUpon>CantidadProducto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteVenta.xaml.cs">
+      <DependentUpon>ClienteVenta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarRegistroProducto.xaml.cs">
+      <DependentUpon>EliminarRegistroProducto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mensaje\MensajeCaptura.xaml.cs">
+      <DependentUpon>MensajeCaptura.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mensaje\MensajeOk.xaml.cs">
+      <DependentUpon>MensajeOk.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mensaje\Mesaje.xaml.cs">
+      <DependentUpon>Mesaje.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Practica.xaml.cs">
+      <DependentUpon>Practica.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ticket.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VENTA\ConsultaProducto.xaml.cs">
+      <DependentUpon>ConsultaProducto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VENTA\Devoluciones.xaml.cs">
+      <DependentUpon>Devoluciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VENTA\PuntoVenta.xaml.cs">
+      <DependentUpon>PuntoVenta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VENTA\simularTicket.xaml.cs">
+      <DependentUpon>simularTicket.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VENTA\Venta.xaml.cs">
       <DependentUpon>Venta.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Venta_Ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta_Ticket.Designer.cs">
+      <DependentUpon>Venta_Ticket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VincularMembreciaxaml.xaml.cs">
+      <DependentUpon>VincularMembreciaxaml.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CantidadProducto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClienteVenta.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EliminarRegistroProducto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mensaje\MensajeCaptura.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mensaje\MensajeOk.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Mensaje\Mesaje.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Practica.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VENTA\ConsultaProducto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VENTA\Devoluciones.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="VENTA\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -75,7 +178,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="VENTA\PuntoVenta.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="VENTA\simularTicket.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="VENTA\Venta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VincularMembreciaxaml.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -94,9 +209,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Asistencia.resx">
+      <DependentUpon>Asistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticket.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Ticket.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venta_Ticket.resx">
+      <DependentUpon>Venta_Ticket.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -107,7 +235,27 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="REcuroso\archive.png" />
+    <Resource Include="REcuroso\bag.png" />
+    <Resource Include="REcuroso\barcode-scanner.png" />
+    <Resource Include="REcuroso\cancel-button.png" />
+    <Resource Include="REcuroso\cart %281%29.png" />
+    <Resource Include="REcuroso\clipboard.png" />
+    <Resource Include="REcuroso\exit.png" />
+    <Resource Include="REcuroso\foto.png" />
+    <Resource Include="REcuroso\logout.png" />
+    <Resource Include="REcuroso\money.png" />
+    <Resource Include="REcuroso\return-of-investment %281%29.png" />
+    <Resource Include="REcuroso\save %281%29.png" />
+    <Resource Include="REcuroso\strong %281%29.png" />
+    <Resource Include="REcuroso\strong %282%29.png" />
+    <Resource Include="REcuroso\warning-exclamation-sign-in-filled-triangle %281%29.png" />
+    <Resource Include="REcuroso\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

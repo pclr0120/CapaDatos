@@ -216,13 +216,13 @@ namespace CapaLogica
         #endregion
         #endregion
 
-        public int GuardarVenta()
+        public int GuardarVenta(int cantidadp)
         {
             try
             {
 
                 string[] parametros = { "_IdUsuario", "_IdCliente", "_CantidadP", "_Total", "_Iva", "_Subtotal","_PAGOCON" };
-                IdVenta = Convert.ToInt32(Acceso.ExeProceVenta("Venta_FinalizarVenta", parametros, IdUsuario, IdCliente, CantidadProducto, Total, IVA, Subtotal,Pago));
+                IdVenta = Convert.ToInt32(Acceso.ExeProceVenta("Venta_FinalizarVenta", parametros, IdUsuario, IdCliente, cantidadp, Total, IVA, Subtotal,Pago));
                 
 
                 string[] parametros2 = { "_IdVenta", "_Codigo", "_PrecioProducto","_Iva" };

@@ -178,7 +178,7 @@ namespace CapaPresentacion
         {
             if (dataGrid.Items.Count > 0)
 
-                if (Vm.GuardarVenta() == 1)
+                if (Vm.GuardarVenta(dataGrid.Items.Count) == 1)
                 {
 
                     Mensaje.MensajeOk m = new Mensaje.MensajeOk("Mensaje:", "La venta se realizo exitoxamente.");
