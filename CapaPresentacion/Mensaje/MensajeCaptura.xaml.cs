@@ -22,6 +22,7 @@ namespace CapaPresentacion.Mensaje
     {
         public double Total { get; set; }
         public int valor { get; set; }
+        public int valor5 { get; set; }
         public string valor3 { get; set; }
         public double valor2 { get; set; }
         public bool Opc { get; set; }
@@ -48,12 +49,12 @@ namespace CapaPresentacion.Mensaje
         void aceptar()
         {
             
-            if (txt_valor.Text != "")
+            if (txt_valor.Text != ""&& txt_valor.Text!="0")
             {
                 Opc = true;
 
 
-                if (Opc2 == "double" && Total < Convert.ToDouble(txt_valor.Text))
+                if (Opc2 == "double" && Total <= Convert.ToDouble(txt_valor.Text))
                 {
                     this.Close();
                     valor2 = Convert.ToDouble(txt_valor.Text);
@@ -77,12 +78,23 @@ namespace CapaPresentacion.Mensaje
                 }
 
 
-
+                if (Opc2 == "intEliminarRegistro")
+                {
+                    
+                    valor = Convert.ToInt32(txt_valor.Text);
+                    if (valor > valor5) {
+                        MessageBox.Show("Capture un registro Existente en la venta");
+                    }
+                    else {
+                        this.Close();
+                    }
+                        
+                }
 
             }
             else
             {
-                MessageBox.Show( "Capture un valor para continuar","Captura");
+                MessageBox.Show( "no se acepta valores en 0","Captura");
                 txt_valor.Focus();
             }
         }

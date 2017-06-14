@@ -68,6 +68,43 @@ namespace CapaPresentacion.VENTA
                 e.Handled = false;
             else e.Handled = true;
         }
+
+        void AgregarCantidadProducto() {
+            try
+            {
+                CantidadProducto cp = new CantidadProducto(dataGrid.Items.Count);
+                cp.ShowDialog();
+                if (cp.registro != null && cp.cantidad != null)
+                {
+                    List<Producto> dt = new List<Producto>();
+                    Vm.agregarcantidad = cp.cantidad;
+                    dt= Vm.AgregarCantidadProducto(cp.registro, cp.cantidad);
+                    if (dt != null)
+                    {
+                        dataGrid.ItemsSource = dt;   //agrega al datagrid los productos
+                        dataGrid.Items.Refresh();
+                        calVenta();  //acutliza los totaltes
+                    }
+                    else {
+                        if (Vm.stockTemporal > 0 && Vm.agregarcantidad>0)
+                        {
+                            MessageBox.Show("Cantidad de producto en existencia:"+Vm.agregarcantidad+". Actualice la cantidad ");
+                        }
+                        else {
+                            MessageBox.Show("no hay en existencia.");
+                        }
+                       
+                    }
+                  
+                
+                }
+            }
+            catch (Exception e) {
+
+                MessageBox.Show("Error consulte con su administrado:"+e.ToString());
+            }
+            txtCodigo.Focus();
+        }
         public void EvaluarTecla(object sender, KeyEventArgs e)
         {
 
@@ -106,6 +143,7 @@ namespace CapaPresentacion.VENTA
                 }
                 if (Key.F1 == e.Key)
                 {
+                  
                     RealizarVenta();
                 
 
@@ -121,6 +159,7 @@ namespace CapaPresentacion.VENTA
                 if (Key.F4 == e.Key)
                 {
                     EliminarProductoVenta();
+
                  
 
                 }
@@ -137,7 +176,12 @@ namespace CapaPresentacion.VENTA
                 if (Key.F6 == e.Key)
                 {
                     consultarProducot();
-
+                   
+                }
+                if (Key.C == e.Key && dataGrid.Items.Count > 0)
+                {
+                  
+                    AgregarCantidadProducto();
                 }
 
 
@@ -160,8 +204,9 @@ namespace CapaPresentacion.VENTA
             if (c == 1)
             {
                 ConsultaProducto cp = new ConsultaProducto();
-                cp.Show();
+                cp.ShowDialog();
             }
+            txtCodigo.Focus();
         }
         void EliminarProductoVenta()
         {
@@ -172,23 +217,19 @@ namespace CapaPresentacion.VENTA
                 if (dataGrid.Items.Count > 0)
                 {
                     control = false;
-                    Mensaje.MensajeCaptura M = new Mensaje.MensajeCaptura("Eliminar producto", "Capture el # registro del producto a eliminar:", "Eliminar F1", "Cancelar F2", true,"int");
+                    Mensaje.MensajeCaptura M = new Mensaje.MensajeCaptura("Eliminar producto", "Capture el # registro del producto a eliminar:", "Eliminar F1", "Cancelar F2", true,"intEliminarRegistro");
+                    M.valor5 = dataGrid.Items.Count;
                     M.ShowDialog();
-
-                    if (M.valor != 0 && Vm.ListaProducto.Exists(c => c.Registro == M.valor))
+                 
+                    if ( Vm.ListaProducto.Exists(c => c.Registro == M.valor) )
                     {
                         Vm.valor = M.valor;   //registro a eliminar
                         Eliminar();
                     }
-                    else if(M.valor!=0)
-                    {
-
-                        Mensaje.MensajeCaptura M2 = new Mensaje.MensajeCaptura("Eliminar producto", "Capture el # registro del producto a eliminar:", "Eliminar F1", "Cancelar F2", true,"int");
-                        M2.ShowDialog();
-                    }
 
 
 
+                    txtCodigo.Focus();
 
                 }
               
@@ -207,7 +248,8 @@ namespace CapaPresentacion.VENTA
                 if (M.valor > 0)
                     AgregarProducto(M.valor.ToString());
             }
-         
+            txtCodigo.Focus();
+
         }
         public void AgregarProducto(string codigo)
         {
@@ -301,7 +343,7 @@ namespace CapaPresentacion.VENTA
 
                         m.ShowDialog();
                         VENTA.simularTicket stk = new VENTA.simularTicket();
-                        stk.Show();
+                        stk.ShowDialog();
 
 
                         dataGrid.ItemsSource = Vm.LimpiarVenta(); //para limpiar la venta
@@ -315,18 +357,19 @@ namespace CapaPresentacion.VENTA
 
                         m.Show();
                     }
-
-            }
+                   
+                }
 
                  }
             //para limpiar la venta
-        
+            txtCodigo.Focus();
+
         }
 
         public void CancelarVenta()
         {
             int c = 1;
-           
+            Vm.StockEntimporeal = 0;
             if (c == 1)
             {
                 c = 2;
@@ -336,14 +379,19 @@ namespace CapaPresentacion.VENTA
                     Mensaje.Mesaje Mm = new CapaPresentacion.Mensaje.Mesaje("Cancelar Venta", "Desea Cancelar la venta?", "Si F1", "No F2");
                     Mm.ShowDialog();
                     if (Mm.Si)
+                    {
                         dataGrid.ItemsSource = null;
-                    dataGrid.Items.Refresh();//para limpiar la venta
-                    Vm.LimpiarVenta();
-                    calVenta();
+                        dataGrid.Items.Refresh();//para limpiar la venta
+                        Vm.LimpiarVenta();
+                        txtCodigo.Clear();
+                        txtCodigo.Focus();
+
+                        calVenta();
+                    }
                 }
             }
-        
 
+            txtCodigo.Focus();
         }
 
 
@@ -360,6 +408,7 @@ namespace CapaPresentacion.VENTA
             }
             catch (Exception)
             { }
+            txtCodigo.Focus();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -462,7 +511,7 @@ namespace CapaPresentacion.VENTA
                 {
 
                     Asistencia a = new Asistencia(c.valor3.ToString());
-                    a.Show();
+                    a.ShowDialog();
                 }
                 else
                 {
@@ -474,6 +523,7 @@ namespace CapaPresentacion.VENTA
 
                 MessageBox.Show("Capture el codigo");
             }
+            txtCodigo.Focus();
         }
 
        
@@ -496,7 +546,7 @@ namespace CapaPresentacion.VENTA
 
                 MessageBox.Show("Error "+e.ToString());
             }
-
+            txtCodigo.Focus();
         }
         void salir()
         {
@@ -533,6 +583,11 @@ namespace CapaPresentacion.VENTA
             else {
                 bander = true;
             }
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

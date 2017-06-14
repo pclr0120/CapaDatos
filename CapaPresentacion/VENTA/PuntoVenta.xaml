@@ -11,12 +11,14 @@
         WindowState="Maximized"
         Title="PuntoVenta" Height="766" Width="1366">
     <Grid Margin="-5,-5,-73,0" Height="771" VerticalAlignment="Top" >
+
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0" Height="103" VerticalAlignment="Top"  Background="#FF232323" Margin="0,1,0,0">
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
@@ -40,6 +42,8 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
+                <TextBox Name="txtCodigo" Height="20" MaxLength="20" Grid.Row="2" Margin="339,226,-310,-206" PreviewKeyDown="txtCodigo_PreviewKeyDown" PreviewTextInput="txtCodigo_PreviewTextInput"  />
+
                 <Label Grid.Row="0"  Content="Lo Atiende:" HorizontalAlignment="Left" Margin="0,6,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14"/>
                 <Label Name="lblEmpladoN" Content="Pablo César Leyva Ramírez" HorizontalAlignment="Left" Margin="1,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold" Grid.RowSpan="2"/>
                 <Label Grid.Row="2" Name="lblEmpladoC" Content="XXXAP" HorizontalAlignment="Left" Margin="1,1,0,-9" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Bold" RenderTransformOrigin="4.389,-1.016"/>
@@ -52,7 +56,6 @@
         <Button x:Name="btn_min" Content="___" HorizontalAlignment="Left" Margin="1268,0,0,0" VerticalAlignment="Top" Width="50" Height="31" FontFamily="Open Sans" FontSize="18" BorderBrush="{x:Null}" Foreground="#FF939393" Background="#FF232323" Click="Min_Click_"/>
 
         <Button x:Name="btn_cerrar" Content="X" HorizontalAlignment="Left" Margin="1318,0,0,0" VerticalAlignment="Top" Width="50" Height="31" FontFamily="Old Antic Bold" FontSize="18" BorderBrush="{x:Null}" Foreground="#FF939393" Background="#FF232323" Click="Cerrar_Click" ForceCursor="True"/>
-        <TextBox Name="txtCodigo" Width="100" Height="5" MaxLength="20" Grid.Row="3" Margin="10,10,10,10" PreviewKeyDown="txtCodigo_PreviewKeyDown" PreviewTextInput="txtCodigo_PreviewTextInput"  ></TextBox>
 
         <DataGrid x:Name="dataGrid"     HorizontalAlignment="Left" Margin="25,10,0,-17"
                   VerticalAlignment="Top" Height="551" Width="1131"  
@@ -134,6 +137,12 @@
                 <DockPanel Height="72" LastChildFill="False" Width="132">
                     <Image RenderTransformOrigin="0.508,0.539" Height="30" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/return-of-investment (1).png"/>
                     <TextBlock Margin="1,0,1,-2" TextWrapping="Wrap" Text="ESC SALIR" Width="130" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="20" VerticalAlignment="Center" Foreground="#FFCDC3C3" DockPanel.Dock="Top"/>
+                </DockPanel>
+            </Button>
+            <Button FontSize="15"  Height="60"   Margin="10,608,0,-408" Background="#FF2D2D30"  BorderBrush="{x:Null}" Click="Button_Click_7"  >
+                <DockPanel Height="72" LastChildFill="False" Width="132">
+                    <Image RenderTransformOrigin="0.508,0.539" Height="30" VerticalAlignment="Bottom" DockPanel.Dock="Top" Source="/CapaPresentacion;component/REcuroso/return-of-investment (1).png"/>
+                    <TextBlock Margin="1,0,1,-2" TextWrapping="Wrap" Text="Cantidad -C" Width="130" HorizontalAlignment="Center" FontFamily="NewsGoth Cn BT" TextAlignment="Center" Height="20" VerticalAlignment="Center" Foreground="#FFCDC3C3" DockPanel.Dock="Top"/>
                 </DockPanel>
             </Button>
 

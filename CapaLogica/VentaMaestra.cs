@@ -40,12 +40,18 @@ namespace CapaLogica
        public  List<Producto> ListaProducto = new List<Producto>();
        public  bool Encontrado;
         public bool Sinproducto ;
+        public bool Sinproducto2;
+        public int agregarcantidad;
         public Producto p = new Producto();
-   
+
+
         public List<Producto> CProducto(string Codigo)
         {
             try
             {
+              
+        StockEntimporeal = 0;
+                Sinproducto2 = false;
                 Sinproducto = false;
                p.Stock0 = false;
                  Encontrado = false;
@@ -55,7 +61,8 @@ namespace CapaLogica
                    p.Obtenerstock(Codigo);
 
                     ///=====
-                   StockEntimporeal= p.Stock;
+                    ///
+                     StockEntimporeal = p.Stock;
                     int contadorpreventa = 0;
                     for (int i = 0; i < ListaProducto.Count ; i++)
                     {
@@ -63,14 +70,24 @@ namespace CapaLogica
                             contadorpreventa = contadorpreventa + 1;
                         }
 
+                       
 
                     }
-                    if (StockEntimporeal==contadorpreventa) {
+                    if (StockEntimporeal == contadorpreventa)
+                    {
 
                         Sinproducto = true;
+                        Sinproducto2 = true;
                         return ListaProducto;
 
                     }
+                    else if (agregarcantidad > (StockEntimporeal-contadorpreventa)) {
+
+                        agregarcantidad = StockEntimporeal-contadorpreventa;
+                        Sinproducto = true;
+                        return ListaProducto;
+                    }
+
                     if (p.Stock > 0)
                     {
                         Producto p = new Producto();
@@ -121,22 +138,58 @@ namespace CapaLogica
 
         //calculos de la venta,elimar y actulizar calculos
         #region AgregarVenta
+            public int stockTemporal { get; set; }
+        
+        public  List<Producto> AgregarCantidadProducto(int registro, int cantidad)
+        {
+
+            //Menos lineas pero mas complicado de enteder.
+            try {
+
+                string codigoo = ListaProducto[ListaProducto.IndexOf(ListaProducto.FirstOrDefault(c => c.Registro == registro))].Codigo.ToString();
+                for (int i = 0; i < cantidad; i++)
+                {
+                    CProducto(codigoo);
+                    if (Sinproducto)
+                    {
+                        if (i==0 && Sinproducto2!=true) {
+                            i = 1;
+                        }
+                        stockTemporal = i;
+                        return null;
+                    }
+                    agregarcantidad = agregarcantidad - 1;
+                }
+            
+                CalVenta();
+                return ListaProducto;
+            }
+            catch (Exception ) {
+                return ListaProducto;
+            }
+
+        }
+
         public void CalVenta()
         {
             IVA = 0;
             Subtotal = 0;
             Total = 0;
             int c = 0;
+       
+       
+           
             for (int i = 0; i < ListaProducto.Count; i++)
             {
-
-                IVA += ListaProducto[i].IVA;
-                Subtotal += ListaProducto[i].Precio;
-                Total = IVA + Subtotal;
+                double ivatempo = 0;
+                ivatempo += ListaProducto[i].IVA;
+               Total += ListaProducto[i].Precio;
+                IVA = IVA + (ivatempo * ListaProducto[i].Precio);
+               
 
                 c += 1;
             }
-
+            Subtotal = Total - IVA;
 
         }
 
@@ -154,8 +207,7 @@ namespace CapaLogica
         public List<Producto> EliminarProducto()
         {
             ListaProducto.Remove(ListaProducto.FirstOrDefault(c => c.Registro == valor));
-          
-        
+
             ActualizarRegistro();
             
             CalVenta();

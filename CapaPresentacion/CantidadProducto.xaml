@@ -1,0 +1,22 @@
+﻿<Window x:Class="CapaPresentacion.CantidadProducto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CapaPresentacion"
+        mc:Ignorable="d"
+        KeyUp="EvaluarTecla"
+       WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Title="CantidadProducto" Height="126.316" Width="378.947">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" TabIndex="1" MaxLength="2" Height="23" Margin="104,41,0,0" TextWrapping="Wrap" Name="txtR" VerticalAlignment="Top" Width="120" PreviewTextInput="txtR_PreviewTextInput" PreviewKeyUp="txtR_PreviewKeyUp"/>
+        <Label Content="#Registro:
+" HorizontalAlignment="Left" Margin="42,41,0,0" VerticalAlignment="Top"/>
+        <Button Content="Agregar F1" HorizontalAlignment="Left" Margin="264,44,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <TextBox HorizontalAlignment="Left" TabIndex="2" MaxLength="2" Height="23" Margin="104,73,0,0" TextWrapping="Wrap" Name="txtcantidad"  VerticalAlignment="Top" Width="120" PreviewTextInput="txtcantidad_PreviewTextInput" PreviewKeyUp="txtcantidad_PreviewKeyUp"/>
+        <Label Content="Cantidad:" HorizontalAlignment="Left" Margin="42,73,0,0" VerticalAlignment="Top"/>
+        <Button Content="Cancelar f2" HorizontalAlignment="Left" Margin="264,73,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>
