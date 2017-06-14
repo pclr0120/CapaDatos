@@ -619,7 +619,7 @@ namespace CapaPresentacion.VENTA
 
         private void Button_Click_7(object sender, RoutedEventArgs e)
         {
-
+            AgregarCantidadProducto();
         }
     }
 }
