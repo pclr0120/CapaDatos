@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formulario_Principal));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_min = new System.Windows.Forms.Button();
+            this.class_Ovalo1 = new EMBLEMA.Class_Ovalo();
             this.lbl_emblema = new System.Windows.Forms.Label();
             this.lbl_usuario = new System.Windows.Forms.Label();
             this.lbl_control_sesion = new System.Windows.Forms.Label();
@@ -39,10 +41,23 @@
             this.txt_message = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.rb_reportes = new System.Windows.Forms.RadioButton();
+            this.rb_equipo = new System.Windows.Forms.RadioButton();
+            this.rb_inicio = new System.Windows.Forms.RadioButton();
+            this.rb_punto_vta = new System.Windows.Forms.RadioButton();
+            this.rb_membre = new System.Windows.Forms.RadioButton();
+            this.rb_empleados = new System.Windows.Forms.RadioButton();
+            this.rb_inventario = new System.Windows.Forms.RadioButton();
+            this.rb_config = new System.Windows.Forms.RadioButton();
             this.lbl_album = new System.Windows.Forms.Label();
             this.lbl_artista = new System.Windows.Forms.Label();
             this.lbl_cancion = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.pb_album = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.btn_next = new System.Windows.Forms.PictureBox();
+            this.btn_play = new System.Windows.Forms.PictureBox();
+            this.btn_previous = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,32 +72,17 @@
             this.conexion = new System.Windows.Forms.Timer(this.components);
             this.btn_install = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.rb_reportes = new System.Windows.Forms.RadioButton();
-            this.rb_equipo = new System.Windows.Forms.RadioButton();
-            this.rb_inicio = new System.Windows.Forms.RadioButton();
-            this.rb_punto_vta = new System.Windows.Forms.RadioButton();
-            this.rb_membre = new System.Windows.Forms.RadioButton();
-            this.rb_empleados = new System.Windows.Forms.RadioButton();
-            this.rb_inventario = new System.Windows.Forms.RadioButton();
-            this.rb_config = new System.Windows.Forms.RadioButton();
-            this.pb_album = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.btn_next = new System.Windows.Forms.PictureBox();
-            this.btn_play = new System.Windows.Forms.PictureBox();
-            this.btn_previous = new System.Windows.Forms.PictureBox();
-            this.btn_min = new System.Windows.Forms.Button();
-            this.class_Ovalo1 = new EMBLEMA.Class_Ovalo();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.class_Ovalo1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_album)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_next)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_previous)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.class_Ovalo1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -112,6 +112,35 @@
             this.label3.Size = new System.Drawing.Size(126, 19);
             this.label3.TabIndex = 16;
             this.label3.Text = "Sistema EMBLEMA ®";
+            // 
+            // btn_min
+            // 
+            this.btn_min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_min.BackColor = System.Drawing.Color.Transparent;
+            this.btn_min.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_min.BackgroundImage")));
+            this.btn_min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_min.FlatAppearance.BorderSize = 0;
+            this.btn_min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btn_min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_min.Location = new System.Drawing.Point(1326, 0);
+            this.btn_min.Name = "btn_min";
+            this.btn_min.Size = new System.Drawing.Size(40, 25);
+            this.btn_min.TabIndex = 1;
+            this.btn_min.UseVisualStyleBackColor = false;
+            this.btn_min.Click += new System.EventHandler(this.btn_min_Click);
+            // 
+            // class_Ovalo1
+            // 
+            this.class_Ovalo1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.class_Ovalo1.BackColor = System.Drawing.Color.DarkGray;
+            this.class_Ovalo1.Image = ((System.Drawing.Image)(resources.GetObject("class_Ovalo1.Image")));
+            this.class_Ovalo1.Location = new System.Drawing.Point(20, 13);
+            this.class_Ovalo1.Name = "class_Ovalo1";
+            this.class_Ovalo1.Size = new System.Drawing.Size(69, 65);
+            this.class_Ovalo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.class_Ovalo1.TabIndex = 12;
+            this.class_Ovalo1.TabStop = false;
             // 
             // lbl_emblema
             // 
@@ -220,160 +249,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(260, 440);
             this.panel3.TabIndex = 11;
-            // 
-            // lbl_album
-            // 
-            this.lbl_album.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_album.AutoSize = true;
-            this.lbl_album.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_album.ForeColor = System.Drawing.Color.LightGray;
-            this.lbl_album.Location = new System.Drawing.Point(93, 519);
-            this.lbl_album.Name = "lbl_album";
-            this.lbl_album.Size = new System.Drawing.Size(47, 18);
-            this.lbl_album.TabIndex = 31;
-            this.lbl_album.Text = "Álbum";
-            // 
-            // lbl_artista
-            // 
-            this.lbl_artista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_artista.AutoSize = true;
-            this.lbl_artista.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_artista.ForeColor = System.Drawing.Color.LightGray;
-            this.lbl_artista.Location = new System.Drawing.Point(93, 501);
-            this.lbl_artista.Name = "lbl_artista";
-            this.lbl_artista.Size = new System.Drawing.Size(47, 18);
-            this.lbl_artista.TabIndex = 30;
-            this.lbl_artista.Text = "Artista";
-            // 
-            // lbl_cancion
-            // 
-            this.lbl_cancion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_cancion.AutoSize = true;
-            this.lbl_cancion.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cancion.ForeColor = System.Drawing.Color.White;
-            this.lbl_cancion.Location = new System.Drawing.Point(93, 483);
-            this.lbl_cancion.Name = "lbl_cancion";
-            this.lbl_cancion.Size = new System.Drawing.Size(142, 18);
-            this.lbl_cancion.TabIndex = 11;
-            this.lbl_cancion.Text = "Título de la canción";
-            // 
-            // trackBar1
-            // 
-            this.trackBar1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.trackBar1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.trackBar1.Location = new System.Drawing.Point(80, 621);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(104, 45);
-            this.trackBar1.TabIndex = 29;
-            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inicioToolStripMenuItem,
-            this.puntoDeVentaToolStripMenuItem,
-            this.membresíasToolStripMenuItem,
-            this.visitasToolStripMenuItem,
-            this.equipoToolStripMenuItem,
-            this.empleadosToolStripMenuItem,
-            this.configuracionesToolStripMenuItem,
-            this.windowToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.MdiWindowListItem = this.windowToolStripMenuItem;
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1366, 24);
-            this.menuStrip1.TabIndex = 9;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // inicioToolStripMenuItem
-            // 
-            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.inicioToolStripMenuItem.Text = "Inicio";
-            // 
-            // puntoDeVentaToolStripMenuItem
-            // 
-            this.puntoDeVentaToolStripMenuItem.Name = "puntoDeVentaToolStripMenuItem";
-            this.puntoDeVentaToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
-            this.puntoDeVentaToolStripMenuItem.Text = "Punto de Venta";
-            // 
-            // membresíasToolStripMenuItem
-            // 
-            this.membresíasToolStripMenuItem.Name = "membresíasToolStripMenuItem";
-            this.membresíasToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.membresíasToolStripMenuItem.Text = "Clientes";
-            // 
-            // visitasToolStripMenuItem
-            // 
-            this.visitasToolStripMenuItem.Name = "visitasToolStripMenuItem";
-            this.visitasToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.visitasToolStripMenuItem.Text = "Visitas";
-            // 
-            // equipoToolStripMenuItem
-            // 
-            this.equipoToolStripMenuItem.Name = "equipoToolStripMenuItem";
-            this.equipoToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.equipoToolStripMenuItem.Text = "Equipo";
-            // 
-            // empleadosToolStripMenuItem
-            // 
-            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
-            this.empleadosToolStripMenuItem.Text = "Empleados";
-            // 
-            // configuracionesToolStripMenuItem
-            // 
-            this.configuracionesToolStripMenuItem.Name = "configuracionesToolStripMenuItem";
-            this.configuracionesToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
-            this.configuracionesToolStripMenuItem.Text = "Configuraciones";
-            // 
-            // windowToolStripMenuItem
-            // 
-            this.windowToolStripMenuItem.Name = "windowToolStripMenuItem";
-            this.windowToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.windowToolStripMenuItem.Text = "Ventanas";
-            // 
-            // mensage_timer
-            // 
-            this.mensage_timer.Tick += new System.EventHandler(this.mensage_timer_Tick);
-            // 
-            // conexion
-            // 
-            this.conexion.Tick += new System.EventHandler(this.conexion_Tick);
-            // 
-            // btn_install
-            // 
-            this.btn_install.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btn_install.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_install.FlatAppearance.BorderSize = 0;
-            this.btn_install.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_install.Font = new System.Drawing.Font("Open Sans", 9.75F);
-            this.btn_install.ForeColor = System.Drawing.Color.White;
-            this.btn_install.Location = new System.Drawing.Point(260, 113);
-            this.btn_install.Name = "btn_install";
-            this.btn_install.Size = new System.Drawing.Size(1106, 39);
-            this.btn_install.TabIndex = 12;
-            this.btn_install.Text = "Ups :( Parece que no hemos podido encontrar Spotify en tu computadora. Puedes des" +
-    "cargarlo dando click en este cuadro de texto";
-            this.btn_install.UseVisualStyleBackColor = false;
-            this.btn_install.Visible = false;
-            this.btn_install.Click += new System.EventHandler(this.btn_install_Click);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(756, 189);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(243, 13);
-            this.linkLabel1.TabIndex = 13;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "https://www.spotify.com/mx/download/windows/";
-            this.linkLabel1.Visible = false;
             // 
             // rb_reportes
             // 
@@ -537,6 +412,52 @@
             this.rb_config.UseVisualStyleBackColor = false;
             this.rb_config.Click += new System.EventHandler(this.rb_config_CheckedChanged);
             // 
+            // lbl_album
+            // 
+            this.lbl_album.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_album.AutoSize = true;
+            this.lbl_album.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_album.ForeColor = System.Drawing.Color.LightGray;
+            this.lbl_album.Location = new System.Drawing.Point(93, 519);
+            this.lbl_album.Name = "lbl_album";
+            this.lbl_album.Size = new System.Drawing.Size(47, 18);
+            this.lbl_album.TabIndex = 31;
+            this.lbl_album.Text = "Álbum";
+            // 
+            // lbl_artista
+            // 
+            this.lbl_artista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_artista.AutoSize = true;
+            this.lbl_artista.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_artista.ForeColor = System.Drawing.Color.LightGray;
+            this.lbl_artista.Location = new System.Drawing.Point(93, 501);
+            this.lbl_artista.Name = "lbl_artista";
+            this.lbl_artista.Size = new System.Drawing.Size(47, 18);
+            this.lbl_artista.TabIndex = 30;
+            this.lbl_artista.Text = "Artista";
+            // 
+            // lbl_cancion
+            // 
+            this.lbl_cancion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_cancion.AutoSize = true;
+            this.lbl_cancion.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cancion.ForeColor = System.Drawing.Color.White;
+            this.lbl_cancion.Location = new System.Drawing.Point(93, 483);
+            this.lbl_cancion.Name = "lbl_cancion";
+            this.lbl_cancion.Size = new System.Drawing.Size(142, 18);
+            this.lbl_cancion.TabIndex = 11;
+            this.lbl_cancion.Text = "Título de la canción";
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.trackBar1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.trackBar1.Location = new System.Drawing.Point(80, 621);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(104, 45);
+            this.trackBar1.TabIndex = 29;
+            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
+            // 
             // pb_album
             // 
             this.pb_album.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -605,34 +526,113 @@
             this.btn_previous.TabStop = false;
             this.btn_previous.Click += new System.EventHandler(this.btn_previous_Click);
             // 
-            // btn_min
+            // openFileDialog1
             // 
-            this.btn_min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_min.BackColor = System.Drawing.Color.Transparent;
-            this.btn_min.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_min.BackgroundImage")));
-            this.btn_min.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_min.FlatAppearance.BorderSize = 0;
-            this.btn_min.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btn_min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_min.Location = new System.Drawing.Point(1326, 0);
-            this.btn_min.Name = "btn_min";
-            this.btn_min.Size = new System.Drawing.Size(40, 25);
-            this.btn_min.TabIndex = 1;
-            this.btn_min.UseVisualStyleBackColor = false;
-            this.btn_min.Click += new System.EventHandler(this.btn_min_Click);
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // class_Ovalo1
+            // menuStrip1
             // 
-            this.class_Ovalo1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.class_Ovalo1.BackColor = System.Drawing.Color.DarkGray;
-            this.class_Ovalo1.Image = ((System.Drawing.Image)(resources.GetObject("class_Ovalo1.Image")));
-            this.class_Ovalo1.Location = new System.Drawing.Point(20, 13);
-            this.class_Ovalo1.Name = "class_Ovalo1";
-            this.class_Ovalo1.Size = new System.Drawing.Size(69, 65);
-            this.class_Ovalo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.class_Ovalo1.TabIndex = 12;
-            this.class_Ovalo1.TabStop = false;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inicioToolStripMenuItem,
+            this.puntoDeVentaToolStripMenuItem,
+            this.membresíasToolStripMenuItem,
+            this.visitasToolStripMenuItem,
+            this.equipoToolStripMenuItem,
+            this.empleadosToolStripMenuItem,
+            this.configuracionesToolStripMenuItem,
+            this.windowToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.MdiWindowListItem = this.windowToolStripMenuItem;
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1366, 24);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // inicioToolStripMenuItem
+            // 
+            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.inicioToolStripMenuItem.Text = "Inicio";
+            // 
+            // puntoDeVentaToolStripMenuItem
+            // 
+            this.puntoDeVentaToolStripMenuItem.Name = "puntoDeVentaToolStripMenuItem";
+            this.puntoDeVentaToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
+            this.puntoDeVentaToolStripMenuItem.Text = "Punto de Venta";
+            // 
+            // membresíasToolStripMenuItem
+            // 
+            this.membresíasToolStripMenuItem.Name = "membresíasToolStripMenuItem";
+            this.membresíasToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.membresíasToolStripMenuItem.Text = "Clientes";
+            // 
+            // visitasToolStripMenuItem
+            // 
+            this.visitasToolStripMenuItem.Name = "visitasToolStripMenuItem";
+            this.visitasToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.visitasToolStripMenuItem.Text = "Visitas";
+            // 
+            // equipoToolStripMenuItem
+            // 
+            this.equipoToolStripMenuItem.Name = "equipoToolStripMenuItem";
+            this.equipoToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.equipoToolStripMenuItem.Text = "Equipo";
+            // 
+            // empleadosToolStripMenuItem
+            // 
+            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.empleadosToolStripMenuItem.Text = "Empleados";
+            // 
+            // configuracionesToolStripMenuItem
+            // 
+            this.configuracionesToolStripMenuItem.Name = "configuracionesToolStripMenuItem";
+            this.configuracionesToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
+            this.configuracionesToolStripMenuItem.Text = "Configuraciones";
+            // 
+            // windowToolStripMenuItem
+            // 
+            this.windowToolStripMenuItem.Name = "windowToolStripMenuItem";
+            this.windowToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.windowToolStripMenuItem.Text = "Ventanas";
+            // 
+            // mensage_timer
+            // 
+            this.mensage_timer.Tick += new System.EventHandler(this.mensage_timer_Tick);
+            // 
+            // conexion
+            // 
+            this.conexion.Tick += new System.EventHandler(this.conexion_Tick);
+            // 
+            // btn_install
+            // 
+            this.btn_install.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btn_install.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_install.FlatAppearance.BorderSize = 0;
+            this.btn_install.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_install.Font = new System.Drawing.Font("Open Sans", 9.75F);
+            this.btn_install.ForeColor = System.Drawing.Color.White;
+            this.btn_install.Location = new System.Drawing.Point(260, 113);
+            this.btn_install.Name = "btn_install";
+            this.btn_install.Size = new System.Drawing.Size(1106, 39);
+            this.btn_install.TabIndex = 12;
+            this.btn_install.Text = "Ups :( Parece que no hemos podido encontrar Spotify en tu computadora. Puedes des" +
+    "cargarlo dando click en este cuadro de texto";
+            this.btn_install.UseVisualStyleBackColor = false;
+            this.btn_install.Visible = false;
+            this.btn_install.Click += new System.EventHandler(this.btn_install_Click);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(756, 189);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(243, 13);
+            this.linkLabel1.TabIndex = 13;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "https://www.spotify.com/mx/download/windows/";
+            this.linkLabel1.Visible = false;
             // 
             // Formulario_Principal
             // 
@@ -654,19 +654,19 @@
             this.Load += new System.EventHandler(this.Formulario_Principal_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.class_Ovalo1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_album)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_next)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_play)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_previous)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.class_Ovalo1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -710,12 +710,12 @@
         private System.Windows.Forms.PictureBox pb_album;
         private System.Windows.Forms.Timer mensage_timer;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button txt_message;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer conexion;
         private System.Windows.Forms.Button btn_install;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.RadioButton rb_reportes;
+        public System.Windows.Forms.Button txt_message;
     }
 }
 

@@ -121,7 +121,7 @@ namespace Modulo_Empleados.INTERFAZ_PRINCIPAL
         {
             //Llamas el reporte
             ReportDocument crystalrpt = new ReportDocument();
-            crystalrpt.Load(@"C:\Users\7559\Source\Repos\PruebaReporte\CapaPresentacion2\Modulo_Empleados\INTERFAZ_PRINCIPAL\VentasRangos.rpt");
+            crystalrpt.Load(@"C:\Users\Frank Crow-Belloso\Source\CapaDatos4\CapaPresentacion2\Modulo_Empleados\INTERFAZ_PRINCIPAL\VentasRangos.rpt");
 
             //declaras los metodos
             ParameterFieldDefinitions crParameterFieldDefinitions;
@@ -158,7 +158,7 @@ namespace Modulo_Empleados.INTERFAZ_PRINCIPAL
         {
             //Llamas el reporte
             ReportDocument crystalrpt = new ReportDocument();
-            crystalrpt.Load(@"C:\Users\7559\Source\Repos\PruebaReporte\CapaPresentacion2\Modulo_Empleados\INTERFAZ_PRINCIPAL\VentasRangosEmpleado.rpt");
+            crystalrpt.Load(@"C:\Users\Frank Crow-Belloso\Source\CapaDatos4\CapaPresentacion2\Modulo_Empleados\INTERFAZ_PRINCIPAL\VentasRangosEmpleado.rpt");
 
             //declaras los metodos
             ParameterFieldDefinitions crParameterFieldDefinitions;
@@ -205,7 +205,7 @@ namespace Modulo_Empleados.INTERFAZ_PRINCIPAL
         {
             //Llamas el reporte
             ReportDocument crystalrpt = new ReportDocument();
-            crystalrpt.Load(@"C:\Users\7559\Source\Repos\PruebaReporte\CapaPresentacion2\Modulo_Empleados\INTERFAZ_PRINCIPAL\VentasRangosProducto.rpt");
+            crystalrpt.Load(@"C:\Users\Frank Crow-Belloso\Source\CapaDatos4\CapaPresentacion2\Modulo_Empleados\INTERFAZ_PRINCIPAL\VentasRangosProducto.rpt");
 
             //declaras los metodos
             ParameterFieldDefinitions crParameterFieldDefinitions;
@@ -252,7 +252,7 @@ namespace Modulo_Empleados.INTERFAZ_PRINCIPAL
         {
             //Llamas el reporte
             ReportDocument crystalrpt = new ReportDocument();
-            crystalrpt.Load(@"C:\Users\7559\Source\Repos\PruebaReporte\CapaPresentacion2\Modulo_Empleados\INTERFAZ_PRINCIPAL\VentasTodo.rpt");
+            crystalrpt.Load(@"C:\Users\Frank Crow-Belloso\Source\CapaDatos4\CapaPresentacion2\Modulo_Empleados\INTERFAZ_PRINCIPAL\VentasTodo.rpt");
 
             //declaras los metodos
             ParameterFieldDefinitions crParameterFieldDefinitions;

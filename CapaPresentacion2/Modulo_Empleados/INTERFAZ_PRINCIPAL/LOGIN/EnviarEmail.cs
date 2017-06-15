@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Modulo_Empleados.INTERFAZ_PRINCIPAL.LOGIN
 {
@@ -31,8 +32,16 @@ namespace Modulo_Empleados.INTERFAZ_PRINCIPAL.LOGIN
             }
             else
             {
-                MessageBox.Show("Se ha enviado un correo con sus datos");
-                this.Close();
+                Regex Val = new Regex(@"^[a-z]+[a-z0-9]*@+[a-z0-9]+[a-z0-9]*[\.][a-z0-9]+$");
+                if (Val.IsMatch(txt_email.Text))
+                {
+                    MessageBox.Show("Se ha enviado un correo con sus datos");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("El correo ingresado no es valido intentelo de nuevo");
+                }
             }
         }
 

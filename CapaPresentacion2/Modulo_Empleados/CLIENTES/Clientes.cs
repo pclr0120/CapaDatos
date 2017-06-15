@@ -161,7 +161,7 @@ namespace Modulo_Clientes
 
         public void ClienteRegMod()
         {
-            Regex Val = new Regex(@"^([a-z])+([a-z0-9])*@+([a-z0-9])+([\.]+[a-z0-9]+)$");
+            Regex Val = new Regex(@"^[a-z]+[a-z0-9]*@+[a-z0-9]+[a-z0-9]*[\.][a-z0-9]+$");
             if (txt_nombre_c.Text != "")
             {
                 if (txt_app_c.Text != "")

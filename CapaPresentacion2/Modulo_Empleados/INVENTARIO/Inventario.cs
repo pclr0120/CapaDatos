@@ -61,7 +61,7 @@ namespace Modulo_Inventario
         private void Inventario_Load(object sender, EventArgs e)
         {
             //TabControl_Inventario.Dock = DockStyle.Fill;
-           
+            tabcontrolproductonuevo.Dock = DockStyle.Fill;
         }
 
       
@@ -216,11 +216,11 @@ namespace Modulo_Inventario
                         {
                             if (TxtDescripcion.Text != "")
                             {
-                                if (TxtStock.Text != "")
+                                if (TxtStock.Text != "" && TxtStock.Text!="0")
                                 {
-                                    if (TxtStockMin.Text != "")
+                                    if (TxtStockMin.Text != "" && TxtStockMin.Text != "0")
                                     {
-                                        if (TxtCosto.Text != "")
+                                        if (TxtCosto.Text != "" )
                                         {
                                             if (TxtPrecioMin.Text != "")
                                             {

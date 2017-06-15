@@ -332,7 +332,7 @@ namespace CapaPresentacion.VENTA
             CapaPresentacion.Venta_Ticket VT = new CapaPresentacion.Venta_Ticket();
             //Llamas el reporte
             ReportDocument crystalrpt = new ReportDocument();
-            crystalrpt.Load(@"C:\Users\pclr\Desktop\CapaPresentacion\CapaPresentacion\Ticket.rpt");
+            crystalrpt.Load(@"C:\Users\Frank Crow-Belloso\Source\CapaDatos4\CapaPresentacion\Ticket.rpt");
 
             //declaras los metodos
             ParameterFieldDefinitions crParameterFieldDefinitions;

@@ -32,6 +32,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabcontrolmodificarprod = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.cbMSeleccionePromo = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbMCuentaPromo = new System.Windows.Forms.ComboBox();
@@ -69,6 +71,7 @@
             this.label42 = new System.Windows.Forms.Label();
             this.button15 = new System.Windows.Forms.Button();
             this.TabNuevo_prod = new System.Windows.Forms.TabPage();
+            this.TxtCodigoBarra = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
@@ -124,12 +127,10 @@
             this.btn_retorno2 = new System.Windows.Forms.Button();
             this.tabcontrolproductonuevo = new System.Windows.Forms.TabControl();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.TxtCodigoBarra = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabcontrolmodificarprod.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.TabNuevo_prod.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabeprincipal.SuspendLayout();
@@ -139,7 +140,6 @@
             this.panel_search.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabcontrolproductonuevo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -210,6 +210,27 @@
             this.tabcontrolmodificarprod.TabIndex = 8;
             this.tabcontrolmodificarprod.Text = "ModificaProducto";
             this.tabcontrolmodificarprod.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(608, 276);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(141, 23);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "seleccionar imagen f2";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Gray;
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(442, 184);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(158, 114);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 98;
+            this.pictureBox5.TabStop = false;
             // 
             // cbMSeleccionePromo
             // 
@@ -680,6 +701,15 @@
             this.TabNuevo_prod.TabIndex = 3;
             this.TabNuevo_prod.Text = "Nuevo_prod";
             this.TabNuevo_prod.UseVisualStyleBackColor = true;
+            // 
+            // TxtCodigoBarra
+            // 
+            this.TxtCodigoBarra.Location = new System.Drawing.Point(410, 484);
+            this.TxtCodigoBarra.MaxLength = 20;
+            this.TxtCodigoBarra.Name = "TxtCodigoBarra";
+            this.TxtCodigoBarra.Size = new System.Drawing.Size(175, 20);
+            this.TxtCodigoBarra.TabIndex = 97;
+            this.TxtCodigoBarra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCodigoBarra_KeyPress_1);
             // 
             // button2
             // 
@@ -1267,11 +1297,11 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
             this.label14.Location = new System.Drawing.Point(104, 83);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(76, 18);
+            this.label14.Size = new System.Drawing.Size(69, 20);
             this.label14.TabIndex = 55;
             this.label14.Text = "ESTATUS";
             // 
@@ -1299,7 +1329,7 @@
             // comboBox3
             // 
             this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.Font = new System.Drawing.Font("Open Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.ForeColor = System.Drawing.Color.DimGray;
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
@@ -1308,7 +1338,7 @@
             "INACTIVOS"});
             this.comboBox3.Location = new System.Drawing.Point(179, 80);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(118, 26);
+            this.comboBox3.Size = new System.Drawing.Size(118, 28);
             this.comboBox3.TabIndex = 1;
             this.comboBox3.Text = "TODOS";
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
@@ -1316,10 +1346,10 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("NewsGoth BT", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(102, 50);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(501, 31);
+            this.label16.Size = new System.Drawing.Size(446, 32);
             this.label16.TabIndex = 28;
             this.label16.Text = "INVENTARIO DE PUNTO DE VENTA";
             // 
@@ -1365,36 +1395,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(608, 276);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 23);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "seleccionar imagen f2";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Gray;
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(442, 184);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(158, 114);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 98;
-            this.pictureBox5.TabStop = false;
-            // 
-            // TxtCodigoBarra
-            // 
-            this.TxtCodigoBarra.Location = new System.Drawing.Point(410, 484);
-            this.TxtCodigoBarra.MaxLength = 20;
-            this.TxtCodigoBarra.Name = "TxtCodigoBarra";
-            this.TxtCodigoBarra.Size = new System.Drawing.Size(175, 20);
-            this.TxtCodigoBarra.TabIndex = 97;
-            this.TxtCodigoBarra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCodigoBarra_KeyPress_1);
-            // 
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1413,6 +1413,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabcontrolmodificarprod.ResumeLayout(false);
             this.tabcontrolmodificarprod.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.TabNuevo_prod.ResumeLayout(false);
             this.TabNuevo_prod.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -1425,7 +1426,6 @@
             this.panel_search.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabcontrolproductonuevo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -276,18 +276,27 @@ namespace EMBLEMA
 
         private void pb_album_Click(object sender, EventArgs e)
         {
-            try
+            if (AccesoInternet())
             {
-                //Abrir_Spotify();
-                //txt_message.Visible = true;
-                //txt_message.Text = "Espere...";
-                //conexion.Start();
+                try
+                {
+                    Abrir_Spotify();
+                    txt_message.Visible = true;
+                    txt_message.Text = "Espere...";
+                    conexion.Start();
+                }
+                catch (Exception exc)
+                {
+                    btn_install.Visible = true;
+                    txt_message.Text = exc.ToString();
+                }
             }
-            catch (Exception exc)
+            else
             {
-                btn_install.Visible = true;
-                txt_message.Text = exc.ToString();
+                txt_message.Text = "No se ha detectado conexion a Internet";
+                mensage_timer.Start();
             }
+
             
             
         }
@@ -309,22 +318,81 @@ namespace EMBLEMA
 
         private void btn_next_Click(object sender, EventArgs e)
         {
-            _spotify.Skip();
+            if (SpotifyFlag)
+            {
+                _spotify.Skip();
+            }
+            else
+            {
+                txt_message.Text = "No se ha realizado la conexión con Spotify!";
+                mensage_timer.Start();
+            }
+
         }
 
         private void btn_previous_Click(object sender, EventArgs e)
         {
-            _spotify.Previous();
+            if (SpotifyFlag)
+            {
+                _spotify.Previous();
+            }
+            else
+            {
+                txt_message.Text = "No se ha realizado la conexión con Spotify!";
+                mensage_timer.Start();
+            }
+
+        }
+
+        private bool AccesoInternet()
+        {
+            try
+            {
+                System.Net.IPHostEntry host = System.Net.Dns.GetHostEntry("www.google.com");
+                return true;
+
+            }
+            catch (Exception es)
+            {
+                return false;
+            }
+
         }
 
         private async void btn_play_Click(object sender, EventArgs e)
         {
-            StatusResponse status = _spotify.GetStatus();
-            if (status.Playing)
+            if (AccesoInternet())
             {
-                await _spotify.Pause();
+                if (SpotifyFlag)
+                {
+                    StatusResponse status = _spotify.GetStatus();
+                    try
+                    {
+                        if (status.Playing)
+                        {
+                            await _spotify.Pause();
+                        }
+
+                        else
+                            await _spotify.Play();
+                    }
+                    catch (Exception ex)
+                    {
+                        txt_message.Text = "Se ha producido un error con la conexión con Spotify! - Vefique su conexión a Internet";
+                        mensage_timer.Start();
+                    }
+                }
+
+                else
+                {
+                    txt_message.Text = "No se ha realizado la conexión con Spotify!";
+                    mensage_timer.Start();
+                }
             }
-            else await _spotify.Play();
+            else
+                txt_message.Text = "No se ha detectado conexion a Internet";
+           
+              
         }
 
         private void txt_message_Click(object sender, EventArgs e)
@@ -351,7 +419,13 @@ namespace EMBLEMA
 
         private void rb_punto_vta_CheckedChanged(object sender, EventArgs e)
         {
-            Punto.Show();
+            try {
+                CapaPresentacion.VENTA.PuntoVenta Punto = new CapaPresentacion.VENTA.PuntoVenta();
+                Punto.Show();
+            } catch (Exception) {
+            
+            }
+           
         }
 
         private void rb_reportes_CheckedChanged(object sender, EventArgs e)
